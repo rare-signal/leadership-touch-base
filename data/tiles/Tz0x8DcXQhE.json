@@ -1,0 +1,28 @@
+{
+  "video_id": "Tz0x8DcXQhE",
+  "layout": "1x1",
+  "source_size": [
+    1080,
+    1392
+  ],
+  "content_bbox": [
+    37,
+    44,
+    1006,
+    1290
+  ],
+  "tiles": [
+    {
+      "idx": 0,
+      "row": 0,
+      "col": 0,
+      "x": 41,
+      "y": 48,
+      "w": 998,
+      "h": 1282
+    }
+  ],
+  "confidence": 0.0,
+  "character_id_by_tile": {},
+  "notes": "auto-detect bands too thin (widths=[1006] heights=[61, 67, 93, 473, 420, 23, 61, 92]); manual tag needed"
+}

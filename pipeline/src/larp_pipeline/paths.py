@@ -14,11 +14,14 @@ CLUSTERS = DATA / "clusters"           # intermediate clustering artifacts
 CHARACTERS = DATA / "characters"       # one canonical characters.json (list of characters)
 PERSONAS = DATA / "personas"           # {character_id}.md + {character_id}.json
 GRUNTS = DATA / "grunts"               # {character_id}/{n}.mp3 + sprite.json
+TILES = DATA / "tiles"                 # {video_id}.json — detected grid bboxes + tags
+CLIPS = DATA / "clips"                 # {character_id}/{video_id}_{tile_idx}.mp4 + .ranges.json
+CLIP_AUDIO = CLIPS / "_audio"          # {video_id}.mp3 — full-mix audio per source
 CHANNEL_INDEX = DATA / "channel_index.json"
 
 
 def ensure_dirs() -> None:
-    for p in (RAW, TRANSCRIPTS, KEYFRAMES, CLUSTERS, CHARACTERS, PERSONAS, GRUNTS):
+    for p in (RAW, TRANSCRIPTS, KEYFRAMES, CLUSTERS, CHARACTERS, PERSONAS, GRUNTS, TILES, CLIPS, CLIP_AUDIO):
         p.mkdir(parents=True, exist_ok=True)
 
 

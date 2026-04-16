@@ -1,0 +1,28 @@
+{
+  "video_id": "ZC4sxomSCDI",
+  "layout": "1x1",
+  "source_size": [
+    1080,
+    1920
+  ],
+  "content_bbox": [
+    37,
+    536,
+    1006,
+    425
+  ],
+  "tiles": [
+    {
+      "idx": 0,
+      "row": 0,
+      "col": 0,
+      "x": 41,
+      "y": 540,
+      "w": 998,
+      "h": 417
+    }
+  ],
+  "confidence": 0.0,
+  "character_id_by_tile": {},
+  "notes": "auto-detect found no interior gutters (guessed 1x1); manual tag needed"
+}

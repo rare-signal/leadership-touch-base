@@ -1,0 +1,28 @@
+{
+  "video_id": "fdvsrY1-F4I",
+  "layout": "1x1",
+  "source_size": [
+    1080,
+    1192
+  ],
+  "content_bbox": [
+    37,
+    62,
+    1006,
+    1060
+  ],
+  "tiles": [
+    {
+      "idx": 0,
+      "row": 0,
+      "col": 0,
+      "x": 41,
+      "y": 66,
+      "w": 998,
+      "h": 1052
+    }
+  ],
+  "confidence": 0.0,
+  "character_id_by_tile": {},
+  "notes": "auto-detect bands too thin (widths=[1006] heights=[68, 71, 129, 646, 23, 45, 78]); manual tag needed"
+}

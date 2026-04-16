@@ -62,6 +62,13 @@ def grunts() -> None:
     run()
 
 
+@app.command()
+def tiles(force: bool = False) -> None:
+    """Auto-detect zoom-grid tile bounding boxes in each source video."""
+    from larp_pipeline.tiles import run
+    run(force=force)
+
+
 @app.command("all")
 def run_all() -> None:
     """Run every stage in order."""

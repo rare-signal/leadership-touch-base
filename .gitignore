@@ -28,6 +28,8 @@ Thumbs.db
 data/raw/
 data/keyframes/
 data/clusters/
+data/tiles/previews/
+data/clips/
 data/*.log
 data/ingest.log
 data/channel_index.json

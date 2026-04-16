@@ -1,0 +1,28 @@
+{
+  "video_id": "I4UEzvIaLxg",
+  "layout": "1x1",
+  "source_size": [
+    1080,
+    1920
+  ],
+  "content_bbox": [
+    38,
+    555,
+    1005,
+    406
+  ],
+  "tiles": [
+    {
+      "idx": 0,
+      "row": 0,
+      "col": 0,
+      "x": 42,
+      "y": 559,
+      "w": 997,
+      "h": 398
+    }
+  ],
+  "confidence": 0.0,
+  "character_id_by_tile": {},
+  "notes": "auto-detect found no interior gutters (guessed 1x1); manual tag needed"
+}

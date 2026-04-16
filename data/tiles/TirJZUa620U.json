@@ -1,0 +1,28 @@
+{
+  "video_id": "TirJZUa620U",
+  "layout": "1x1",
+  "source_size": [
+    1080,
+    1920
+  ],
+  "content_bbox": [
+    36,
+    679,
+    1009,
+    563
+  ],
+  "tiles": [
+    {
+      "idx": 0,
+      "row": 0,
+      "col": 0,
+      "x": 40,
+      "y": 683,
+      "w": 1001,
+      "h": 555
+    }
+  ],
+  "confidence": 0.0,
+  "character_id_by_tile": {},
+  "notes": "auto-detect found no interior gutters (guessed 1x1); manual tag needed"
+}
