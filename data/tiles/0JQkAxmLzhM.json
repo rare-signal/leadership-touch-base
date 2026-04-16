@@ -73,7 +73,7 @@
       "character_id": null
     }
   ],
-  "confidence": 1,
+  "confidence": 1.0,
   "character_id_by_tile": {
     "1": "cold_boss_ryan",
     "2": "bro_coworker_charles",

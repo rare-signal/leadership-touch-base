@@ -15,10 +15,14 @@ const TileBoxSchema = z.object({
   character_id: z.string().nullable().optional(),
 });
 
-// Simplified schema: the pipeline seeds geometry + layout, and the UI edits
-// character_id per tile. We accept just the tiles + optional notes.
+// The pipeline seeds geometry + layout; the UI can re-edit geometry
+// (content_bbox, rows/cols re-flow) and per-tile character_id.
 const PutSchema = z.object({
   tiles: z.array(TileBoxSchema),
+  layout: z.string().optional(),
+  content_bbox: z
+    .tuple([z.number().int(), z.number().int(), z.number().int(), z.number().int()])
+    .optional(),
   notes: z.string().optional(),
 });
 
@@ -52,6 +56,8 @@ export async function PUT(
     ...current,
     tiles: parsed.tiles,
     character_id_by_tile: idByTile,
+    layout: parsed.layout ?? current.layout,
+    content_bbox: parsed.content_bbox ?? current.content_bbox,
     notes: parsed.notes ?? current.notes,
   };
   await saveTileDoc(vid, next);

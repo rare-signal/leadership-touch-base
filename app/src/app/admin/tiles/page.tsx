@@ -86,6 +86,44 @@ function Stats({ docs }: { docs: TileDoc[] }) {
   );
 }
 
+function parseRC(layout: string): [number, number] {
+  const m = layout.match(/^(\d+)x(\d+)$/);
+  if (!m) return [1, 1];
+  return [parseInt(m[1]), parseInt(m[2])];
+}
+
+function reflowTiles(
+  bbox: [number, number, number, number],
+  rows: number,
+  cols: number,
+  prev: TileBox[],
+): TileBox[] {
+  const [bx, by, bw, bh] = bbox;
+  const tileW = Math.floor(bw / cols);
+  const tileH = Math.floor(bh / rows);
+  const margin = 6;
+  const out: TileBox[] = [];
+  let idx = 0;
+  const prevById = new Map(prev.map((t) => [t.idx, t]));
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      const old = prevById.get(idx);
+      out.push({
+        idx,
+        row: r,
+        col: c,
+        x: bx + c * tileW + margin,
+        y: by + r * tileH + margin,
+        w: tileW - margin * 2,
+        h: tileH - margin * 2,
+        character_id: old?.character_id ?? null,
+      });
+      idx++;
+    }
+  }
+  return out;
+}
+
 function VideoCard({
   doc,
   roster,
@@ -96,13 +134,18 @@ function VideoCard({
   onSaved: (next: TileDoc) => void;
 }) {
   const [tiles, setTiles] = useState<TileBox[]>(doc.tiles);
+  const [bbox, setBbox] = useState<[number, number, number, number]>(doc.content_bbox);
+  const [layout, setLayout] = useState<string>(doc.layout);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const dirty = useMemo(
-    () => JSON.stringify(tiles) !== JSON.stringify(doc.tiles),
-    [tiles, doc.tiles]
+    () =>
+      JSON.stringify(tiles) !== JSON.stringify(doc.tiles) ||
+      JSON.stringify(bbox) !== JSON.stringify(doc.content_bbox) ||
+      layout !== doc.layout,
+    [tiles, bbox, layout, doc]
   );
 
   const setTileChar = useCallback((idx: number, cid: string | null) => {
@@ -110,6 +153,37 @@ function VideoCard({
       ts.map((t) => (t.idx === idx ? { ...t, character_id: cid } : t))
     );
   }, []);
+
+  const nudgeBbox = useCallback(
+    (dx: number, dy: number, dw: number, dh: number) => {
+      setBbox(([x, y, w, h]) => {
+        const next: [number, number, number, number] = [x + dx, y + dy, w + dw, h + dh];
+        setTiles((prev) => reflowTiles(next, ...parseRC(layout), prev));
+        return next;
+      });
+    },
+    [layout]
+  );
+
+  const setBboxField = useCallback(
+    (idx: 0 | 1 | 2 | 3, val: number) => {
+      setBbox((prev) => {
+        const next = [...prev] as [number, number, number, number];
+        next[idx] = val;
+        setTiles((p) => reflowTiles(next, ...parseRC(layout), p));
+        return next;
+      });
+    },
+    [layout]
+  );
+
+  const setLayoutAndReflow = useCallback(
+    (next: string) => {
+      setLayout(next);
+      setTiles((p) => reflowTiles(bbox, ...parseRC(next), p));
+    },
+    [bbox]
+  );
 
   const save = useCallback(async () => {
     setSaving(true);
@@ -119,7 +193,12 @@ function VideoCard({
       const res = await fetch(`/api/admin/tiles/${doc.video_id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ tiles, notes: doc.notes }),
+        body: JSON.stringify({
+          tiles,
+          layout,
+          content_bbox: bbox,
+          notes: doc.notes,
+        }),
       });
       const j = await res.json();
       if (!res.ok) throw new Error(j.detail ?? j.error ?? `HTTP ${res.status}`);
@@ -130,7 +209,7 @@ function VideoCard({
     } finally {
       setSaving(false);
     }
-  }, [doc, tiles, onSaved]);
+  }, [doc, tiles, bbox, layout, onSaved]);
 
   const [sw, sh] = doc.source_size;
   const tagged = tiles.filter((t) => t.character_id).length;
@@ -153,6 +232,15 @@ function VideoCard({
           </Button>
         </div>
       </div>
+
+      <GeometryEditor
+        bbox={bbox}
+        layout={layout}
+        sourceSize={[sw, sh]}
+        onBboxField={setBboxField}
+        onNudge={nudgeBbox}
+        onLayoutChange={setLayoutAndReflow}
+      />
 
       <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
         <PreviewCanvas
@@ -211,6 +299,98 @@ function VideoCard({
         </div>
       </div>
     </section>
+  );
+}
+
+function GeometryEditor({
+  bbox,
+  layout,
+  sourceSize,
+  onBboxField,
+  onNudge,
+  onLayoutChange,
+}: {
+  bbox: [number, number, number, number];
+  layout: string;
+  sourceSize: [number, number];
+  onBboxField: (idx: 0 | 1 | 2 | 3, val: number) => void;
+  onNudge: (dx: number, dy: number, dw: number, dh: number) => void;
+  onLayoutChange: (next: string) => void;
+}) {
+  const [bx, by, bw, bh] = bbox;
+  const [sw, sh] = sourceSize;
+  const labels: [string, number][] = [
+    ["x", bx],
+    ["y", by],
+    ["w", bw],
+    ["h", bh],
+  ];
+  return (
+    <div className="mb-3 flex flex-wrap items-center gap-2 rounded-md border border-zinc-800 bg-zinc-900/40 px-3 py-2 text-xs text-zinc-400">
+      <span className="mr-1 uppercase tracking-wide text-zinc-500">grid</span>
+      <select
+        value={layout}
+        onChange={(e) => onLayoutChange(e.target.value)}
+        className="rounded border bg-zinc-950 px-2 py-1 text-xs"
+      >
+        {["1x1", "1x2", "2x1", "2x2", "1x3", "3x1", "2x3", "3x2"].map((l) => (
+          <option key={l} value={l}>
+            {l}
+          </option>
+        ))}
+      </select>
+      <span className="ml-3 uppercase tracking-wide text-zinc-500">bbox</span>
+      {labels.map(([lbl, val], i) => (
+        <label key={lbl} className="flex items-center gap-1">
+          <span className="font-mono text-zinc-500">{lbl}</span>
+          <input
+            type="number"
+            value={val}
+            onChange={(e) => onBboxField(i as 0 | 1 | 2 | 3, parseInt(e.target.value) || 0)}
+            className="w-16 rounded border bg-zinc-950 px-1.5 py-0.5 text-xs tabular-nums"
+          />
+        </label>
+      ))}
+      <span className="ml-2 text-[10px] text-zinc-600">
+        of {sw}×{sh}
+      </span>
+      <div className="ml-3 flex items-center gap-1">
+        <span className="text-[10px] uppercase text-zinc-500">nudge&nbsp;y</span>
+        <button
+          type="button"
+          onClick={() => onNudge(0, -20, 0, 0)}
+          className="rounded border border-zinc-700 bg-zinc-800 px-1.5 py-0.5 text-xs hover:bg-zinc-700"
+          title="move bbox up 20px"
+        >
+          ↑20
+        </button>
+        <button
+          type="button"
+          onClick={() => onNudge(0, 20, 0, 0)}
+          className="rounded border border-zinc-700 bg-zinc-800 px-1.5 py-0.5 text-xs hover:bg-zinc-700"
+          title="move bbox down 20px"
+        >
+          ↓20
+        </button>
+        <span className="ml-2 text-[10px] uppercase text-zinc-500">h</span>
+        <button
+          type="button"
+          onClick={() => onNudge(0, 0, 0, -20)}
+          className="rounded border border-zinc-700 bg-zinc-800 px-1.5 py-0.5 text-xs hover:bg-zinc-700"
+          title="shrink height 20px"
+        >
+          −20
+        </button>
+        <button
+          type="button"
+          onClick={() => onNudge(0, 0, 0, 20)}
+          className="rounded border border-zinc-700 bg-zinc-800 px-1.5 py-0.5 text-xs hover:bg-zinc-700"
+          title="grow height 20px"
+        >
+          +20
+        </button>
+      </div>
+    </div>
   );
 }
 

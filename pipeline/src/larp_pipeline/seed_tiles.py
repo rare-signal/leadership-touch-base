@@ -52,6 +52,17 @@ BBOX_1x1 = (0.00, 0.00, 1.00, 1.00)
 BBOX_2x3_SHORT = BBOX_2x3
 BBOX_2x2_SHORT = BBOX_2x2
 
+# Per-video pixel-bbox overrides (x, y, w, h). These take precedence over
+# the layout-based fractions and are used when the grid sits at an atypical
+# position in the frame. Obtained by eyeballing the clean preview frame.
+BBOX_PIXELS: dict[str, tuple[int, int, int, int]] = {
+    # 1080x1920 2x3 — grid sits higher + shorter than the default fraction.
+    "9nWj2i1wzeQ":  (45, 700, 990, 820),
+    # 1080x1920 2x2 — grid extends further down than the default.
+    "0fSIY9WkPls":  (45, 650, 990, 1130),
+    "6c4ezOY-HOc":  (45, 650, 990, 1130),
+}
+
 
 SEED: list[tuple[str, int, int, tuple[float, float, float, float], list[Optional[str]], str]] = [
     # (vid, rows, cols, bbox_fracs, [tile0, tile1, …], notes)
@@ -176,16 +187,19 @@ def build_one(vid: str, rows: int, cols: int,
     ensure_dirs()
     sw, sh = _frame_size(vid)
 
-    # If this is a shorter (letterboxed) video, the title card eats a
-    # smaller vertical fraction — use the *_SHORT bbox profile.
-    if sh < 1500 and bbox_fracs in (BBOX_2x3, BBOX_2x2):
-        bbox_fracs = BBOX_2x3_SHORT if bbox_fracs == BBOX_2x3 else BBOX_2x2_SHORT
-
-    lf, tf, rf, bf = bbox_fracs
-    bx = int(sw * lf)
-    by = int(sh * tf)
-    bw = int(sw * (rf - lf))
-    bh = int(sh * (bf - tf))
+    # Per-video pixel override wins over layout fractions.
+    if vid in BBOX_PIXELS:
+        bx, by, bw, bh = BBOX_PIXELS[vid]
+    else:
+        # If this is a shorter (letterboxed) video, the title card eats a
+        # smaller vertical fraction — use the *_SHORT bbox profile.
+        if sh < 1500 and bbox_fracs in (BBOX_2x3, BBOX_2x2):
+            bbox_fracs = BBOX_2x3_SHORT if bbox_fracs == BBOX_2x3 else BBOX_2x2_SHORT
+        lf, tf, rf, bf = bbox_fracs
+        bx = int(sw * lf)
+        by = int(sh * tf)
+        bw = int(sw * (rf - lf))
+        bh = int(sh * (bf - tf))
 
     tile_w = bw // cols
     tile_h = bh // rows
