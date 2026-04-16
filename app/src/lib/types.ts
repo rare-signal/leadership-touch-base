@@ -59,3 +59,24 @@ export type ChatMessage = {
   text: string;
   timestamp: number;
 };
+
+export type TileBox = {
+  idx: number;
+  row: number;
+  col: number;
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+};
+
+export type TileDoc = {
+  video_id: string;
+  layout: string; // "1x1" | "2x2" | "2x3" | "3x2" | "1x2" | "2x1" | "1x3" | "3x1" | "skip"
+  source_size: [number, number];
+  content_bbox: [number, number, number, number]; // x,y,w,h
+  tiles: TileBox[];
+  confidence: number;
+  character_id_by_tile: Record<string, string>; // tile_idx (stringified) -> character_id
+  notes?: string;
+};

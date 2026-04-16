@@ -1,7 +1,7 @@
 /** Server-side loaders that read pipeline outputs from ../data/. */
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import type { Character, CharacterPack, GruntEntry, Persona } from "./types";
+import type { Character, CharacterPack, GruntEntry, Persona, TileDoc } from "./types";
 
 // app/src/lib -> app -> repo root
 export const REPO_ROOT = path.resolve(process.cwd(), "..");
@@ -52,4 +52,31 @@ export async function loadCharacterPacks(): Promise<CharacterPack[]> {
 
 export function safeId(id: string): string {
   return /^[a-z0-9_-]+$/i.test(id) ? id : "";
+}
+
+export async function loadTileDoc(vid: string): Promise<TileDoc | null> {
+  return readJsonIfExists<TileDoc>(path.join(DATA_DIR, "tiles", `${vid}.json`));
+}
+
+export async function loadAllTileDocs(): Promise<TileDoc[]> {
+  const dir = path.join(DATA_DIR, "tiles");
+  let entries: string[];
+  try {
+    entries = await fs.readdir(dir);
+  } catch {
+    return [];
+  }
+  const jsons = entries.filter((e) => e.endsWith(".json")).sort();
+  const docs = await Promise.all(
+    jsons.map(async (name) => {
+      const p = path.join(dir, name);
+      return readJsonIfExists<TileDoc>(p);
+    })
+  );
+  return docs.filter((d): d is TileDoc => !!d);
+}
+
+export async function saveTileDoc(vid: string, doc: TileDoc): Promise<void> {
+  const p = path.join(DATA_DIR, "tiles", `${vid}.json`);
+  await fs.writeFile(p, JSON.stringify(doc, null, 2));
 }

@@ -22,7 +22,7 @@
       "h": 417
     }
   ],
-  "confidence": 0.0,
+  "confidence": 0,
   "character_id_by_tile": {},
   "notes": "auto-detect found no interior gutters (guessed 1x1); manual tag needed"
 }
