@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ParticipantTile, UserTile } from "./participant-tile";
+import { pickRandomClip, useClipIndex } from "@/lib/clips";
 import type { CharacterPack, ChatMessage } from "@/lib/types";
 
 type Props = { topic: string };
@@ -39,6 +40,8 @@ export function MeetingRoom({ topic }: Props) {
   const [error, setError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const chatScrollRef = useRef<HTMLDivElement>(null);
+  const clipIndex = useClipIndex();
+  const speakingAudioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     fetch("/api/characters")
@@ -90,6 +93,12 @@ export function MeetingRoom({ topic }: Props) {
           setActiveIds((s) => new Set(s).add(charId));
           setPending((p) => ({ ...p, [charId]: "" }));
           if (grunt) playGrunt(charId, grunt.url);
+          // Start the master audio for whatever source video this character
+          // currently has on screen (so you hear that zoom meeting's ambient
+          // chatter + the speaker). Just one speaking audio at a time — the
+          // ref below swaps src + plays.
+          const clip = pickRandomClip(clipIndex, charId);
+          if (clip) playSpeakingAudio(speakingAudioRef, clip.audio_url);
         },
         onDelta: (charId, text) => {
           setPending((p) => ({ ...p, [charId]: (p[charId] ?? "") + text }));
@@ -116,6 +125,8 @@ export function MeetingRoom({ topic }: Props) {
               n.delete(charId);
               return n;
             });
+            // Fade out the speaking audio along with the UI ring.
+            fadeOutSpeakingAudio(speakingAudioRef);
           }, 800);
         },
         onError: (msg) => setError(msg),
@@ -297,6 +308,61 @@ function playGrunt(charId: string, url: string) {
   const el = audioCache.get(key)!;
   el.currentTime = 0;
   el.play().catch(() => {});
+}
+
+// Speaking-audio: one shared <Audio>. When a character starts speaking,
+// swap src to that character's current source master audio and play from a
+// random offset (gives "we joined this meeting mid-sentence" vibes).
+function playSpeakingAudio(
+  ref: React.MutableRefObject<HTMLAudioElement | null>,
+  url: string
+) {
+  if (!ref.current) {
+    const a = new Audio();
+    a.preload = "auto";
+    a.volume = 0.85;
+    ref.current = a;
+  }
+  const el = ref.current;
+  if (el.src !== url) {
+    el.src = url;
+  }
+  const start = () => {
+    const dur = el.duration;
+    if (isFinite(dur) && dur > 1) {
+      el.currentTime = Math.random() * Math.max(0, dur - 1);
+    }
+    el.volume = 0.85;
+    el.play().catch(() => {});
+    el.removeEventListener("loadedmetadata", start);
+  };
+  if (el.readyState >= 1 && el.duration > 0) {
+    start();
+  } else {
+    el.addEventListener("loadedmetadata", start);
+  }
+}
+
+function fadeOutSpeakingAudio(
+  ref: React.MutableRefObject<HTMLAudioElement | null>
+) {
+  const el = ref.current;
+  if (!el || el.paused) return;
+  const startVol = el.volume;
+  const steps = 10;
+  let i = 0;
+  const tick = () => {
+    i++;
+    el.volume = Math.max(0, startVol * (1 - i / steps));
+    if (i < steps) {
+      setTimeout(tick, 40);
+    } else {
+      el.pause();
+      el.currentTime = 0;
+      el.volume = startVol;
+    }
+  };
+  tick();
 }
 
 type SSEHandlers = {

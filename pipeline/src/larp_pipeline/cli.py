@@ -76,6 +76,13 @@ def seed_tiles_cmd() -> None:
     run()
 
 
+@app.command()
+def clips(force: bool = False, only: str | None = None) -> None:
+    """Cut per-character silent MP4 clips + master audio per source video."""
+    from larp_pipeline.clips import run
+    run(force=force, only_vid=only)
+
+
 @app.command("all")
 def run_all() -> None:
     """Run every stage in order."""

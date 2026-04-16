@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import type { CharacterPack } from "@/lib/types";
+import { pickRandomClip, useClipIndex, type Clip } from "@/lib/clips";
 
 type Props = {
   pack: CharacterPack;
@@ -11,6 +13,36 @@ type Props = {
 };
 
 export function ParticipantTile({ pack, active, captionText }: Props) {
+  const clipIndex = useClipIndex();
+  const [clip, setClip] = useState<Clip | null>(null);
+
+  // Pick a random clip when the index arrives, and re-pick when "active"
+  // toggles on — gives the illusion of "speaker just unmuted, new angle".
+  useEffect(() => {
+    if (!clipIndex) return;
+    const next = pickRandomClip(clipIndex, pack.character.id);
+    if (next) setClip(next);
+  }, [clipIndex, pack.character.id, active]);
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // When the clip changes, start at a random offset so six tiles don't all
+  // show the same frame of the same moment.
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v || !clip) return;
+    const onMeta = () => {
+      const dur = v.duration;
+      if (isFinite(dur) && dur > 0.5) {
+        v.currentTime = Math.random() * Math.max(0, dur - 0.5);
+      }
+      v.play().catch(() => {});
+      v.removeEventListener("loadedmetadata", onMeta);
+    };
+    v.addEventListener("loadedmetadata", onMeta);
+    return () => v.removeEventListener("loadedmetadata", onMeta);
+  }, [clip]);
+
   const thumbVid =
     pack.character.thumb_video_id ?? pack.character.appearances[0]?.video_id;
   const thumb = thumbVid ? `/api/thumb/${thumbVid}` : null;
@@ -25,7 +57,19 @@ export function ParticipantTile({ pack, active, captionText }: Props) {
           : "border-zinc-800"
       )}
     >
-      {thumb ? (
+      {clip ? (
+        <video
+          ref={videoRef}
+          src={clip.video_url}
+          className="absolute inset-0 h-full w-full object-cover"
+          muted
+          playsInline
+          loop
+          autoPlay
+          preload="auto"
+          data-vid={clip.vid}
+        />
+      ) : thumb ? (
         <Image
           src={thumb}
           alt={pack.character.display_name}
