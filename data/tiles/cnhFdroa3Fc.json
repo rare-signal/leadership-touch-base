@@ -7,7 +7,7 @@
   ],
   "content_bbox": [
     43,
-    652,
+    512,
     993,
     1132
   ],
@@ -17,7 +17,7 @@
       "row": 0,
       "col": 0,
       "x": 49,
-      "y": 658,
+      "y": 518,
       "w": 484,
       "h": 554,
       "character_id": null
@@ -27,7 +27,7 @@
       "row": 0,
       "col": 1,
       "x": 545,
-      "y": 658,
+      "y": 518,
       "w": 484,
       "h": 554,
       "character_id": "cold_boss_ryan"
@@ -37,7 +37,7 @@
       "row": 1,
       "col": 0,
       "x": 49,
-      "y": 1224,
+      "y": 1084,
       "w": 484,
       "h": 554,
       "character_id": null
@@ -47,7 +47,7 @@
       "row": 1,
       "col": 1,
       "x": 545,
-      "y": 1224,
+      "y": 1084,
       "w": 484,
       "h": 554,
       "character_id": "bro_coworker_charles"

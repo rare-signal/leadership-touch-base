@@ -43,14 +43,18 @@ console = Console()
 # Default frame bboxes by layout — tuned by eye from the 1080x1920 portrait
 # shorts. Title card typically ends ~y=0.20 and Zoom chrome starts ~y=0.53 for
 # 2x3 layouts (smaller face grid), ~y=0.64 for 2x2 (bigger face grid).
-BBOX_2x3 = (0.04, 0.37, 0.96, 0.85)
-BBOX_2x2 = (0.04, 0.34, 0.96, 0.93)
+# Tall-portrait (sh=1920) fractions — adjusted per David's visual check:
+#   2x3: shift -40px on y vs the first estimate (two nudge-up clicks)
+#   2x2: shift -140px on y vs the first estimate (seven nudge-up clicks)
+BBOX_2x3 = (0.04, 0.349, 0.96, 0.829)
+BBOX_2x2 = (0.04, 0.267, 0.96, 0.857)
 BBOX_1x1 = (0.00, 0.00, 1.00, 1.00)
 
-# Aspect-adjusted overrides for shorter (letterboxed) videos. Same fractions
-# usually work fine; kept as separate constants so we can tune per-aspect.
-BBOX_2x3_SHORT = BBOX_2x3
-BBOX_2x2_SHORT = BBOX_2x2
+# Aspect-adjusted fractions for the shorter letterboxed videos (sh<1500).
+# These were correct at the pre-shift values — 0JQkAxmLzhM for instance was
+# perfectly aligned — so they keep the original fractions.
+BBOX_2x3_SHORT = (0.04, 0.37, 0.96, 0.85)
+BBOX_2x2_SHORT = (0.04, 0.34, 0.96, 0.93)
 
 # Per-video pixel-bbox overrides (x, y, w, h). These take precedence over
 # the layout-based fractions and are used when the grid sits at an atypical

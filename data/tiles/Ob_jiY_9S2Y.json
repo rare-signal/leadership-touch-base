@@ -7,7 +7,7 @@
   ],
   "content_bbox": [
     43,
-    710,
+    670,
     993,
     921
   ],
@@ -17,7 +17,7 @@
       "row": 0,
       "col": 0,
       "x": 49,
-      "y": 716,
+      "y": 676,
       "w": 319,
       "h": 448,
       "character_id": null
@@ -27,7 +27,7 @@
       "row": 0,
       "col": 1,
       "x": 380,
-      "y": 716,
+      "y": 676,
       "w": 319,
       "h": 448,
       "character_id": null
@@ -37,7 +37,7 @@
       "row": 0,
       "col": 2,
       "x": 711,
-      "y": 716,
+      "y": 676,
       "w": 319,
       "h": 448,
       "character_id": "braxton"
@@ -47,7 +47,7 @@
       "row": 1,
       "col": 0,
       "x": 49,
-      "y": 1176,
+      "y": 1136,
       "w": 319,
       "h": 448,
       "character_id": "bro_coworker_charles"
@@ -57,7 +57,7 @@
       "row": 1,
       "col": 1,
       "x": 380,
-      "y": 1176,
+      "y": 1136,
       "w": 319,
       "h": 448,
       "character_id": "cold_boss_ryan"
@@ -67,7 +67,7 @@
       "row": 1,
       "col": 2,
       "x": 711,
-      "y": 1176,
+      "y": 1136,
       "w": 319,
       "h": 448,
       "character_id": null
