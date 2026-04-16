@@ -1,0 +1,77 @@
+{
+  "video_id": "Ob_jiY_9S2Y",
+  "scene_summary": "A corporate meeting where a manager presents Q1 performance data showing missed targets and discusses whether to cut costs or push harder.",
+  "observations": [
+    {
+      "label_hint": "cold-boss",
+      "turn_indices": [
+        0,
+        3
+      ],
+      "names_heard": [],
+      "likely_role": "manager/executive presenting quarterly results",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "quick as we were effectively unable to reclaim the two lost days from February"
+      ],
+      "interpersonal_note": "speaks in a flat, data-driven corporate tone; others respond with nervous agreement and suggestions",
+      "best_frame_idx": 0
+    },
+    {
+      "label_hint": "bro-coworker",
+      "turn_indices": [
+        1
+      ],
+      "names_heard": [],
+      "likely_role": "colleague offering casual reassurance",
+      "register": "bro-chill",
+      "signature_lines": [
+        "it's fine, it'll be fine"
+      ],
+      "interpersonal_note": "tries to lighten the mood with chill energy while others remain focused on the grim numbers",
+      "best_frame_idx": 1
+    },
+    {
+      "label_hint": "earnest-intern",
+      "turn_indices": [
+        2
+      ],
+      "names_heard": [],
+      "likely_role": "junior employee seeking validation",
+      "register": "earnest",
+      "signature_lines": [
+        "I think we're going to be fine"
+      ],
+      "interpersonal_note": "offers optimistic reassurance that others dismiss with data-driven pushback",
+      "best_frame_idx": 2
+    },
+    {
+      "label_hint": "chaos-agent",
+      "turn_indices": [
+        4
+      ],
+      "names_heard": [],
+      "likely_role": "colleague pushing for aggressive action",
+      "register": "chaos-agent",
+      "signature_lines": [
+        "we need to cut costs"
+      ],
+      "interpersonal_note": "proposes drastic measures while others debate between cutting costs vs. pushing harder",
+      "best_frame_idx": 4
+    },
+    {
+      "label_hint": "earnest-intern",
+      "turn_indices": [
+        5
+      ],
+      "names_heard": [],
+      "likely_role": "junior employee seeking validation",
+      "register": "earnest",
+      "signature_lines": [
+        "we need to push harder"
+      ],
+      "interpersonal_note": "offers alternative solution that gets dismissed in favor of cost-cutting",
+      "best_frame_idx": 5
+    }
+  ]
+}

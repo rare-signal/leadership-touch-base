@@ -1,0 +1,859 @@
+{
+  "video_id": "TirJZUa620U",
+  "duration": 42.99,
+  "language": "en",
+  "model": "small.en",
+  "compute_type": "int8",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.46,
+      "text": "to quickly flag that tax day is this Wednesday, right? We should anticipate some mental bandwidth",
+      "avg_logprob": -0.1872,
+      "speaker_turn": 0
+    },
+    {
+      "start": 5.46,
+      "end": 12.42,
+      "text": "being temporarily reallocated across the org, right? And zooming out from a workflow perspective,",
+      "avg_logprob": -0.1872,
+      "speaker_turn": 0
+    },
+    {
+      "start": 12.76,
+      "end": 18.76,
+      "text": "right? Even a modest increase in finance related external focus can have downstream impacts on",
+      "avg_logprob": -0.1872,
+      "speaker_turn": 0
+    },
+    {
+      "start": 18.76,
+      "end": 25.36,
+      "text": "day to day execution, right? So in the spirit of being pragmatic here, right? It's no question",
+      "avg_logprob": -0.1872,
+      "speaker_turn": 0
+    },
+    {
+      "start": 25.36,
+      "end": 30.06,
+      "text": "that midway tax-based deliverables may create a bit of cognitive overhead amongst personnel,",
+      "avg_logprob": -0.2693,
+      "speaker_turn": 0
+    },
+    {
+      "start": 30.18,
+      "end": 35.22,
+      "text": "right? Absolutely. And if I can close that loop real quick, given the impending fiscal reporting",
+      "avg_logprob": -0.2693,
+      "speaker_turn": 0
+    },
+    {
+      "start": 35.22,
+      "end": 40.32,
+      "text": "applications of this Wednesday, right? How can we allow the org around minimizing any corresponding",
+      "avg_logprob": -0.2693,
+      "speaker_turn": 0
+    },
+    {
+      "start": 40.32,
+      "end": 42.96,
+      "text": "total short-term productivity disruption, right?",
+      "avg_logprob": -0.5878,
+      "speaker_turn": 0
+    }
+  ],
+  "words": [
+    {
+      "start": 0.0,
+      "end": 0.14,
+      "word": " to",
+      "probability": 0.1441,
+      "speaker_turn": 0
+    },
+    {
+      "start": 0.14,
+      "end": 0.36,
+      "word": " quickly",
+      "probability": 0.9055,
+      "speaker_turn": 0
+    },
+    {
+      "start": 0.36,
+      "end": 0.78,
+      "word": " flag",
+      "probability": 0.9833,
+      "speaker_turn": 0
+    },
+    {
+      "start": 0.78,
+      "end": 1.0,
+      "word": " that",
+      "probability": 0.9199,
+      "speaker_turn": 0
+    },
+    {
+      "start": 1.0,
+      "end": 1.3,
+      "word": " tax",
+      "probability": 0.5812,
+      "speaker_turn": 0
+    },
+    {
+      "start": 1.3,
+      "end": 1.6,
+      "word": " day",
+      "probability": 0.8586,
+      "speaker_turn": 0
+    },
+    {
+      "start": 1.6,
+      "end": 1.9,
+      "word": " is",
+      "probability": 0.9747,
+      "speaker_turn": 0
+    },
+    {
+      "start": 1.9,
+      "end": 2.14,
+      "word": " this",
+      "probability": 0.984,
+      "speaker_turn": 0
+    },
+    {
+      "start": 2.14,
+      "end": 2.76,
+      "word": " Wednesday,",
+      "probability": 0.863,
+      "speaker_turn": 0
+    },
+    {
+      "start": 2.92,
+      "end": 3.26,
+      "word": " right?",
+      "probability": 0.964,
+      "speaker_turn": 0
+    },
+    {
+      "start": 3.5,
+      "end": 3.86,
+      "word": " We",
+      "probability": 0.4489,
+      "speaker_turn": 0
+    },
+    {
+      "start": 3.86,
+      "end": 4.04,
+      "word": " should",
+      "probability": 0.9282,
+      "speaker_turn": 0
+    },
+    {
+      "start": 4.04,
+      "end": 4.52,
+      "word": " anticipate",
+      "probability": 0.9969,
+      "speaker_turn": 0
+    },
+    {
+      "start": 4.52,
+      "end": 4.74,
+      "word": " some",
+      "probability": 0.872,
+      "speaker_turn": 0
+    },
+    {
+      "start": 4.74,
+      "end": 5.04,
+      "word": " mental",
+      "probability": 0.9951,
+      "speaker_turn": 0
+    },
+    {
+      "start": 5.04,
+      "end": 5.46,
+      "word": " bandwidth",
+      "probability": 0.9624,
+      "speaker_turn": 0
+    },
+    {
+      "start": 5.46,
+      "end": 5.8,
+      "word": " being",
+      "probability": 0.9649,
+      "speaker_turn": 0
+    },
+    {
+      "start": 5.8,
+      "end": 6.38,
+      "word": " temporarily",
+      "probability": 0.9551,
+      "speaker_turn": 0
+    },
+    {
+      "start": 6.38,
+      "end": 7.14,
+      "word": " reallocated",
+      "probability": 0.9815,
+      "speaker_turn": 0
+    },
+    {
+      "start": 7.14,
+      "end": 7.48,
+      "word": " across",
+      "probability": 0.996,
+      "speaker_turn": 0
+    },
+    {
+      "start": 7.48,
+      "end": 7.72,
+      "word": " the",
+      "probability": 0.9936,
+      "speaker_turn": 0
+    },
+    {
+      "start": 7.72,
+      "end": 8.28,
+      "word": " org,",
+      "probability": 0.947,
+      "speaker_turn": 0
+    },
+    {
+      "start": 8.28,
+      "end": 8.64,
+      "word": " right?",
+      "probability": 0.8142,
+      "speaker_turn": 0
+    },
+    {
+      "start": 9.68,
+      "end": 9.7,
+      "word": " And",
+      "probability": 0.2675,
+      "speaker_turn": 0
+    },
+    {
+      "start": 9.7,
+      "end": 10.94,
+      "word": " zooming",
+      "probability": 0.9558,
+      "speaker_turn": 0
+    },
+    {
+      "start": 10.94,
+      "end": 11.14,
+      "word": " out",
+      "probability": 0.9971,
+      "speaker_turn": 0
+    },
+    {
+      "start": 11.14,
+      "end": 11.28,
+      "word": " from",
+      "probability": 0.9969,
+      "speaker_turn": 0
+    },
+    {
+      "start": 11.28,
+      "end": 11.42,
+      "word": " a",
+      "probability": 0.9854,
+      "speaker_turn": 0
+    },
+    {
+      "start": 11.42,
+      "end": 11.86,
+      "word": " workflow",
+      "probability": 0.9945,
+      "speaker_turn": 0
+    },
+    {
+      "start": 11.86,
+      "end": 12.42,
+      "word": " perspective,",
+      "probability": 0.9977,
+      "speaker_turn": 0
+    },
+    {
+      "start": 12.76,
+      "end": 12.94,
+      "word": " right?",
+      "probability": 0.9632,
+      "speaker_turn": 0
+    },
+    {
+      "start": 13.8,
+      "end": 14.08,
+      "word": " Even",
+      "probability": 0.8551,
+      "speaker_turn": 0
+    },
+    {
+      "start": 14.08,
+      "end": 14.22,
+      "word": " a",
+      "probability": 0.9962,
+      "speaker_turn": 0
+    },
+    {
+      "start": 14.22,
+      "end": 14.5,
+      "word": " modest",
+      "probability": 0.9982,
+      "speaker_turn": 0
+    },
+    {
+      "start": 14.5,
+      "end": 15.1,
+      "word": " increase",
+      "probability": 0.9982,
+      "speaker_turn": 0
+    },
+    {
+      "start": 15.1,
+      "end": 15.44,
+      "word": " in",
+      "probability": 0.9751,
+      "speaker_turn": 0
+    },
+    {
+      "start": 15.44,
+      "end": 15.8,
+      "word": " finance",
+      "probability": 0.9776,
+      "speaker_turn": 0
+    },
+    {
+      "start": 15.8,
+      "end": 16.02,
+      "word": " related",
+      "probability": 0.8084,
+      "speaker_turn": 0
+    },
+    {
+      "start": 16.02,
+      "end": 16.42,
+      "word": " external",
+      "probability": 0.8629,
+      "speaker_turn": 0
+    },
+    {
+      "start": 16.42,
+      "end": 16.84,
+      "word": " focus",
+      "probability": 0.9827,
+      "speaker_turn": 0
+    },
+    {
+      "start": 16.84,
+      "end": 17.56,
+      "word": " can",
+      "probability": 0.8324,
+      "speaker_turn": 0
+    },
+    {
+      "start": 17.56,
+      "end": 17.76,
+      "word": " have",
+      "probability": 0.9709,
+      "speaker_turn": 0
+    },
+    {
+      "start": 17.76,
+      "end": 18.12,
+      "word": " downstream",
+      "probability": 0.9857,
+      "speaker_turn": 0
+    },
+    {
+      "start": 18.12,
+      "end": 18.54,
+      "word": " impacts",
+      "probability": 0.9941,
+      "speaker_turn": 0
+    },
+    {
+      "start": 18.54,
+      "end": 18.76,
+      "word": " on",
+      "probability": 0.9901,
+      "speaker_turn": 0
+    },
+    {
+      "start": 18.76,
+      "end": 18.88,
+      "word": " day",
+      "probability": 0.5446,
+      "speaker_turn": 0
+    },
+    {
+      "start": 18.88,
+      "end": 18.98,
+      "word": " to",
+      "probability": 0.7544,
+      "speaker_turn": 0
+    },
+    {
+      "start": 18.98,
+      "end": 19.06,
+      "word": " day",
+      "probability": 0.9909,
+      "speaker_turn": 0
+    },
+    {
+      "start": 19.06,
+      "end": 19.82,
+      "word": " execution,",
+      "probability": 0.9968,
+      "speaker_turn": 0
+    },
+    {
+      "start": 20.08,
+      "end": 20.36,
+      "word": " right?",
+      "probability": 0.9554,
+      "speaker_turn": 0
+    },
+    {
+      "start": 20.62,
+      "end": 20.62,
+      "word": " So",
+      "probability": 0.3065,
+      "speaker_turn": 0
+    },
+    {
+      "start": 20.62,
+      "end": 20.92,
+      "word": " in",
+      "probability": 0.2995,
+      "speaker_turn": 0
+    },
+    {
+      "start": 20.92,
+      "end": 22.6,
+      "word": " the",
+      "probability": 0.9595,
+      "speaker_turn": 0
+    },
+    {
+      "start": 22.6,
+      "end": 22.8,
+      "word": " spirit",
+      "probability": 0.9669,
+      "speaker_turn": 0
+    },
+    {
+      "start": 22.8,
+      "end": 22.94,
+      "word": " of",
+      "probability": 0.9959,
+      "speaker_turn": 0
+    },
+    {
+      "start": 22.94,
+      "end": 23.02,
+      "word": " being",
+      "probability": 0.9764,
+      "speaker_turn": 0
+    },
+    {
+      "start": 23.02,
+      "end": 23.5,
+      "word": " pragmatic",
+      "probability": 0.9993,
+      "speaker_turn": 0
+    },
+    {
+      "start": 23.5,
+      "end": 23.82,
+      "word": " here,",
+      "probability": 0.8279,
+      "speaker_turn": 0
+    },
+    {
+      "start": 23.94,
+      "end": 24.18,
+      "word": " right?",
+      "probability": 0.9657,
+      "speaker_turn": 0
+    },
+    {
+      "start": 24.76,
+      "end": 24.92,
+      "word": " It's",
+      "probability": 0.9934,
+      "speaker_turn": 0
+    },
+    {
+      "start": 24.92,
+      "end": 25.06,
+      "word": " no",
+      "probability": 0.9961,
+      "speaker_turn": 0
+    },
+    {
+      "start": 25.06,
+      "end": 25.36,
+      "word": " question",
+      "probability": 0.9987,
+      "speaker_turn": 0
+    },
+    {
+      "start": 25.36,
+      "end": 25.74,
+      "word": " that",
+      "probability": 0.1879,
+      "speaker_turn": 0
+    },
+    {
+      "start": 25.74,
+      "end": 26.04,
+      "word": " midway",
+      "probability": 0.3588,
+      "speaker_turn": 0
+    },
+    {
+      "start": 26.04,
+      "end": 26.36,
+      "word": " tax",
+      "probability": 0.9225,
+      "speaker_turn": 0
+    },
+    {
+      "start": 26.36,
+      "end": 26.6,
+      "word": "-based",
+      "probability": 0.6408,
+      "speaker_turn": 0
+    },
+    {
+      "start": 26.6,
+      "end": 27.18,
+      "word": " deliverables",
+      "probability": 0.7358,
+      "speaker_turn": 0
+    },
+    {
+      "start": 27.18,
+      "end": 27.46,
+      "word": " may",
+      "probability": 0.9866,
+      "speaker_turn": 0
+    },
+    {
+      "start": 27.46,
+      "end": 27.7,
+      "word": " create",
+      "probability": 0.9962,
+      "speaker_turn": 0
+    },
+    {
+      "start": 27.7,
+      "end": 27.78,
+      "word": " a",
+      "probability": 0.9915,
+      "speaker_turn": 0
+    },
+    {
+      "start": 27.78,
+      "end": 27.86,
+      "word": " bit",
+      "probability": 0.9865,
+      "speaker_turn": 0
+    },
+    {
+      "start": 27.86,
+      "end": 28.0,
+      "word": " of",
+      "probability": 0.9947,
+      "speaker_turn": 0
+    },
+    {
+      "start": 28.0,
+      "end": 28.3,
+      "word": " cognitive",
+      "probability": 0.9927,
+      "speaker_turn": 0
+    },
+    {
+      "start": 28.3,
+      "end": 28.9,
+      "word": " overhead",
+      "probability": 0.937,
+      "speaker_turn": 0
+    },
+    {
+      "start": 28.9,
+      "end": 29.4,
+      "word": " amongst",
+      "probability": 0.7948,
+      "speaker_turn": 0
+    },
+    {
+      "start": 29.4,
+      "end": 30.06,
+      "word": " personnel,",
+      "probability": 0.9933,
+      "speaker_turn": 0
+    },
+    {
+      "start": 30.18,
+      "end": 30.46,
+      "word": " right?",
+      "probability": 0.8811,
+      "speaker_turn": 0
+    },
+    {
+      "start": 30.94,
+      "end": 31.0,
+      "word": " Absolutely.",
+      "probability": 0.1506,
+      "speaker_turn": 0
+    },
+    {
+      "start": 31.58,
+      "end": 31.58,
+      "word": " And",
+      "probability": 0.7083,
+      "speaker_turn": 0
+    },
+    {
+      "start": 31.58,
+      "end": 31.7,
+      "word": " if",
+      "probability": 0.8295,
+      "speaker_turn": 0
+    },
+    {
+      "start": 31.7,
+      "end": 31.82,
+      "word": " I",
+      "probability": 0.9876,
+      "speaker_turn": 0
+    },
+    {
+      "start": 31.82,
+      "end": 31.98,
+      "word": " can",
+      "probability": 0.9047,
+      "speaker_turn": 0
+    },
+    {
+      "start": 31.98,
+      "end": 32.34,
+      "word": " close",
+      "probability": 0.8209,
+      "speaker_turn": 0
+    },
+    {
+      "start": 32.34,
+      "end": 32.62,
+      "word": " that",
+      "probability": 0.9179,
+      "speaker_turn": 0
+    },
+    {
+      "start": 32.62,
+      "end": 32.82,
+      "word": " loop",
+      "probability": 0.8873,
+      "speaker_turn": 0
+    },
+    {
+      "start": 32.82,
+      "end": 33.0,
+      "word": " real",
+      "probability": 0.9711,
+      "speaker_turn": 0
+    },
+    {
+      "start": 33.0,
+      "end": 33.34,
+      "word": " quick,",
+      "probability": 0.9974,
+      "speaker_turn": 0
+    },
+    {
+      "start": 33.74,
+      "end": 33.88,
+      "word": " given",
+      "probability": 0.9576,
+      "speaker_turn": 0
+    },
+    {
+      "start": 33.88,
+      "end": 34.08,
+      "word": " the",
+      "probability": 0.9988,
+      "speaker_turn": 0
+    },
+    {
+      "start": 34.08,
+      "end": 34.4,
+      "word": " impending",
+      "probability": 0.9971,
+      "speaker_turn": 0
+    },
+    {
+      "start": 34.4,
+      "end": 34.74,
+      "word": " fiscal",
+      "probability": 0.991,
+      "speaker_turn": 0
+    },
+    {
+      "start": 34.74,
+      "end": 35.22,
+      "word": " reporting",
+      "probability": 0.9893,
+      "speaker_turn": 0
+    },
+    {
+      "start": 35.22,
+      "end": 35.84,
+      "word": " applications",
+      "probability": 0.4565,
+      "speaker_turn": 0
+    },
+    {
+      "start": 35.84,
+      "end": 36.22,
+      "word": " of",
+      "probability": 0.9693,
+      "speaker_turn": 0
+    },
+    {
+      "start": 36.22,
+      "end": 36.44,
+      "word": " this",
+      "probability": 0.9985,
+      "speaker_turn": 0
+    },
+    {
+      "start": 36.44,
+      "end": 36.86,
+      "word": " Wednesday,",
+      "probability": 0.9934,
+      "speaker_turn": 0
+    },
+    {
+      "start": 37.16,
+      "end": 37.16,
+      "word": " right?",
+      "probability": 0.9066,
+      "speaker_turn": 0
+    },
+    {
+      "start": 37.78,
+      "end": 37.78,
+      "word": " How",
+      "probability": 0.7437,
+      "speaker_turn": 0
+    },
+    {
+      "start": 37.78,
+      "end": 37.94,
+      "word": " can",
+      "probability": 0.9916,
+      "speaker_turn": 0
+    },
+    {
+      "start": 37.94,
+      "end": 38.08,
+      "word": " we",
+      "probability": 0.9867,
+      "speaker_turn": 0
+    },
+    {
+      "start": 38.08,
+      "end": 38.26,
+      "word": " allow",
+      "probability": 0.1909,
+      "speaker_turn": 0
+    },
+    {
+      "start": 38.26,
+      "end": 38.46,
+      "word": " the",
+      "probability": 0.1186,
+      "speaker_turn": 0
+    },
+    {
+      "start": 38.46,
+      "end": 38.76,
+      "word": " org",
+      "probability": 0.0792,
+      "speaker_turn": 0
+    },
+    {
+      "start": 38.76,
+      "end": 39.06,
+      "word": " around",
+      "probability": 0.9826,
+      "speaker_turn": 0
+    },
+    {
+      "start": 39.06,
+      "end": 39.58,
+      "word": " minimizing",
+      "probability": 0.969,
+      "speaker_turn": 0
+    },
+    {
+      "start": 39.58,
+      "end": 39.86,
+      "word": " any",
+      "probability": 0.9781,
+      "speaker_turn": 0
+    },
+    {
+      "start": 39.86,
+      "end": 40.32,
+      "word": " corresponding",
+      "probability": 0.987,
+      "speaker_turn": 0
+    },
+    {
+      "start": 40.32,
+      "end": 40.68,
+      "word": " total",
+      "probability": 0.0154,
+      "speaker_turn": 0
+    },
+    {
+      "start": 40.68,
+      "end": 40.98,
+      "word": " short",
+      "probability": 0.3397,
+      "speaker_turn": 0
+    },
+    {
+      "start": 40.98,
+      "end": 41.2,
+      "word": "-term",
+      "probability": 0.7514,
+      "speaker_turn": 0
+    },
+    {
+      "start": 41.2,
+      "end": 41.64,
+      "word": " productivity",
+      "probability": 0.9827,
+      "speaker_turn": 0
+    },
+    {
+      "start": 41.64,
+      "end": 42.34,
+      "word": " disruption,",
+      "probability": 0.9922,
+      "speaker_turn": 0
+    },
+    {
+      "start": 42.5,
+      "end": 42.96,
+      "word": " right?",
+      "probability": 0.9891,
+      "speaker_turn": 0
+    }
+  ],
+  "srt_turn_markers": []
+}

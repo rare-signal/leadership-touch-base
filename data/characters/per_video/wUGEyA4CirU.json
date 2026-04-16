@@ -1,0 +1,85 @@
+{
+  "video_id": "wUGEyA4CirU",
+  "scene_summary": "A corporate meeting where a manager (Ryan) is forced to explain why his absence will slow things down, while the rest of the team pretends this is a serious strategic concern.",
+  "observations": [
+    {
+      "label_hint": "cold-boss-ryan",
+      "turn_indices": [
+        0,
+        4
+      ],
+      "names_heard": [],
+      "likely_role": "manager / lead engineer",
+      "register": "monotone",
+      "signature_lines": [
+        "despite being out of office. Ryan was kind enough to join us today just to quickly recalibrate on the potential downstream applications of his absence, right?",
+        "my unavailability will create some deceleration across my core work streams."
+      ],
+      "interpersonal_note": "the only one who actually acknowledges their own absence; everyone else treats it as a major crisis",
+      "best_frame_idx": 0
+    },
+    {
+      "label_hint": "bro-coworker",
+      "turn_indices": [
+        1,
+        6
+      ],
+      "names_heard": [],
+      "likely_role": "colleague / peer",
+      "register": "bro-chill",
+      "signature_lines": [
+        "And just from a sort of execution standpoint,",
+        "Real question."
+      ],
+      "interpersonal_note": "tries to sound serious but keeps slipping into casual speech; clearly not buying the drama",
+      "best_frame_idx": 2
+    },
+    {
+      "label_hint": "earnest-intern",
+      "turn_indices": [
+        3,
+        7
+      ],
+      "names_heard": [],
+      "likely_role": "junior employee / intern",
+      "register": "earnest",
+      "signature_lines": [
+        "that you being offline will produce the subsequent productivity delta for us to strategically neutralize.",
+        "I think I'm gonna line up here"
+      ],
+      "interpersonal_note": "overly formal and trying too hard; their 'serious' analysis is just nonsense corporate jargon",
+      "best_frame_idx": 3
+    },
+    {
+      "label_hint": "sycophant",
+      "turn_indices": [
+        5,
+        9
+      ],
+      "names_heard": [],
+      "likely_role": "yes-man / team member",
+      "register": "sycophant",
+      "signature_lines": [
+        "No question.",
+        "Right, so I think that-"
+      ],
+      "interpersonal_note": "always agrees with whatever's being said; no opinion of their own",
+      "best_frame_idx": 4
+    },
+    {
+      "label_hint": "chaos-agent",
+      "turn_indices": [
+        8
+      ],
+      "names_heard": [],
+      "likely_role": "colleague / peer",
+      "register": "chaos-agent",
+      "signature_lines": [
+        "Yeah, super helpful.",
+        "Yeah, yeah, go ahead."
+      ],
+      "interpersonal_note": "interrupts and changes the subject mid-sentence; can't stay on topic for more than a second",
+      "best_frame_idx": 5
+    }
+  ]
+}

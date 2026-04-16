@@ -1,0 +1,60 @@
+{
+  "video_id": "ts6m_SCQ8_w",
+  "scene_summary": "A corporate meeting where leadership tries to spin February's underperformance as a 'strategic acceleration opportunity' while junior staff nervously second-guess their own analysis.",
+  "observations": [
+    {
+      "label_hint": "cold-boss",
+      "turn_indices": [
+        0,
+        3
+      ],
+      "names_heard": [
+        "you"
+      ],
+      "likely_role": "VP/Head of Operations (the one who owns the numbers)",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "Before we dive into our March roadmap, I did want to surface that February closed just below our projected performance forecast models.",
+        "Right, so become more- Surely, surely."
+      ],
+      "interpersonal_note": "speaks first and most often; sets the tone for the whole meeting; others defer to them",
+      "best_frame_idx": 0
+    },
+    {
+      "label_hint": "sycophant",
+      "turn_indices": [
+        1,
+        4
+      ],
+      "names_heard": [
+        "you"
+      ],
+      "likely_role": "middle manager / analyst (the one who validates leadership's framing)",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "Yeah, go ahead. We look at February attainment from a sort of achievement perspective.",
+        "And I think go ahead, getting that here is that we effectively were affected by February shrunk in chronological architecture, right? So now the issue- Oh, absolutely."
+      ],
+      "interpersonal_note": "immediately agrees with and amplifies the cold-boss's points; never contradicts anyone",
+      "best_frame_idx": 1
+    },
+    {
+      "label_hint": "earnest-intern",
+      "turn_indices": [
+        2,
+        5
+      ],
+      "names_heard": [
+        "you"
+      ],
+      "likely_role": "junior analyst / data person (the one who tries to be helpful but keeps getting talked over)",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "Right precisely, yes.",
+        "And I think what we should take a look at is does the under-convergence of the February benchmark offer a strategic acceleration opportunity for March? Right."
+      ],
+      "interpersonal_note": "tries to contribute thoughtful analysis but is consistently interrupted or cut off by others; their insights are only acknowledged after they've been dismissed",
+      "best_frame_idx": 5
+    }
+  ]
+}

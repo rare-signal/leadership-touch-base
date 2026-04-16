@@ -1,0 +1,854 @@
+{
+  "video_id": "6c4ezOY-HOc",
+  "duration": 32.35,
+  "language": "en",
+  "model": "small.en",
+  "compute_type": "int8",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.48,
+      "text": "based on February one last time. It's ultimately a question of, okay, how can we streamline",
+      "avg_logprob": -0.2571,
+      "speaker_turn": 0
+    },
+    {
+      "start": 4.48,
+      "end": 8.54,
+      "text": "optimization within the irregular calendary constraints we're being forced to navigate?",
+      "avg_logprob": -0.2571,
+      "speaker_turn": 0
+    },
+    {
+      "start": 9.68,
+      "end": 13.6,
+      "text": "Yes, so important to elevate that. So important. I think with February, it really starts with",
+      "avg_logprob": -0.2571,
+      "speaker_turn": 0
+    },
+    {
+      "start": 13.6,
+      "end": 17.48,
+      "text": "just heightened time awareness around that reduced execution bandwidth.",
+      "avg_logprob": -0.2571,
+      "speaker_turn": 3
+    },
+    {
+      "start": 17.84,
+      "end": 19.62,
+      "text": "Right. Mind your just piggyback on that one quick.",
+      "avg_logprob": -0.2571,
+      "speaker_turn": 3
+    },
+    {
+      "start": 20.08,
+      "end": 23.36,
+      "text": "Without getting into the weeds, I think what we're dealing with here is a length",
+      "avg_logprob": -0.2571,
+      "speaker_turn": 6
+    },
+    {
+      "start": 23.36,
+      "end": 25.06,
+      "text": "disadvantage time cycle.",
+      "avg_logprob": -0.2571,
+      "speaker_turn": 6
+    },
+    {
+      "start": 25.14,
+      "end": 25.32,
+      "text": "Yes.",
+      "avg_logprob": -0.2571,
+      "speaker_turn": 6
+    },
+    {
+      "start": 25.84,
+      "end": 28.82,
+      "text": "Yeah, and just kind of stitch that together. Like functionally, I think it's a matter of,",
+      "avg_logprob": -0.2571,
+      "speaker_turn": 6
+    },
+    {
+      "start": 28.82,
+      "end": 32.22,
+      "text": "okay, how do we solve for less month, right?",
+      "avg_logprob": -0.3978,
+      "speaker_turn": 9
+    }
+  ],
+  "words": [
+    {
+      "start": 0.0,
+      "end": 0.22,
+      "word": " based",
+      "probability": 0.2688,
+      "speaker_turn": 0
+    },
+    {
+      "start": 0.22,
+      "end": 0.44,
+      "word": " on",
+      "probability": 0.9888,
+      "speaker_turn": 0
+    },
+    {
+      "start": 0.44,
+      "end": 0.66,
+      "word": " February",
+      "probability": 0.9298,
+      "speaker_turn": 0
+    },
+    {
+      "start": 0.66,
+      "end": 1.02,
+      "word": " one",
+      "probability": 0.7008,
+      "speaker_turn": 0
+    },
+    {
+      "start": 1.02,
+      "end": 1.28,
+      "word": " last",
+      "probability": 0.9751,
+      "speaker_turn": 0
+    },
+    {
+      "start": 1.28,
+      "end": 1.56,
+      "word": " time.",
+      "probability": 0.9964,
+      "speaker_turn": 0
+    },
+    {
+      "start": 1.82,
+      "end": 1.92,
+      "word": " It's",
+      "probability": 0.9747,
+      "speaker_turn": 0
+    },
+    {
+      "start": 1.92,
+      "end": 2.2,
+      "word": " ultimately",
+      "probability": 0.9948,
+      "speaker_turn": 0
+    },
+    {
+      "start": 2.2,
+      "end": 2.38,
+      "word": " a",
+      "probability": 0.9899,
+      "speaker_turn": 0
+    },
+    {
+      "start": 2.38,
+      "end": 2.62,
+      "word": " question",
+      "probability": 0.9983,
+      "speaker_turn": 0
+    },
+    {
+      "start": 2.62,
+      "end": 2.88,
+      "word": " of,",
+      "probability": 0.9519,
+      "speaker_turn": 0
+    },
+    {
+      "start": 3.16,
+      "end": 3.18,
+      "word": " okay,",
+      "probability": 0.5996,
+      "speaker_turn": 0
+    },
+    {
+      "start": 3.54,
+      "end": 3.62,
+      "word": " how",
+      "probability": 0.9601,
+      "speaker_turn": 0
+    },
+    {
+      "start": 3.62,
+      "end": 3.76,
+      "word": " can",
+      "probability": 0.9802,
+      "speaker_turn": 0
+    },
+    {
+      "start": 3.76,
+      "end": 3.9,
+      "word": " we",
+      "probability": 0.9969,
+      "speaker_turn": 0
+    },
+    {
+      "start": 3.9,
+      "end": 4.48,
+      "word": " streamline",
+      "probability": 0.9975,
+      "speaker_turn": 0
+    },
+    {
+      "start": 4.48,
+      "end": 4.98,
+      "word": " optimization",
+      "probability": 0.994,
+      "speaker_turn": 0
+    },
+    {
+      "start": 4.98,
+      "end": 5.78,
+      "word": " within",
+      "probability": 0.987,
+      "speaker_turn": 0
+    },
+    {
+      "start": 5.78,
+      "end": 6.0,
+      "word": " the",
+      "probability": 0.9957,
+      "speaker_turn": 0
+    },
+    {
+      "start": 6.0,
+      "end": 6.38,
+      "word": " irregular",
+      "probability": 0.8767,
+      "speaker_turn": 0
+    },
+    {
+      "start": 6.38,
+      "end": 6.9,
+      "word": " calendary",
+      "probability": 0.6495,
+      "speaker_turn": 0
+    },
+    {
+      "start": 6.9,
+      "end": 7.38,
+      "word": " constraints",
+      "probability": 0.9882,
+      "speaker_turn": 0
+    },
+    {
+      "start": 7.38,
+      "end": 7.6,
+      "word": " we're",
+      "probability": 0.6654,
+      "speaker_turn": 0
+    },
+    {
+      "start": 7.6,
+      "end": 7.76,
+      "word": " being",
+      "probability": 0.9343,
+      "speaker_turn": 0
+    },
+    {
+      "start": 7.76,
+      "end": 8.02,
+      "word": " forced",
+      "probability": 0.9967,
+      "speaker_turn": 0
+    },
+    {
+      "start": 8.02,
+      "end": 8.22,
+      "word": " to",
+      "probability": 0.9978,
+      "speaker_turn": 0
+    },
+    {
+      "start": 8.22,
+      "end": 8.54,
+      "word": " navigate?",
+      "probability": 0.9991,
+      "speaker_turn": 0
+    },
+    {
+      "start": 9.68,
+      "end": 9.84,
+      "word": " Yes,",
+      "probability": 0.0238,
+      "speaker_turn": 0
+    },
+    {
+      "start": 10.2,
+      "end": 10.2,
+      "word": " so",
+      "probability": 0.77,
+      "speaker_turn": 0
+    },
+    {
+      "start": 10.2,
+      "end": 10.5,
+      "word": " important",
+      "probability": 0.9655,
+      "speaker_turn": 0
+    },
+    {
+      "start": 10.5,
+      "end": 10.68,
+      "word": " to",
+      "probability": 0.3111,
+      "speaker_turn": 1
+    },
+    {
+      "start": 10.68,
+      "end": 10.94,
+      "word": " elevate",
+      "probability": 0.7781,
+      "speaker_turn": 1
+    },
+    {
+      "start": 10.94,
+      "end": 11.18,
+      "word": " that.",
+      "probability": 0.8701,
+      "speaker_turn": 1
+    },
+    {
+      "start": 11.44,
+      "end": 11.46,
+      "word": " So",
+      "probability": 0.7332,
+      "speaker_turn": 1
+    },
+    {
+      "start": 11.46,
+      "end": 11.76,
+      "word": " important.",
+      "probability": 0.9625,
+      "speaker_turn": 1
+    },
+    {
+      "start": 11.96,
+      "end": 11.96,
+      "word": " I",
+      "probability": 0.9802,
+      "speaker_turn": 3
+    },
+    {
+      "start": 11.96,
+      "end": 12.1,
+      "word": " think",
+      "probability": 0.9995,
+      "speaker_turn": 3
+    },
+    {
+      "start": 12.1,
+      "end": 12.28,
+      "word": " with",
+      "probability": 0.9614,
+      "speaker_turn": 3
+    },
+    {
+      "start": 12.28,
+      "end": 12.64,
+      "word": " February,",
+      "probability": 0.9688,
+      "speaker_turn": 3
+    },
+    {
+      "start": 12.82,
+      "end": 12.84,
+      "word": " it",
+      "probability": 0.9827,
+      "speaker_turn": 3
+    },
+    {
+      "start": 12.84,
+      "end": 13.0,
+      "word": " really",
+      "probability": 0.9983,
+      "speaker_turn": 3
+    },
+    {
+      "start": 13.0,
+      "end": 13.32,
+      "word": " starts",
+      "probability": 0.9906,
+      "speaker_turn": 3
+    },
+    {
+      "start": 13.32,
+      "end": 13.6,
+      "word": " with",
+      "probability": 0.9966,
+      "speaker_turn": 3
+    },
+    {
+      "start": 13.6,
+      "end": 13.98,
+      "word": " just",
+      "probability": 0.5403,
+      "speaker_turn": 3
+    },
+    {
+      "start": 13.98,
+      "end": 14.26,
+      "word": " heightened",
+      "probability": 0.9823,
+      "speaker_turn": 3
+    },
+    {
+      "start": 14.26,
+      "end": 14.6,
+      "word": " time",
+      "probability": 0.9978,
+      "speaker_turn": 3
+    },
+    {
+      "start": 14.6,
+      "end": 15.06,
+      "word": " awareness",
+      "probability": 0.9911,
+      "speaker_turn": 3
+    },
+    {
+      "start": 15.06,
+      "end": 15.72,
+      "word": " around",
+      "probability": 0.9849,
+      "speaker_turn": 3
+    },
+    {
+      "start": 15.72,
+      "end": 16.0,
+      "word": " that",
+      "probability": 0.9971,
+      "speaker_turn": 3
+    },
+    {
+      "start": 16.0,
+      "end": 16.26,
+      "word": " reduced",
+      "probability": 0.987,
+      "speaker_turn": 3
+    },
+    {
+      "start": 16.26,
+      "end": 16.94,
+      "word": " execution",
+      "probability": 0.9934,
+      "speaker_turn": 3
+    },
+    {
+      "start": 16.94,
+      "end": 17.48,
+      "word": " bandwidth.",
+      "probability": 0.9987,
+      "speaker_turn": 3
+    },
+    {
+      "start": 17.84,
+      "end": 17.84,
+      "word": " Right.",
+      "probability": 0.1402,
+      "speaker_turn": 3
+    },
+    {
+      "start": 18.0,
+      "end": 18.18,
+      "word": " Mind",
+      "probability": 0.0517,
+      "speaker_turn": 3
+    },
+    {
+      "start": 18.18,
+      "end": 18.32,
+      "word": " your",
+      "probability": 0.2329,
+      "speaker_turn": 4
+    },
+    {
+      "start": 18.32,
+      "end": 18.52,
+      "word": " just",
+      "probability": 0.3406,
+      "speaker_turn": 4
+    },
+    {
+      "start": 18.52,
+      "end": 18.88,
+      "word": " piggyback",
+      "probability": 0.8783,
+      "speaker_turn": 4
+    },
+    {
+      "start": 18.88,
+      "end": 19.08,
+      "word": " on",
+      "probability": 0.5412,
+      "speaker_turn": 4
+    },
+    {
+      "start": 19.08,
+      "end": 19.24,
+      "word": " that",
+      "probability": 0.9316,
+      "speaker_turn": 4
+    },
+    {
+      "start": 19.24,
+      "end": 19.42,
+      "word": " one",
+      "probability": 0.4784,
+      "speaker_turn": 4
+    },
+    {
+      "start": 19.42,
+      "end": 19.62,
+      "word": " quick.",
+      "probability": 0.7305,
+      "speaker_turn": 4
+    },
+    {
+      "start": 20.08,
+      "end": 20.3,
+      "word": " Without",
+      "probability": 0.2777,
+      "speaker_turn": 6
+    },
+    {
+      "start": 20.3,
+      "end": 20.54,
+      "word": " getting",
+      "probability": 0.9875,
+      "speaker_turn": 6
+    },
+    {
+      "start": 20.54,
+      "end": 20.78,
+      "word": " into",
+      "probability": 0.902,
+      "speaker_turn": 6
+    },
+    {
+      "start": 20.78,
+      "end": 20.94,
+      "word": " the",
+      "probability": 0.9972,
+      "speaker_turn": 6
+    },
+    {
+      "start": 20.94,
+      "end": 21.16,
+      "word": " weeds,",
+      "probability": 0.9987,
+      "speaker_turn": 6
+    },
+    {
+      "start": 21.36,
+      "end": 21.4,
+      "word": " I",
+      "probability": 0.995,
+      "speaker_turn": 6
+    },
+    {
+      "start": 21.4,
+      "end": 21.62,
+      "word": " think",
+      "probability": 0.9996,
+      "speaker_turn": 6
+    },
+    {
+      "start": 21.62,
+      "end": 21.84,
+      "word": " what",
+      "probability": 0.9613,
+      "speaker_turn": 6
+    },
+    {
+      "start": 21.84,
+      "end": 22.02,
+      "word": " we're",
+      "probability": 0.999,
+      "speaker_turn": 6
+    },
+    {
+      "start": 22.02,
+      "end": 22.18,
+      "word": " dealing",
+      "probability": 0.9995,
+      "speaker_turn": 6
+    },
+    {
+      "start": 22.18,
+      "end": 22.44,
+      "word": " with",
+      "probability": 0.9987,
+      "speaker_turn": 6
+    },
+    {
+      "start": 22.44,
+      "end": 22.64,
+      "word": " here",
+      "probability": 0.9983,
+      "speaker_turn": 6
+    },
+    {
+      "start": 22.64,
+      "end": 22.9,
+      "word": " is",
+      "probability": 0.982,
+      "speaker_turn": 6
+    },
+    {
+      "start": 22.9,
+      "end": 23.04,
+      "word": " a",
+      "probability": 0.9743,
+      "speaker_turn": 6
+    },
+    {
+      "start": 23.04,
+      "end": 23.36,
+      "word": " length",
+      "probability": 0.9562,
+      "speaker_turn": 6
+    },
+    {
+      "start": 23.36,
+      "end": 24.12,
+      "word": " disadvantage",
+      "probability": 0.6586,
+      "speaker_turn": 6
+    },
+    {
+      "start": 24.12,
+      "end": 24.56,
+      "word": " time",
+      "probability": 0.9671,
+      "speaker_turn": 6
+    },
+    {
+      "start": 24.56,
+      "end": 25.06,
+      "word": " cycle.",
+      "probability": 0.9958,
+      "speaker_turn": 6
+    },
+    {
+      "start": 25.14,
+      "end": 25.32,
+      "word": " Yes.",
+      "probability": 0.47,
+      "speaker_turn": 6
+    },
+    {
+      "start": 25.84,
+      "end": 25.9,
+      "word": " Yeah,",
+      "probability": 0.1728,
+      "speaker_turn": 6
+    },
+    {
+      "start": 26.0,
+      "end": 26.04,
+      "word": " and",
+      "probability": 0.6709,
+      "speaker_turn": 6
+    },
+    {
+      "start": 26.04,
+      "end": 26.18,
+      "word": " just",
+      "probability": 0.9706,
+      "speaker_turn": 6
+    },
+    {
+      "start": 26.18,
+      "end": 26.36,
+      "word": " kind",
+      "probability": 0.6357,
+      "speaker_turn": 7
+    },
+    {
+      "start": 26.36,
+      "end": 26.54,
+      "word": " of",
+      "probability": 0.9959,
+      "speaker_turn": 7
+    },
+    {
+      "start": 26.54,
+      "end": 26.68,
+      "word": " stitch",
+      "probability": 0.3501,
+      "speaker_turn": 7
+    },
+    {
+      "start": 26.68,
+      "end": 26.92,
+      "word": " that",
+      "probability": 0.9837,
+      "speaker_turn": 7
+    },
+    {
+      "start": 26.92,
+      "end": 27.32,
+      "word": " together.",
+      "probability": 0.9971,
+      "speaker_turn": 7
+    },
+    {
+      "start": 27.5,
+      "end": 27.56,
+      "word": " Like",
+      "probability": 0.7014,
+      "speaker_turn": 7
+    },
+    {
+      "start": 27.56,
+      "end": 27.9,
+      "word": " functionally,",
+      "probability": 0.6258,
+      "speaker_turn": 7
+    },
+    {
+      "start": 28.06,
+      "end": 28.06,
+      "word": " I",
+      "probability": 0.9955,
+      "speaker_turn": 9
+    },
+    {
+      "start": 28.06,
+      "end": 28.18,
+      "word": " think",
+      "probability": 0.9997,
+      "speaker_turn": 9
+    },
+    {
+      "start": 28.18,
+      "end": 28.36,
+      "word": " it's",
+      "probability": 0.9951,
+      "speaker_turn": 9
+    },
+    {
+      "start": 28.36,
+      "end": 28.44,
+      "word": " a",
+      "probability": 0.9896,
+      "speaker_turn": 9
+    },
+    {
+      "start": 28.44,
+      "end": 28.56,
+      "word": " matter",
+      "probability": 0.9948,
+      "speaker_turn": 9
+    },
+    {
+      "start": 28.56,
+      "end": 28.82,
+      "word": " of,",
+      "probability": 0.8473,
+      "speaker_turn": 9
+    },
+    {
+      "start": 28.82,
+      "end": 29.1,
+      "word": " okay,",
+      "probability": 0.1741,
+      "speaker_turn": 9
+    },
+    {
+      "start": 29.56,
+      "end": 29.74,
+      "word": " how",
+      "probability": 0.0691,
+      "speaker_turn": 9
+    },
+    {
+      "start": 29.74,
+      "end": 29.78,
+      "word": " do",
+      "probability": 0.9912,
+      "speaker_turn": 9
+    },
+    {
+      "start": 29.78,
+      "end": 29.92,
+      "word": " we",
+      "probability": 0.9977,
+      "speaker_turn": 9
+    },
+    {
+      "start": 29.92,
+      "end": 30.18,
+      "word": " solve",
+      "probability": 0.9976,
+      "speaker_turn": 9
+    },
+    {
+      "start": 30.18,
+      "end": 30.42,
+      "word": " for",
+      "probability": 0.9939,
+      "speaker_turn": 9
+    },
+    {
+      "start": 30.42,
+      "end": 30.78,
+      "word": " less",
+      "probability": 0.941,
+      "speaker_turn": 9
+    },
+    {
+      "start": 30.78,
+      "end": 31.64,
+      "word": " month,",
+      "probability": 0.7609,
+      "speaker_turn": 9
+    },
+    {
+      "start": 31.88,
+      "end": 32.22,
+      "word": " right?",
+      "probability": 0.9953,
+      "speaker_turn": 9
+    }
+  ],
+  "srt_turn_markers": [
+    [
+      10.32,
+      1
+    ],
+    [
+      11.589,
+      2
+    ],
+    [
+      11.599,
+      3
+    ],
+    [
+      18.08,
+      4
+    ],
+    [
+      19.59,
+      5
+    ],
+    [
+      19.6,
+      6
+    ],
+    [
+      26.16,
+      7
+    ],
+    [
+      27.67,
+      8
+    ],
+    [
+      27.68,
+      9
+    ]
+  ]
+}

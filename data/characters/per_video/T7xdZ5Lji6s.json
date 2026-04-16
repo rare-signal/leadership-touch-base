@@ -1,0 +1,28 @@
+{
+  "video_id": "T7xdZ5Lji6s",
+  "scene_summary": "An intern's morning routine at LARP: waking up, getting dressed in corporate attire, grabbing coffee, and rushing to work while dealing with a demanding boss.",
+  "observations": [
+    {
+      "label_hint": "intern",
+      "turn_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "names_heard": [
+        "intern"
+      ],
+      "likely_role": "new hire / entry-level employee",
+      "register": "earnest",
+      "signature_lines": [
+        "All right. We've extracted 6 keyframes (indices 0..5) evenly spaced through the clip.",
+        "You cannot see them \u2014 just pick a plausible best_frame_idx for each character (characters speaking early = lower index, late = higher).",
+        "Return JSON ONLY, matching this schema exactly:",
+        "Be precise about turn_indices \u2014 assign each turn to exactly one character."
+      ],
+      "interpersonal_note": "the only character present in the scene; all dialogue is internal monologue describing their morning routine",
+      "best_frame_idx": 2
+    }
+  ]
+}

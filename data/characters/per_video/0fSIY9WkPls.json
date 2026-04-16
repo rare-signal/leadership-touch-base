@@ -1,0 +1,39 @@
+{
+  "video_id": "0fSIY9WkPls",
+  "scene_summary": "A corporate meeting where a nervous presenter tries to explain Q1's strategic importance while an overconfident colleague interrupts with buzzword-heavy corrections.",
+  "observations": [
+    {
+      "label_hint": "nervous-presenter",
+      "turn_indices": [
+        0,
+        1
+      ],
+      "names_heard": [],
+      "likely_role": "junior analyst or project lead presenting quarterly strategy",
+      "register": "earnest",
+      "signature_lines": [
+        "shift our focus to a broader Q1 conversation, right?",
+        "incredible catch. Go ahead.",
+        "I think we just need to be aware that Q1 is essentially that pivotal entry point into the fiscal calendar"
+      ],
+      "interpersonal_note": "seems deferential and eager to please; yields immediately when interrupted by the overconfident colleague",
+      "best_frame_idx": 0
+    },
+    {
+      "label_hint": "overconfident-colleague",
+      "turn_indices": [
+        2,
+        3
+      ],
+      "names_heard": [],
+      "likely_role": "senior strategist or VP-level exec who dominates meetings with corporate jargon",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "Q1 functions as sort of that primary throughput interval for 2026, right?",
+        "we are currently in the earliest quarterly installment"
+      ],
+      "interpersonal_note": "interrupts the nervous presenter repeatedly with 'corrections' and 'go ahead's \u2014 acts like they own the conversation",
+      "best_frame_idx": 3
+    }
+  ]
+}

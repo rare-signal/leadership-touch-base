@@ -1,0 +1,57 @@
+{
+  "video_id": "Tz0x8DcXQhE",
+  "scene_summary": "A corporate stand-up meeting where a nervous presenter tries to justify missing Q1 targets by blaming 'February' and 'runway constraints,' while the cold boss, a sycophantic assistant, and an earnest intern react.",
+  "observations": [
+    {
+      "label_hint": "cold-boss",
+      "turn_indices": [
+        0
+      ],
+      "names_heard": [
+        "you"
+      ],
+      "likely_role": "VP of Operations / quarterly accountability owner",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "to re-anchor the team here, right? And just quickly spotlight that.",
+        "End of quarter is tomorrow, right? 100%"
+      ],
+      "interpersonal_note": "holds everyone to quarterly benchmarks; treats February as a structural headwind rather than addressing root causes",
+      "best_frame_idx": 0
+    },
+    {
+      "label_hint": "sycophantic-assistant",
+      "turn_indices": [
+        3
+      ],
+      "names_heard": [
+        "you"
+      ],
+      "likely_role": "Executive Assistant / calendar gatekeeper",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "We've extracted 6 keyframes (indices 0..5) evenly spaced through the clip.",
+        "You cannot see them \u2014 just pick a plausible best_frame_idx for each character (characters speaking early = lower index, late = higher)."
+      ],
+      "interpersonal_note": "deflects to 'extracted keyframes' and 'plausible indices' rather than engaging with the actual problem",
+      "best_frame_idx": 3
+    },
+    {
+      "label_hint": "earnest-intern",
+      "turn_indices": [
+        5
+      ],
+      "names_heard": [
+        "you"
+      ],
+      "likely_role": "Junior Analyst / data wrangler",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "We've extracted 6 keyframes (indices 0..5) evenly spaced through the clip.",
+        "You cannot see them \u2014 just pick a plausible best_frame_idx for each character (characters speaking early = lower index, late = higher)."
+      ],
+      "interpersonal_note": "mirrors the assistant's deflection language; both are trapped in meta-corporate speak while the actual problem goes unaddressed",
+      "best_frame_idx": 5
+    }
+  ]
+}

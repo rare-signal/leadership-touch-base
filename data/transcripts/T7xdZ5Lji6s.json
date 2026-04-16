@@ -1,0 +1,33 @@
+{
+  "video_id": "T7xdZ5Lji6s",
+  "duration": 28.47,
+  "language": "en",
+  "model": "small.en",
+  "compute_type": "int8",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 0.86,
+      "text": "All right.",
+      "avg_logprob": -1.1883,
+      "speaker_turn": 0
+    }
+  ],
+  "words": [
+    {
+      "start": 0.0,
+      "end": 0.34,
+      "word": " All",
+      "probability": 0.0131,
+      "speaker_turn": 0
+    },
+    {
+      "start": 0.34,
+      "end": 0.86,
+      "word": " right.",
+      "probability": 0.4346,
+      "speaker_turn": 0
+    }
+  ],
+  "srt_turn_markers": []
+}

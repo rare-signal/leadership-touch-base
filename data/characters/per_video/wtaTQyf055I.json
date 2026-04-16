@@ -1,0 +1,99 @@
+{
+  "video_id": "wtaTQyf055I",
+  "scene_summary": "A corporate meeting where executives blame a shortfall in March performance on Charles's low golf outing cadence and argue that increasing his golf trips will free up time for team forums.",
+  "observations": [
+    {
+      "label_hint": "cold-boss",
+      "turn_indices": [
+        0,
+        3
+      ],
+      "names_heard": [],
+      "likely_role": "VP of Performance / Executive",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "where we dive too deep into our April roadmap"
+      ],
+      "interpersonal_note": "sets the tone for the meeting by immediately blaming Charles's golf cadence for March's shortfall",
+      "best_frame_idx": 0
+    },
+    {
+      "label_hint": "bro-coworker",
+      "turn_indices": [
+        1,
+        4
+      ],
+      "names_heard": [
+        "Charles"
+      ],
+      "likely_role": "Team Lead / Middle Manager",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "are a massively critical input for us"
+      ],
+      "interpersonal_note": "defends Charles's golf outings as essential to pipeline generation while also agreeing they need more team time",
+      "best_frame_idx": 1
+    },
+    {
+      "label_hint": "earnest-intern",
+      "turn_indices": [
+        2,
+        5
+      ],
+      "names_heard": [
+        "Charles"
+      ],
+      "likely_role": "Junior Associate / Analyst",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "And from a pipeline generation standpoint, Charles' odd course partner engagements are a massively critical input for us."
+      ],
+      "interpersonal_note": "echoes the boss's framing and adds that more golf trips would enable scheduled forums",
+      "best_frame_idx": 2
+    },
+    {
+      "label_hint": "sycophant",
+      "turn_indices": [
+        6
+      ],
+      "names_heard": [
+        "Charles"
+      ],
+      "likely_role": "VP of Culture / Enablement",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "Right, call out. For sure."
+      ],
+      "interpersonal_note": "pure agreement with the boss's framing without adding new content",
+      "best_frame_idx": 3
+    },
+    {
+      "label_hint": "chaos-agent",
+      "turn_indices": [
+        7
+      ],
+      "names_heard": [],
+      "likely_role": "Director of Strategy / Planning",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "And from a meeting perspective, right,"
+      ],
+      "interpersonal_note": "introduces the 'meeting' angle as another reason to increase Charles's golf cadence",
+      "best_frame_idx": 4
+    },
+    {
+      "label_hint": "earnest-intern",
+      "turn_indices": [
+        8
+      ],
+      "names_heard": [],
+      "likely_role": "Junior Associate / Analyst",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "hopefully you're still able to regularly elevate our discourse, right?"
+      ],
+      "interpersonal_note": "closes the loop by agreeing that golf trips will enable more forums and thus better discourse",
+      "best_frame_idx": 5
+    }
+  ]
+}

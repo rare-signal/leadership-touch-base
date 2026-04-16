@@ -1,0 +1,54 @@
+{
+  "video_id": "cnhFdroa3Fc",
+  "scene_summary": "A corporate team scrambles to make up for lost time after Daylight Savings cuts a week short.",
+  "observations": [
+    {
+      "label_hint": "cold-boss",
+      "turn_indices": [
+        0,
+        1
+      ],
+      "names_heard": [],
+      "likely_role": "manager/leader who sets the tone",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "I just wanted to quickly flag that the Daylight Savings Adjustment is this weekend, right?",
+        "Operationally speaking, if not properly mitigated, this seemingly minor temporal compression can create sizable downstream headwinds for us to correct for, right?"
+      ],
+      "interpersonal_note": "opens the meeting with buzzword-heavy framing; others immediately mirror and escalate",
+      "best_frame_idx": 0
+    },
+    {
+      "label_hint": "bro-coworker",
+      "turn_indices": [
+        2,
+        3,
+        4
+      ],
+      "names_heard": [],
+      "likely_role": "colleague who tries to keep it casual but gets pulled into the jargon",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "And I did just write it all out there, go ahead.",
+        "Totally, totally."
+      ],
+      "interpersonal_note": "initially dismissive ('go ahead') then fully on-boarded by the boss's language; later tries to pivot with 'strategically' but still uses corporate framing",
+      "best_frame_idx": 2
+    },
+    {
+      "label_hint": "earnest-intern",
+      "turn_indices": [
+        5
+      ],
+      "names_heard": [],
+      "likely_role": "new hire trying to sound like they belong",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "And if I might bug that out real quick, it's no question that we must proactively reclaim that hour from a workflow standpoint if we are to prevent any daylight-induced productivity decline, right?",
+        "So I'm very sure."
+      ],
+      "interpersonal_note": "over-qualifies every statement ('no question', 'very sure') and mirrors the boss's cadence; others treat them as an extension of the corporate voice",
+      "best_frame_idx": 5
+    }
+  ]
+}

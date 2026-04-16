@@ -1,0 +1,63 @@
+{
+  "video_id": "9nWj2i1wzeQ",
+  "scene_summary": "A corporate meeting at LARP where an earnest employee tries to pivot from February month-end close to March, only to be shut down by the cold boss and interrupted by a chaotic coworker.",
+  "observations": [
+    {
+      "label_hint": "cold-boss",
+      "turn_indices": [
+        0
+      ],
+      "names_heard": [],
+      "likely_role": "manager/executive",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "just wanted to reiterate that today is the last day of February, right?",
+        "given that we are effectively at month end close, I do want to underscore that anything we want reflected in February performance needs to materialize today"
+      ],
+      "interpersonal_note": "sets the rigid tone for the meeting; dismisses alternative strategies outright",
+      "best_frame_idx": 0
+    },
+    {
+      "label_hint": "earnest-intern",
+      "turn_indices": [
+        3
+      ],
+      "names_heard": [],
+      "likely_role": "junior employee trying to help",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "how can we eliminate blockers, focus on tangibles and pull forward any low handling proof to get us across the finish line"
+      ],
+      "interpersonal_note": "tries to salvage the situation with buzzword-heavy suggestions; gets cut off by the chaos agent",
+      "best_frame_idx": 3
+    },
+    {
+      "label_hint": "chaos-agent",
+      "turn_indices": [
+        9
+      ],
+      "names_heard": [],
+      "likely_role": "disruptive coworker",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "is there an alternative strategy where we can functionally push February to March"
+      ],
+      "interpersonal_note": "interrupts earnest-intern mid-sentence with a half-formed 'alternative' that immediately self-corrects into chaos",
+      "best_frame_idx": 4
+    },
+    {
+      "label_hint": "fire-employee",
+      "turn_indices": [
+        16
+      ],
+      "names_heard": [],
+      "likely_role": "someone being let go",
+      "register": "monotone",
+      "signature_lines": [
+        "nothing for me on my pardon. nothing for me"
+      ],
+      "interpersonal_note": "delivers the punchline \u2014 the 'alternative strategy' was just a polite way of saying they're getting fired; speaks in deadpan monotone while chaos erupts around them",
+      "best_frame_idx": 5
+    }
+  ]
+}

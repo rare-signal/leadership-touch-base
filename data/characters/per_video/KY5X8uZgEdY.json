@@ -1,0 +1,21 @@
+{
+  "video_id": "KY5X8uZgEdY",
+  "scene_summary": "A corporate employee at LARP delivers a painfully formal quarterly update about March being the final month of Q1, with no actual work or events to report on.",
+  "observations": [
+    {
+      "label_hint": "corporate-robot",
+      "turn_indices": [
+        0,
+        3
+      ],
+      "names_heard": [],
+      "likely_role": "quarterly update deliverer / fiscal analyst",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "we've officially entered the culminating monthly node of the Q1 construct"
+      ],
+      "interpersonal_note": "speaks to no one in particular, addressing 'us' as a faceless collective; their formal tone contrasts with the absurd emptiness of their message.",
+      "best_frame_idx": 0
+    }
+  ]
+}

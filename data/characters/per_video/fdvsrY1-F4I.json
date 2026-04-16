@@ -1,0 +1,79 @@
+{
+  "video_id": "fdvsrY1-F4I",
+  "scene_summary": "A corporate resignation meeting where a manager announces their departure after missing quarterly benchmarks, followed by colleagues debating whether to replace them.",
+  "observations": [
+    {
+      "label_hint": "cold-boss",
+      "turn_indices": [
+        0
+      ],
+      "names_heard": [],
+      "likely_role": "Manager / Team Lead",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "that will set the room here, right?",
+        "I have volunteered to step down from my role at the company effective immediately."
+      ],
+      "interpersonal_note": "Initiates the meeting by announcing their own departure; others react with surprise and debate.",
+      "best_frame_idx": 0
+    },
+    {
+      "label_hint": "bro-coworker",
+      "turn_indices": [
+        1,
+        4
+      ],
+      "names_heard": [],
+      "likely_role": "Casual colleague / peer",
+      "register": "bro-chill",
+      "signature_lines": [
+        "Wow, I really appreciate the reason I like that.",
+        "Right, and looking at it from a sort of capacity standpoint."
+      ],
+      "interpersonal_note": "Responds with deadpan approval to the resignation; later frames the situation in terms of 'capacity' rather than emotional impact.",
+      "best_frame_idx": 4
+    },
+    {
+      "label_hint": "earnest-intern",
+      "turn_indices": [
+        2
+      ],
+      "names_heard": [],
+      "likely_role": "Junior employee / intern",
+      "register": "earnest",
+      "signature_lines": [
+        "I think that your resignation might be equally as operationally detrimental as it is emotionally detrimental, right?"
+      ],
+      "interpersonal_note": "Tries to sound professional and empathetic but gets caught in corporate-speak; others gently correct them.",
+      "best_frame_idx": 2
+    },
+    {
+      "label_hint": "sycophant",
+      "turn_indices": [
+        3
+      ],
+      "names_heard": [],
+      "likely_role": "Yes-man colleague",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "Oh, completely agree, because remembering a contributor of his caliber will create sizable short-term bandwidth constraints, right?"
+      ],
+      "interpersonal_note": "Agrees with the cold-boss's assessment and doubles down on corporate jargon even when others are being more casual.",
+      "best_frame_idx": 3
+    },
+    {
+      "label_hint": "chaos-agent",
+      "turn_indices": [
+        5
+      ],
+      "names_heard": [],
+      "likely_role": "Disruptive colleague / meme-savvy peer",
+      "register": "chaos-agent",
+      "signature_lines": [
+        "How do we solve for less Charles? Right, like hilarious."
+      ],
+      "interpersonal_note": "Breaks the corporate tone by referencing a character name ('Charles') and ending with an absurd 'hilarious' that undercuts the entire meeting.",
+      "best_frame_idx": 5
+    }
+  ]
+}

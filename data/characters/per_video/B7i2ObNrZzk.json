@@ -1,0 +1,44 @@
+{
+  "video_id": "B7i2ObNrZzk",
+  "scene_summary": "A corporate team scrambles to backfill Ryan's output during a critical week by having everyone else work harder and faster.",
+  "observations": [
+    {
+      "label_hint": "cold-boss",
+      "turn_indices": [
+        0,
+        1,
+        3
+      ],
+      "names_heard": [
+        "Ryan"
+      ],
+      "likely_role": "VP/Executive",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "although with Ryan offline, during what is objectively a trajectory-defying week, the question becomes, okay, how can we proactively backfill any potential throughput gap we might experience due to his absence? Right.",
+        "we are going to experience some short-term executional drag, right?"
+      ],
+      "interpersonal_note": "speaks in corporate speak, treats Ryan's absence as a strategic challenge rather than a problem",
+      "best_frame_idx": 0
+    },
+    {
+      "label_hint": "bro-coworker",
+      "turn_indices": [
+        2,
+        4,
+        5
+      ],
+      "names_heard": [
+        "Ryan"
+      ],
+      "likely_role": "mid-level employee",
+      "register": "chaos-agent",
+      "signature_lines": [
+        "we're gonna have to work harder and faster.",
+        "if I may, is that the reduction in Ryan-centered output velocity will create downstream risks, right? So how do we- Yeah, really quick. About to boil the ocean, but this is a nominally consequential operating window for us, right?"
+      ],
+      "interpersonal_note": "speaks with chaotic energy, treats corporate speak as performative theater",
+      "best_frame_idx": 2
+    }
+  ]
+}

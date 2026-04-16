@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.uv-cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node
+node_modules/
+.next/
+.turbo/
+out/
+dist/
+.vercel/
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project data — local media; intermediate artifacts tracked selectively
+data/raw/
+data/keyframes/
+data/clusters/
+data/*.log
+data/ingest.log
+data/channel_index.json
+
+# We DO commit these once generated:
+#   data/transcripts/
+#   data/characters/
+#   data/personas/
+#   data/grunts/   (small audio sprites, <100KB each)

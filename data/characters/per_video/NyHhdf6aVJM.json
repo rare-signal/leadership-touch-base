@@ -1,0 +1,103 @@
+{
+  "video_id": "NyHhdf6aVJM",
+  "scene_summary": "LARP's Q1 underperformance forces a corporate reset meeting where leadership demands tighter execution and cross-functional synergy while employees scramble for clarity.",
+  "observations": [
+    {
+      "label_hint": "cold-boss",
+      "turn_indices": [
+        0,
+        3,
+        6
+      ],
+      "names_heard": [
+        "the group"
+      ],
+      "likely_role": "VP of Operations / org leader",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "Given our underperformance in Q1, the question now becomes... how can we proactively realign around increased focus, cross-functional synergy, and tighter execution across the org?",
+        "I think it's about how do we sort of tighten our connective tissue, if you will, to minimize friction and make way for higher impact outcomes"
+      ],
+      "interpersonal_note": "speaks with authority; others respond by asking clarifying questions or seeking buy-in",
+      "best_frame_idx": 0
+    },
+    {
+      "label_hint": "earnest-intern",
+      "turn_indices": [
+        1
+      ],
+      "names_heard": [
+        "the group"
+      ],
+      "likely_role": "new hire / junior employee",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "I'm not sure what you mean. Can you clarify?",
+        "Is there a specific initiative or project that you're referring to?",
+        "How do we prioritize our efforts given the current resource constraints?",
+        "What's the expected outcome of this realignment?"
+      ],
+      "interpersonal_note": "asks clarifying questions; seeks to understand before committing",
+      "best_frame_idx": 1
+    },
+    {
+      "label_hint": "bro-coworker",
+      "turn_indices": [
+        2
+      ],
+      "names_heard": [
+        "the group"
+      ],
+      "likely_role": "mid-level employee / team lead",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "I'm not sure what you mean. Can you clarify?",
+        "Is there a specific initiative or project that you're referring to?",
+        "How do we prioritize our efforts given the current resource constraints?",
+        "What's the expected outcome of this realignment?"
+      ],
+      "interpersonal_note": "asks clarifying questions; seeks to understand before committing",
+      "best_frame_idx": 2
+    },
+    {
+      "label_hint": "chaos-agent",
+      "turn_indices": [
+        4,
+        5
+      ],
+      "names_heard": [
+        "the group"
+      ],
+      "likely_role": "employee / team member",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "I'm not sure what you mean. Can you clarify?",
+        "Is there a specific initiative or project that you're referring to?",
+        "How do we prioritize our efforts given the current resource constraints?",
+        "What's the expected outcome of this realignment?"
+      ],
+      "interpersonal_note": "asks clarifying questions; seeks to understand before committing",
+      "best_frame_idx": 4
+    },
+    {
+      "label_hint": "sycophant",
+      "turn_indices": [
+        7,
+        8
+      ],
+      "names_heard": [
+        "the group"
+      ],
+      "likely_role": "employee / team member",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "I'm not sure what you mean. Can you clarify?",
+        "Is there a specific initiative or project that you're referring to?",
+        "How do we prioritize our efforts given the current resource constraints?",
+        "What's the expected outcome of this realignment?"
+      ],
+      "interpersonal_note": "asks clarifying questions; seeks to understand before committing",
+      "best_frame_idx": 5
+    }
+  ]
+}

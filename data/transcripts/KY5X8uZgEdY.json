@@ -1,0 +1,802 @@
+{
+  "video_id": "KY5X8uZgEdY",
+  "duration": 35.01,
+  "language": "en",
+  "model": "small.en",
+  "compute_type": "int8",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.36,
+      "text": "re-anchor us in the temporal framework here. With March now live, we've officially entered",
+      "avg_logprob": -0.213,
+      "speaker_turn": 0
+    },
+    {
+      "start": 4.36,
+      "end": 9.0,
+      "text": "the culminating monthly node of the Q1 construct, right? So the question is a lot on it. And if I",
+      "avg_logprob": -0.213,
+      "speaker_turn": 0
+    },
+    {
+      "start": 9.0,
+      "end": 14.76,
+      "text": "can take a stab here from a fiscal advantage point, we are now operating inside the concluding trudge",
+      "avg_logprob": -0.213,
+      "speaker_turn": 0
+    },
+    {
+      "start": 14.76,
+      "end": 20.36,
+      "text": "of the first quarter performance arc. Just to reinforce that, March functions,",
+      "avg_logprob": -0.213,
+      "speaker_turn": 0
+    },
+    {
+      "start": 20.62,
+      "end": 25.02,
+      "text": "that's kind of that end of period inflection compartment within the Q1 ecosystem, right?",
+      "avg_logprob": -0.213,
+      "speaker_turn": 3
+    },
+    {
+      "start": 25.44,
+      "end": 28.86,
+      "text": "Oh, definitely. Really quick, I do want to remind us, right,",
+      "avg_logprob": -0.213,
+      "speaker_turn": 3
+    },
+    {
+      "start": 28.86,
+      "end": 34.28,
+      "text": "that March represents the final one-third allocation of the quarter structure reporting horizon.",
+      "avg_logprob": -0.2566,
+      "speaker_turn": 3
+    }
+  ],
+  "words": [
+    {
+      "start": 0.0,
+      "end": 0.26,
+      "word": " re",
+      "probability": 0.1167,
+      "speaker_turn": 0
+    },
+    {
+      "start": 0.26,
+      "end": 0.5,
+      "word": "-anchor",
+      "probability": 0.7925,
+      "speaker_turn": 0
+    },
+    {
+      "start": 0.5,
+      "end": 0.68,
+      "word": " us",
+      "probability": 0.9122,
+      "speaker_turn": 0
+    },
+    {
+      "start": 0.68,
+      "end": 0.78,
+      "word": " in",
+      "probability": 0.9394,
+      "speaker_turn": 0
+    },
+    {
+      "start": 0.78,
+      "end": 0.86,
+      "word": " the",
+      "probability": 0.9851,
+      "speaker_turn": 0
+    },
+    {
+      "start": 0.86,
+      "end": 1.18,
+      "word": " temporal",
+      "probability": 0.9799,
+      "speaker_turn": 0
+    },
+    {
+      "start": 1.18,
+      "end": 1.62,
+      "word": " framework",
+      "probability": 0.995,
+      "speaker_turn": 0
+    },
+    {
+      "start": 1.62,
+      "end": 2.0,
+      "word": " here.",
+      "probability": 0.8796,
+      "speaker_turn": 0
+    },
+    {
+      "start": 2.34,
+      "end": 2.46,
+      "word": " With",
+      "probability": 0.9758,
+      "speaker_turn": 0
+    },
+    {
+      "start": 2.46,
+      "end": 2.64,
+      "word": " March",
+      "probability": 0.9578,
+      "speaker_turn": 0
+    },
+    {
+      "start": 2.64,
+      "end": 2.88,
+      "word": " now",
+      "probability": 0.7031,
+      "speaker_turn": 0
+    },
+    {
+      "start": 2.88,
+      "end": 3.2,
+      "word": " live,",
+      "probability": 0.9543,
+      "speaker_turn": 0
+    },
+    {
+      "start": 3.5,
+      "end": 3.64,
+      "word": " we've",
+      "probability": 0.9575,
+      "speaker_turn": 0
+    },
+    {
+      "start": 3.64,
+      "end": 3.92,
+      "word": " officially",
+      "probability": 0.9955,
+      "speaker_turn": 0
+    },
+    {
+      "start": 3.92,
+      "end": 4.36,
+      "word": " entered",
+      "probability": 0.9964,
+      "speaker_turn": 0
+    },
+    {
+      "start": 4.36,
+      "end": 4.6,
+      "word": " the",
+      "probability": 0.9955,
+      "speaker_turn": 0
+    },
+    {
+      "start": 4.6,
+      "end": 4.94,
+      "word": " culminating",
+      "probability": 0.9863,
+      "speaker_turn": 0
+    },
+    {
+      "start": 4.94,
+      "end": 5.42,
+      "word": " monthly",
+      "probability": 0.9937,
+      "speaker_turn": 0
+    },
+    {
+      "start": 5.42,
+      "end": 5.78,
+      "word": " node",
+      "probability": 0.8944,
+      "speaker_turn": 0
+    },
+    {
+      "start": 5.78,
+      "end": 6.18,
+      "word": " of",
+      "probability": 0.9959,
+      "speaker_turn": 0
+    },
+    {
+      "start": 6.18,
+      "end": 6.36,
+      "word": " the",
+      "probability": 0.9962,
+      "speaker_turn": 0
+    },
+    {
+      "start": 6.36,
+      "end": 6.66,
+      "word": " Q1",
+      "probability": 0.951,
+      "speaker_turn": 0
+    },
+    {
+      "start": 6.66,
+      "end": 7.22,
+      "word": " construct,",
+      "probability": 0.8707,
+      "speaker_turn": 0
+    },
+    {
+      "start": 7.34,
+      "end": 7.48,
+      "word": " right?",
+      "probability": 0.79,
+      "speaker_turn": 0
+    },
+    {
+      "start": 7.6,
+      "end": 7.6,
+      "word": " So",
+      "probability": 0.7747,
+      "speaker_turn": 0
+    },
+    {
+      "start": 7.6,
+      "end": 7.68,
+      "word": " the",
+      "probability": 0.7983,
+      "speaker_turn": 0
+    },
+    {
+      "start": 7.68,
+      "end": 7.84,
+      "word": " question",
+      "probability": 0.8501,
+      "speaker_turn": 0
+    },
+    {
+      "start": 7.84,
+      "end": 8.04,
+      "word": " is",
+      "probability": 0.4151,
+      "speaker_turn": 0
+    },
+    {
+      "start": 8.04,
+      "end": 8.1,
+      "word": " a",
+      "probability": 0.4761,
+      "speaker_turn": 0
+    },
+    {
+      "start": 8.1,
+      "end": 8.24,
+      "word": " lot",
+      "probability": 0.9089,
+      "speaker_turn": 0
+    },
+    {
+      "start": 8.24,
+      "end": 8.5,
+      "word": " on",
+      "probability": 0.7982,
+      "speaker_turn": 0
+    },
+    {
+      "start": 8.5,
+      "end": 8.72,
+      "word": " it.",
+      "probability": 0.9555,
+      "speaker_turn": 0
+    },
+    {
+      "start": 8.8,
+      "end": 8.8,
+      "word": " And",
+      "probability": 0.618,
+      "speaker_turn": 0
+    },
+    {
+      "start": 8.8,
+      "end": 8.88,
+      "word": " if",
+      "probability": 0.9538,
+      "speaker_turn": 0
+    },
+    {
+      "start": 8.88,
+      "end": 9.0,
+      "word": " I",
+      "probability": 0.919,
+      "speaker_turn": 0
+    },
+    {
+      "start": 9.0,
+      "end": 9.1,
+      "word": " can",
+      "probability": 0.3582,
+      "speaker_turn": 0
+    },
+    {
+      "start": 9.1,
+      "end": 9.16,
+      "word": " take",
+      "probability": 0.5197,
+      "speaker_turn": 0
+    },
+    {
+      "start": 9.16,
+      "end": 9.5,
+      "word": " a",
+      "probability": 0.9872,
+      "speaker_turn": 0
+    },
+    {
+      "start": 9.5,
+      "end": 9.58,
+      "word": " stab",
+      "probability": 0.9731,
+      "speaker_turn": 0
+    },
+    {
+      "start": 9.58,
+      "end": 10.04,
+      "word": " here",
+      "probability": 0.9874,
+      "speaker_turn": 0
+    },
+    {
+      "start": 10.04,
+      "end": 10.3,
+      "word": " from",
+      "probability": 0.7935,
+      "speaker_turn": 0
+    },
+    {
+      "start": 10.3,
+      "end": 10.7,
+      "word": " a",
+      "probability": 0.9646,
+      "speaker_turn": 0
+    },
+    {
+      "start": 10.7,
+      "end": 11.22,
+      "word": " fiscal",
+      "probability": 0.9623,
+      "speaker_turn": 0
+    },
+    {
+      "start": 11.22,
+      "end": 11.5,
+      "word": " advantage",
+      "probability": 0.5768,
+      "speaker_turn": 0
+    },
+    {
+      "start": 11.5,
+      "end": 11.98,
+      "word": " point,",
+      "probability": 0.9953,
+      "speaker_turn": 0
+    },
+    {
+      "start": 12.16,
+      "end": 12.44,
+      "word": " we",
+      "probability": 0.9617,
+      "speaker_turn": 0
+    },
+    {
+      "start": 12.44,
+      "end": 12.54,
+      "word": " are",
+      "probability": 0.8183,
+      "speaker_turn": 0
+    },
+    {
+      "start": 12.54,
+      "end": 12.7,
+      "word": " now",
+      "probability": 0.9959,
+      "speaker_turn": 0
+    },
+    {
+      "start": 12.7,
+      "end": 13.12,
+      "word": " operating",
+      "probability": 0.9995,
+      "speaker_turn": 0
+    },
+    {
+      "start": 13.12,
+      "end": 13.68,
+      "word": " inside",
+      "probability": 0.9987,
+      "speaker_turn": 0
+    },
+    {
+      "start": 13.68,
+      "end": 14.04,
+      "word": " the",
+      "probability": 0.9947,
+      "speaker_turn": 0
+    },
+    {
+      "start": 14.04,
+      "end": 14.36,
+      "word": " concluding",
+      "probability": 0.9954,
+      "speaker_turn": 0
+    },
+    {
+      "start": 14.36,
+      "end": 14.76,
+      "word": " trudge",
+      "probability": 0.5958,
+      "speaker_turn": 0
+    },
+    {
+      "start": 14.76,
+      "end": 15.24,
+      "word": " of",
+      "probability": 0.9954,
+      "speaker_turn": 0
+    },
+    {
+      "start": 15.24,
+      "end": 15.38,
+      "word": " the",
+      "probability": 0.997,
+      "speaker_turn": 0
+    },
+    {
+      "start": 15.38,
+      "end": 15.52,
+      "word": " first",
+      "probability": 0.8505,
+      "speaker_turn": 0
+    },
+    {
+      "start": 15.52,
+      "end": 15.82,
+      "word": " quarter",
+      "probability": 0.9578,
+      "speaker_turn": 0
+    },
+    {
+      "start": 15.82,
+      "end": 16.32,
+      "word": " performance",
+      "probability": 0.9794,
+      "speaker_turn": 0
+    },
+    {
+      "start": 16.32,
+      "end": 16.68,
+      "word": " arc.",
+      "probability": 0.9018,
+      "speaker_turn": 0
+    },
+    {
+      "start": 17.22,
+      "end": 17.38,
+      "word": " Just",
+      "probability": 0.0884,
+      "speaker_turn": 0
+    },
+    {
+      "start": 17.38,
+      "end": 17.54,
+      "word": " to",
+      "probability": 0.7922,
+      "speaker_turn": 0
+    },
+    {
+      "start": 17.54,
+      "end": 17.66,
+      "word": " reinforce",
+      "probability": 0.8954,
+      "speaker_turn": 0
+    },
+    {
+      "start": 17.66,
+      "end": 19.4,
+      "word": " that,",
+      "probability": 0.9899,
+      "speaker_turn": 0
+    },
+    {
+      "start": 19.88,
+      "end": 20.0,
+      "word": " March",
+      "probability": 0.8849,
+      "speaker_turn": 1
+    },
+    {
+      "start": 20.0,
+      "end": 20.36,
+      "word": " functions,",
+      "probability": 0.6887,
+      "speaker_turn": 1
+    },
+    {
+      "start": 20.62,
+      "end": 20.7,
+      "word": " that's",
+      "probability": 0.9771,
+      "speaker_turn": 3
+    },
+    {
+      "start": 20.7,
+      "end": 20.78,
+      "word": " kind",
+      "probability": 0.9051,
+      "speaker_turn": 3
+    },
+    {
+      "start": 20.78,
+      "end": 20.9,
+      "word": " of",
+      "probability": 0.9989,
+      "speaker_turn": 3
+    },
+    {
+      "start": 20.9,
+      "end": 21.08,
+      "word": " that",
+      "probability": 0.9839,
+      "speaker_turn": 3
+    },
+    {
+      "start": 21.08,
+      "end": 21.4,
+      "word": " end",
+      "probability": 0.9953,
+      "speaker_turn": 3
+    },
+    {
+      "start": 21.4,
+      "end": 21.54,
+      "word": " of",
+      "probability": 0.8783,
+      "speaker_turn": 3
+    },
+    {
+      "start": 21.54,
+      "end": 21.84,
+      "word": " period",
+      "probability": 0.9973,
+      "speaker_turn": 3
+    },
+    {
+      "start": 21.84,
+      "end": 22.28,
+      "word": " inflection",
+      "probability": 0.9786,
+      "speaker_turn": 3
+    },
+    {
+      "start": 22.28,
+      "end": 22.82,
+      "word": " compartment",
+      "probability": 0.997,
+      "speaker_turn": 3
+    },
+    {
+      "start": 22.82,
+      "end": 23.56,
+      "word": " within",
+      "probability": 0.96,
+      "speaker_turn": 3
+    },
+    {
+      "start": 23.56,
+      "end": 23.8,
+      "word": " the",
+      "probability": 0.9987,
+      "speaker_turn": 3
+    },
+    {
+      "start": 23.8,
+      "end": 24.1,
+      "word": " Q1",
+      "probability": 0.992,
+      "speaker_turn": 3
+    },
+    {
+      "start": 24.1,
+      "end": 24.56,
+      "word": " ecosystem,",
+      "probability": 0.9984,
+      "speaker_turn": 3
+    },
+    {
+      "start": 24.8,
+      "end": 25.02,
+      "word": " right?",
+      "probability": 0.9767,
+      "speaker_turn": 3
+    },
+    {
+      "start": 25.44,
+      "end": 25.6,
+      "word": " Oh,",
+      "probability": 0.0643,
+      "speaker_turn": 3
+    },
+    {
+      "start": 25.78,
+      "end": 25.84,
+      "word": " definitely.",
+      "probability": 0.9473,
+      "speaker_turn": 3
+    },
+    {
+      "start": 26.62,
+      "end": 26.86,
+      "word": " Really",
+      "probability": 0.1271,
+      "speaker_turn": 3
+    },
+    {
+      "start": 26.86,
+      "end": 27.26,
+      "word": " quick,",
+      "probability": 0.9781,
+      "speaker_turn": 3
+    },
+    {
+      "start": 27.36,
+      "end": 27.64,
+      "word": " I",
+      "probability": 0.9882,
+      "speaker_turn": 3
+    },
+    {
+      "start": 27.64,
+      "end": 27.78,
+      "word": " do",
+      "probability": 0.9965,
+      "speaker_turn": 3
+    },
+    {
+      "start": 27.78,
+      "end": 27.96,
+      "word": " want",
+      "probability": 0.9981,
+      "speaker_turn": 3
+    },
+    {
+      "start": 27.96,
+      "end": 28.1,
+      "word": " to",
+      "probability": 0.9991,
+      "speaker_turn": 3
+    },
+    {
+      "start": 28.1,
+      "end": 28.34,
+      "word": " remind",
+      "probability": 0.996,
+      "speaker_turn": 3
+    },
+    {
+      "start": 28.34,
+      "end": 28.66,
+      "word": " us,",
+      "probability": 0.996,
+      "speaker_turn": 3
+    },
+    {
+      "start": 28.74,
+      "end": 28.86,
+      "word": " right,",
+      "probability": 0.6317,
+      "speaker_turn": 3
+    },
+    {
+      "start": 28.86,
+      "end": 29.3,
+      "word": " that",
+      "probability": 0.2542,
+      "speaker_turn": 3
+    },
+    {
+      "start": 29.3,
+      "end": 29.68,
+      "word": " March",
+      "probability": 0.4626,
+      "speaker_turn": 3
+    },
+    {
+      "start": 29.68,
+      "end": 30.18,
+      "word": " represents",
+      "probability": 0.9567,
+      "speaker_turn": 3
+    },
+    {
+      "start": 30.18,
+      "end": 30.64,
+      "word": " the",
+      "probability": 0.5722,
+      "speaker_turn": 3
+    },
+    {
+      "start": 30.64,
+      "end": 30.98,
+      "word": " final",
+      "probability": 0.9959,
+      "speaker_turn": 3
+    },
+    {
+      "start": 30.98,
+      "end": 31.24,
+      "word": " one",
+      "probability": 0.5688,
+      "speaker_turn": 3
+    },
+    {
+      "start": 31.24,
+      "end": 31.44,
+      "word": "-third",
+      "probability": 0.6309,
+      "speaker_turn": 3
+    },
+    {
+      "start": 31.44,
+      "end": 31.96,
+      "word": " allocation",
+      "probability": 0.9924,
+      "speaker_turn": 3
+    },
+    {
+      "start": 31.96,
+      "end": 32.58,
+      "word": " of",
+      "probability": 0.9877,
+      "speaker_turn": 3
+    },
+    {
+      "start": 32.58,
+      "end": 32.74,
+      "word": " the",
+      "probability": 0.9985,
+      "speaker_turn": 3
+    },
+    {
+      "start": 32.74,
+      "end": 32.94,
+      "word": " quarter",
+      "probability": 0.7803,
+      "speaker_turn": 3
+    },
+    {
+      "start": 32.94,
+      "end": 33.32,
+      "word": " structure",
+      "probability": 0.7247,
+      "speaker_turn": 3
+    },
+    {
+      "start": 33.32,
+      "end": 33.78,
+      "word": " reporting",
+      "probability": 0.8676,
+      "speaker_turn": 3
+    },
+    {
+      "start": 33.78,
+      "end": 34.28,
+      "word": " horizon.",
+      "probability": 0.939,
+      "speaker_turn": 3
+    }
+  ],
+  "srt_turn_markers": [
+    [
+      18.16,
+      1
+    ],
+    [
+      20.15,
+      2
+    ],
+    [
+      20.16,
+      3
+    ]
+  ]
+}

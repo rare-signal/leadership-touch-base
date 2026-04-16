@@ -1,0 +1,39 @@
+{
+  "video_id": "mhEjCqGcyqs",
+  "scene_summary": "A corporate team meeting where leadership and staff debate how to cover a February shortfall against Q1 targets.",
+  "observations": [
+    {
+      "label_hint": "cold-boss",
+      "turn_indices": [
+        0,
+        3
+      ],
+      "names_heard": [],
+      "likely_role": "Q1 lead / executive",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "we were effectively unable to push February to March.",
+        "if we fail to close the attainment gap created by February, we risk underdelivering in the first quadrant as a whole."
+      ],
+      "interpersonal_note": "sets up the problem and frames it with corporate euphemisms; others respond to their framing",
+      "best_frame_idx": 0
+    },
+    {
+      "label_hint": "earnest-intern",
+      "turn_indices": [
+        6
+      ],
+      "names_heard": [
+        "Adam"
+      ],
+      "likely_role": "intern / junior analyst",
+      "register": "earnest",
+      "signature_lines": [
+        "right? If our February output delta isn't absorbed within the March window, our quarterly benchmark will collapse, right?",
+        "So now we're just like, Adam."
+      ],
+      "interpersonal_note": "speaks to 'Adam' and tries to be reassuring; appears to be addressing someone named Adam",
+      "best_frame_idx": 5
+    }
+  ]
+}

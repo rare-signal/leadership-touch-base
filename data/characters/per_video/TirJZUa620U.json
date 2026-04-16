@@ -1,0 +1,21 @@
+{
+  "video_id": "TirJZUa620U",
+  "scene_summary": "A finance manager gives a painfully corporate warning about tax day approaching and its impact on productivity.",
+  "observations": [
+    {
+      "label_hint": "finance-manager",
+      "turn_indices": [
+        0
+      ],
+      "names_heard": [],
+      "likely_role": "Finance Manager at LARP",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "to quickly flag that tax day is this Wednesday, right?",
+        "And zooming out from a workflow perspective, right?"
+      ],
+      "interpersonal_note": "speaks alone; no other characters present in scene",
+      "best_frame_idx": 0
+    }
+  ]
+}

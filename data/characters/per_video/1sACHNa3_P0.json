@@ -1,0 +1,87 @@
+{
+  "video_id": "1sACHNa3_P0",
+  "scene_summary": "A corporate intern gets offered a full-time position at LARP with the same hourly pay but a fancier title, and after some pushback they awkwardly agree to it.",
+  "observations": [
+    {
+      "label_hint": "earnest-hr-bro",
+      "turn_indices": [
+        0,
+        3,
+        4,
+        10,
+        12,
+        15,
+        18
+      ],
+      "names_heard": [
+        "Braxton"
+      ],
+      "likely_role": "HR / hiring manager / corporate recruiter",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "We're officially extending you the full-time off.",
+        "we're incredibly proud, right?",
+        "compensation isn't always the best indicator of value at this stage"
+      ],
+      "interpersonal_note": "the one trying to sell a bad deal with excessive enthusiasm and corporate jargon",
+      "best_frame_idx": 2
+    },
+    {
+      "label_hint": "bro-coworker",
+      "turn_indices": [
+        1,
+        9
+      ],
+      "names_heard": [],
+      "likely_role": "coworker / peer at LARP",
+      "register": "bro-chill",
+      "signature_lines": [
+        "What up, I guess.",
+        "Let's go."
+      ],
+      "interpersonal_note": "the chill one who just wants to get it over with and doesn't care about the details",
+      "best_frame_idx": 1
+    },
+    {
+      "label_hint": "frazzled-intern",
+      "turn_indices": [
+        2,
+        6,
+        7,
+        8,
+        11,
+        14,
+        16,
+        17
+      ],
+      "names_heard": [
+        "Braxton"
+      ],
+      "likely_role": "intern at LARP (the protagonist)",
+      "register": "frazzled",
+      "signature_lines": [
+        "Wait, I think there might be a mistake.",
+        "That's chopped, bro.",
+        "I basically kept your platform afloat for the past year"
+      ],
+      "interpersonal_note": "the one getting screwed over and trying to process it while being talked down",
+      "best_frame_idx": 3
+    },
+    {
+      "label_hint": "sycophant-boss",
+      "turn_indices": [
+        5,
+        19
+      ],
+      "names_heard": [],
+      "likely_role": "boss / executive at LARP",
+      "register": "sycophant",
+      "signature_lines": [
+        "This is really an expression of how much the LARP team values you",
+        "we're honestly thrilled to have you as a part of our family"
+      ],
+      "interpersonal_note": "the one who's too eager and uses corporate buzzwords to smooth over the bad deal",
+      "best_frame_idx": 4
+    }
+  ]
+}

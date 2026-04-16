@@ -1,0 +1,1115 @@
+{
+  "video_id": "V2DHYyZD03w",
+  "duration": 47.35,
+  "language": "en",
+  "model": "small.en",
+  "compute_type": "int8",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.3,
+      "text": "to quickly revisit our Daylight Savings dialog because it appears we may have misforecasted",
+      "avg_logprob": -0.2574,
+      "speaker_turn": 0
+    },
+    {
+      "start": 4.3,
+      "end": 7.68,
+      "text": "the perceived one-hour subtraction to the work week, right? So I just forgot.",
+      "avg_logprob": -0.2574,
+      "speaker_turn": 0
+    },
+    {
+      "start": 7.84,
+      "end": 12.56,
+      "text": "Yeah, so glad to surface that, and as discussed, right, we originally had modeled some operational",
+      "avg_logprob": -0.2574,
+      "speaker_turn": 0
+    },
+    {
+      "start": 12.56,
+      "end": 17.28,
+      "text": "headwinds tied to the Daylight Savings shift. But because the adjustment occurred on Sunday,",
+      "avg_logprob": -0.2574,
+      "speaker_turn": 0
+    },
+    {
+      "start": 17.62,
+      "end": 21.9,
+      "text": "we effectively retained all 120 hours of the typical business time frame, right?",
+      "avg_logprob": -0.2574,
+      "speaker_turn": 0
+    },
+    {
+      "start": 22.3,
+      "end": 26.82,
+      "text": "Absolutely. And I think we'll be best here, guys, is that because Sunday sits outside our",
+      "avg_logprob": -0.2574,
+      "speaker_turn": 0
+    },
+    {
+      "start": 26.82,
+      "end": 32.16,
+      "text": "operating window, net-net, we successfully were able to absorb the Daylight Savings transition",
+      "avg_logprob": -0.2634,
+      "speaker_turn": 3
+    },
+    {
+      "start": 32.16,
+      "end": 35.64,
+      "text": "without any measurable business impact. So now the question comes up.",
+      "avg_logprob": -0.2634,
+      "speaker_turn": 3
+    },
+    {
+      "start": 35.64,
+      "end": 40.02,
+      "text": "Exactly correct. And if I might take a step back from a Daylight perspective,",
+      "avg_logprob": -0.2634,
+      "speaker_turn": 3
+    },
+    {
+      "start": 40.7,
+      "end": 46.24,
+      "text": "I'd like to posit that the additional Daylight could potentially present a productivity tailwind",
+      "avg_logprob": -0.2634,
+      "speaker_turn": 6
+    },
+    {
+      "start": 46.24,
+      "end": 47.26,
+      "text": "for us, right?",
+      "avg_logprob": -0.5575,
+      "speaker_turn": 6
+    }
+  ],
+  "words": [
+    {
+      "start": 0.0,
+      "end": 0.16,
+      "word": " to",
+      "probability": 0.1828,
+      "speaker_turn": 0
+    },
+    {
+      "start": 0.16,
+      "end": 0.36,
+      "word": " quickly",
+      "probability": 0.8848,
+      "speaker_turn": 0
+    },
+    {
+      "start": 0.36,
+      "end": 0.84,
+      "word": " revisit",
+      "probability": 0.9927,
+      "speaker_turn": 0
+    },
+    {
+      "start": 0.84,
+      "end": 1.04,
+      "word": " our",
+      "probability": 0.99,
+      "speaker_turn": 0
+    },
+    {
+      "start": 1.04,
+      "end": 1.3,
+      "word": " Daylight",
+      "probability": 0.5109,
+      "speaker_turn": 0
+    },
+    {
+      "start": 1.3,
+      "end": 1.68,
+      "word": " Savings",
+      "probability": 0.9664,
+      "speaker_turn": 0
+    },
+    {
+      "start": 1.68,
+      "end": 2.08,
+      "word": " dialog",
+      "probability": 0.3207,
+      "speaker_turn": 0
+    },
+    {
+      "start": 2.08,
+      "end": 2.56,
+      "word": " because",
+      "probability": 0.388,
+      "speaker_turn": 0
+    },
+    {
+      "start": 2.56,
+      "end": 2.62,
+      "word": " it",
+      "probability": 0.9895,
+      "speaker_turn": 0
+    },
+    {
+      "start": 2.62,
+      "end": 2.88,
+      "word": " appears",
+      "probability": 0.9937,
+      "speaker_turn": 0
+    },
+    {
+      "start": 2.88,
+      "end": 3.06,
+      "word": " we",
+      "probability": 0.9694,
+      "speaker_turn": 0
+    },
+    {
+      "start": 3.06,
+      "end": 3.22,
+      "word": " may",
+      "probability": 0.9928,
+      "speaker_turn": 0
+    },
+    {
+      "start": 3.22,
+      "end": 3.32,
+      "word": " have",
+      "probability": 0.9981,
+      "speaker_turn": 0
+    },
+    {
+      "start": 3.32,
+      "end": 4.3,
+      "word": " misforecasted",
+      "probability": 0.8949,
+      "speaker_turn": 0
+    },
+    {
+      "start": 4.3,
+      "end": 4.46,
+      "word": " the",
+      "probability": 0.9868,
+      "speaker_turn": 0
+    },
+    {
+      "start": 4.46,
+      "end": 4.84,
+      "word": " perceived",
+      "probability": 0.963,
+      "speaker_turn": 0
+    },
+    {
+      "start": 4.84,
+      "end": 5.1,
+      "word": " one",
+      "probability": 0.8605,
+      "speaker_turn": 0
+    },
+    {
+      "start": 5.1,
+      "end": 5.24,
+      "word": "-hour",
+      "probability": 0.8116,
+      "speaker_turn": 0
+    },
+    {
+      "start": 5.24,
+      "end": 5.9,
+      "word": " subtraction",
+      "probability": 0.9929,
+      "speaker_turn": 0
+    },
+    {
+      "start": 5.9,
+      "end": 6.2,
+      "word": " to",
+      "probability": 0.9932,
+      "speaker_turn": 0
+    },
+    {
+      "start": 6.2,
+      "end": 6.32,
+      "word": " the",
+      "probability": 0.9973,
+      "speaker_turn": 0
+    },
+    {
+      "start": 6.32,
+      "end": 6.52,
+      "word": " work",
+      "probability": 0.9435,
+      "speaker_turn": 0
+    },
+    {
+      "start": 6.52,
+      "end": 6.86,
+      "word": " week,",
+      "probability": 0.6411,
+      "speaker_turn": 0
+    },
+    {
+      "start": 6.88,
+      "end": 7.04,
+      "word": " right?",
+      "probability": 0.9097,
+      "speaker_turn": 0
+    },
+    {
+      "start": 7.22,
+      "end": 7.22,
+      "word": " So",
+      "probability": 0.7009,
+      "speaker_turn": 0
+    },
+    {
+      "start": 7.22,
+      "end": 7.26,
+      "word": " I",
+      "probability": 0.5661,
+      "speaker_turn": 0
+    },
+    {
+      "start": 7.26,
+      "end": 7.44,
+      "word": " just",
+      "probability": 0.9451,
+      "speaker_turn": 0
+    },
+    {
+      "start": 7.44,
+      "end": 7.68,
+      "word": " forgot.",
+      "probability": 0.1642,
+      "speaker_turn": 0
+    },
+    {
+      "start": 7.84,
+      "end": 7.84,
+      "word": " Yeah,",
+      "probability": 0.2671,
+      "speaker_turn": 0
+    },
+    {
+      "start": 8.0,
+      "end": 8.08,
+      "word": " so",
+      "probability": 0.5156,
+      "speaker_turn": 0
+    },
+    {
+      "start": 8.08,
+      "end": 8.32,
+      "word": " glad",
+      "probability": 0.9835,
+      "speaker_turn": 0
+    },
+    {
+      "start": 8.32,
+      "end": 8.5,
+      "word": " to",
+      "probability": 0.531,
+      "speaker_turn": 0
+    },
+    {
+      "start": 8.5,
+      "end": 8.72,
+      "word": " surface",
+      "probability": 0.5361,
+      "speaker_turn": 0
+    },
+    {
+      "start": 8.72,
+      "end": 9.12,
+      "word": " that,",
+      "probability": 0.9919,
+      "speaker_turn": 0
+    },
+    {
+      "start": 9.26,
+      "end": 9.52,
+      "word": " and",
+      "probability": 0.5677,
+      "speaker_turn": 0
+    },
+    {
+      "start": 9.52,
+      "end": 9.9,
+      "word": " as",
+      "probability": 0.9235,
+      "speaker_turn": 0
+    },
+    {
+      "start": 9.9,
+      "end": 10.34,
+      "word": " discussed,",
+      "probability": 0.9888,
+      "speaker_turn": 0
+    },
+    {
+      "start": 10.64,
+      "end": 10.7,
+      "word": " right,",
+      "probability": 0.7039,
+      "speaker_turn": 0
+    },
+    {
+      "start": 10.8,
+      "end": 10.96,
+      "word": " we",
+      "probability": 0.9786,
+      "speaker_turn": 0
+    },
+    {
+      "start": 10.96,
+      "end": 11.28,
+      "word": " originally",
+      "probability": 0.975,
+      "speaker_turn": 0
+    },
+    {
+      "start": 11.28,
+      "end": 11.48,
+      "word": " had",
+      "probability": 0.9941,
+      "speaker_turn": 0
+    },
+    {
+      "start": 11.48,
+      "end": 11.84,
+      "word": " modeled",
+      "probability": 0.9679,
+      "speaker_turn": 0
+    },
+    {
+      "start": 11.84,
+      "end": 12.08,
+      "word": " some",
+      "probability": 0.9983,
+      "speaker_turn": 0
+    },
+    {
+      "start": 12.08,
+      "end": 12.56,
+      "word": " operational",
+      "probability": 0.9772,
+      "speaker_turn": 0
+    },
+    {
+      "start": 12.56,
+      "end": 13.32,
+      "word": " headwinds",
+      "probability": 0.9768,
+      "speaker_turn": 0
+    },
+    {
+      "start": 13.32,
+      "end": 13.4,
+      "word": " tied",
+      "probability": 0.9952,
+      "speaker_turn": 0
+    },
+    {
+      "start": 13.4,
+      "end": 13.58,
+      "word": " to",
+      "probability": 0.9983,
+      "speaker_turn": 0
+    },
+    {
+      "start": 13.58,
+      "end": 13.68,
+      "word": " the",
+      "probability": 0.9929,
+      "speaker_turn": 0
+    },
+    {
+      "start": 13.68,
+      "end": 13.94,
+      "word": " Daylight",
+      "probability": 0.9776,
+      "speaker_turn": 0
+    },
+    {
+      "start": 13.94,
+      "end": 14.28,
+      "word": " Savings",
+      "probability": 0.9464,
+      "speaker_turn": 0
+    },
+    {
+      "start": 14.28,
+      "end": 14.78,
+      "word": " shift.",
+      "probability": 0.8364,
+      "speaker_turn": 0
+    },
+    {
+      "start": 15.5,
+      "end": 15.52,
+      "word": " But",
+      "probability": 0.4204,
+      "speaker_turn": 0
+    },
+    {
+      "start": 15.52,
+      "end": 15.74,
+      "word": " because",
+      "probability": 0.9107,
+      "speaker_turn": 0
+    },
+    {
+      "start": 15.74,
+      "end": 15.9,
+      "word": " the",
+      "probability": 0.6402,
+      "speaker_turn": 0
+    },
+    {
+      "start": 15.9,
+      "end": 16.14,
+      "word": " adjustment",
+      "probability": 0.9392,
+      "speaker_turn": 0
+    },
+    {
+      "start": 16.14,
+      "end": 16.48,
+      "word": " occurred",
+      "probability": 0.9909,
+      "speaker_turn": 0
+    },
+    {
+      "start": 16.48,
+      "end": 16.68,
+      "word": " on",
+      "probability": 0.9957,
+      "speaker_turn": 0
+    },
+    {
+      "start": 16.68,
+      "end": 17.28,
+      "word": " Sunday,",
+      "probability": 0.9981,
+      "speaker_turn": 0
+    },
+    {
+      "start": 17.62,
+      "end": 17.82,
+      "word": " we",
+      "probability": 0.9984,
+      "speaker_turn": 0
+    },
+    {
+      "start": 17.82,
+      "end": 18.08,
+      "word": " effectively",
+      "probability": 0.9979,
+      "speaker_turn": 0
+    },
+    {
+      "start": 18.08,
+      "end": 18.6,
+      "word": " retained",
+      "probability": 0.9957,
+      "speaker_turn": 0
+    },
+    {
+      "start": 18.6,
+      "end": 18.98,
+      "word": " all",
+      "probability": 0.9979,
+      "speaker_turn": 0
+    },
+    {
+      "start": 18.98,
+      "end": 19.56,
+      "word": " 120",
+      "probability": 0.9969,
+      "speaker_turn": 0
+    },
+    {
+      "start": 19.56,
+      "end": 19.94,
+      "word": " hours",
+      "probability": 0.9962,
+      "speaker_turn": 0
+    },
+    {
+      "start": 19.94,
+      "end": 20.3,
+      "word": " of",
+      "probability": 0.9973,
+      "speaker_turn": 0
+    },
+    {
+      "start": 20.3,
+      "end": 20.46,
+      "word": " the",
+      "probability": 0.999,
+      "speaker_turn": 0
+    },
+    {
+      "start": 20.46,
+      "end": 20.72,
+      "word": " typical",
+      "probability": 0.9587,
+      "speaker_turn": 0
+    },
+    {
+      "start": 20.72,
+      "end": 21.04,
+      "word": " business",
+      "probability": 0.965,
+      "speaker_turn": 0
+    },
+    {
+      "start": 21.04,
+      "end": 21.32,
+      "word": " time",
+      "probability": 0.3647,
+      "speaker_turn": 0
+    },
+    {
+      "start": 21.32,
+      "end": 21.68,
+      "word": " frame,",
+      "probability": 0.9896,
+      "speaker_turn": 0
+    },
+    {
+      "start": 21.68,
+      "end": 21.9,
+      "word": " right?",
+      "probability": 0.964,
+      "speaker_turn": 0
+    },
+    {
+      "start": 22.3,
+      "end": 22.78,
+      "word": " Absolutely.",
+      "probability": 0.5291,
+      "speaker_turn": 0
+    },
+    {
+      "start": 23.24,
+      "end": 23.38,
+      "word": " And",
+      "probability": 0.7284,
+      "speaker_turn": 1
+    },
+    {
+      "start": 23.38,
+      "end": 23.5,
+      "word": " I",
+      "probability": 0.9415,
+      "speaker_turn": 1
+    },
+    {
+      "start": 23.5,
+      "end": 23.62,
+      "word": " think",
+      "probability": 0.8871,
+      "speaker_turn": 1
+    },
+    {
+      "start": 23.62,
+      "end": 23.76,
+      "word": " we'll",
+      "probability": 0.7888,
+      "speaker_turn": 1
+    },
+    {
+      "start": 23.76,
+      "end": 23.9,
+      "word": " be",
+      "probability": 0.7231,
+      "speaker_turn": 1
+    },
+    {
+      "start": 23.9,
+      "end": 24.06,
+      "word": " best",
+      "probability": 0.2697,
+      "speaker_turn": 1
+    },
+    {
+      "start": 24.06,
+      "end": 24.26,
+      "word": " here,",
+      "probability": 0.7815,
+      "speaker_turn": 1
+    },
+    {
+      "start": 24.26,
+      "end": 24.6,
+      "word": " guys,",
+      "probability": 0.9949,
+      "speaker_turn": 3
+    },
+    {
+      "start": 24.76,
+      "end": 25.0,
+      "word": " is",
+      "probability": 0.6747,
+      "speaker_turn": 3
+    },
+    {
+      "start": 25.0,
+      "end": 25.14,
+      "word": " that",
+      "probability": 0.987,
+      "speaker_turn": 3
+    },
+    {
+      "start": 25.14,
+      "end": 25.38,
+      "word": " because",
+      "probability": 0.8776,
+      "speaker_turn": 3
+    },
+    {
+      "start": 25.38,
+      "end": 25.78,
+      "word": " Sunday",
+      "probability": 0.9947,
+      "speaker_turn": 3
+    },
+    {
+      "start": 25.78,
+      "end": 26.08,
+      "word": " sits",
+      "probability": 0.9935,
+      "speaker_turn": 3
+    },
+    {
+      "start": 26.08,
+      "end": 26.58,
+      "word": " outside",
+      "probability": 0.9987,
+      "speaker_turn": 3
+    },
+    {
+      "start": 26.58,
+      "end": 26.82,
+      "word": " our",
+      "probability": 0.9861,
+      "speaker_turn": 3
+    },
+    {
+      "start": 26.82,
+      "end": 27.32,
+      "word": " operating",
+      "probability": 0.013,
+      "speaker_turn": 3
+    },
+    {
+      "start": 27.32,
+      "end": 27.98,
+      "word": " window,",
+      "probability": 0.9932,
+      "speaker_turn": 3
+    },
+    {
+      "start": 28.44,
+      "end": 28.5,
+      "word": " net",
+      "probability": 0.8813,
+      "speaker_turn": 3
+    },
+    {
+      "start": 28.5,
+      "end": 28.82,
+      "word": "-net,",
+      "probability": 0.4447,
+      "speaker_turn": 3
+    },
+    {
+      "start": 29.04,
+      "end": 29.24,
+      "word": " we",
+      "probability": 0.9853,
+      "speaker_turn": 3
+    },
+    {
+      "start": 29.24,
+      "end": 29.62,
+      "word": " successfully",
+      "probability": 0.9684,
+      "speaker_turn": 3
+    },
+    {
+      "start": 29.62,
+      "end": 29.98,
+      "word": " were",
+      "probability": 0.9933,
+      "speaker_turn": 3
+    },
+    {
+      "start": 29.98,
+      "end": 30.18,
+      "word": " able",
+      "probability": 0.9995,
+      "speaker_turn": 3
+    },
+    {
+      "start": 30.18,
+      "end": 30.4,
+      "word": " to",
+      "probability": 0.9987,
+      "speaker_turn": 3
+    },
+    {
+      "start": 30.4,
+      "end": 30.86,
+      "word": " absorb",
+      "probability": 0.9941,
+      "speaker_turn": 3
+    },
+    {
+      "start": 30.86,
+      "end": 31.1,
+      "word": " the",
+      "probability": 0.9796,
+      "speaker_turn": 3
+    },
+    {
+      "start": 31.1,
+      "end": 31.34,
+      "word": " Daylight",
+      "probability": 0.0699,
+      "speaker_turn": 3
+    },
+    {
+      "start": 31.34,
+      "end": 31.7,
+      "word": " Savings",
+      "probability": 0.8819,
+      "speaker_turn": 3
+    },
+    {
+      "start": 31.7,
+      "end": 32.16,
+      "word": " transition",
+      "probability": 0.2993,
+      "speaker_turn": 3
+    },
+    {
+      "start": 32.16,
+      "end": 32.92,
+      "word": " without",
+      "probability": 0.7482,
+      "speaker_turn": 3
+    },
+    {
+      "start": 32.92,
+      "end": 33.18,
+      "word": " any",
+      "probability": 0.9088,
+      "speaker_turn": 3
+    },
+    {
+      "start": 33.18,
+      "end": 33.54,
+      "word": " measurable",
+      "probability": 0.9896,
+      "speaker_turn": 3
+    },
+    {
+      "start": 33.54,
+      "end": 33.96,
+      "word": " business",
+      "probability": 0.9839,
+      "speaker_turn": 3
+    },
+    {
+      "start": 33.96,
+      "end": 34.5,
+      "word": " impact.",
+      "probability": 0.9908,
+      "speaker_turn": 3
+    },
+    {
+      "start": 34.9,
+      "end": 34.9,
+      "word": " So",
+      "probability": 0.6959,
+      "speaker_turn": 3
+    },
+    {
+      "start": 34.9,
+      "end": 35.08,
+      "word": " now",
+      "probability": 0.8489,
+      "speaker_turn": 3
+    },
+    {
+      "start": 35.08,
+      "end": 35.24,
+      "word": " the",
+      "probability": 0.876,
+      "speaker_turn": 3
+    },
+    {
+      "start": 35.24,
+      "end": 35.46,
+      "word": " question",
+      "probability": 0.9849,
+      "speaker_turn": 3
+    },
+    {
+      "start": 35.46,
+      "end": 35.64,
+      "word": " comes",
+      "probability": 0.2657,
+      "speaker_turn": 3
+    },
+    {
+      "start": 35.64,
+      "end": 35.64,
+      "word": " up.",
+      "probability": 0.0979,
+      "speaker_turn": 3
+    },
+    {
+      "start": 35.64,
+      "end": 36.04,
+      "word": " Exactly",
+      "probability": 0.4549,
+      "speaker_turn": 3
+    },
+    {
+      "start": 36.04,
+      "end": 36.5,
+      "word": " correct.",
+      "probability": 0.947,
+      "speaker_turn": 4
+    },
+    {
+      "start": 36.84,
+      "end": 36.9,
+      "word": " And",
+      "probability": 0.7398,
+      "speaker_turn": 4
+    },
+    {
+      "start": 36.9,
+      "end": 37.24,
+      "word": " if",
+      "probability": 0.9734,
+      "speaker_turn": 4
+    },
+    {
+      "start": 37.24,
+      "end": 37.34,
+      "word": " I",
+      "probability": 0.9878,
+      "speaker_turn": 4
+    },
+    {
+      "start": 37.34,
+      "end": 37.46,
+      "word": " might",
+      "probability": 0.7191,
+      "speaker_turn": 4
+    },
+    {
+      "start": 37.46,
+      "end": 37.62,
+      "word": " take",
+      "probability": 0.9975,
+      "speaker_turn": 4
+    },
+    {
+      "start": 37.62,
+      "end": 37.74,
+      "word": " a",
+      "probability": 0.9983,
+      "speaker_turn": 4
+    },
+    {
+      "start": 37.74,
+      "end": 37.92,
+      "word": " step",
+      "probability": 0.9993,
+      "speaker_turn": 4
+    },
+    {
+      "start": 37.92,
+      "end": 38.3,
+      "word": " back",
+      "probability": 0.9995,
+      "speaker_turn": 6
+    },
+    {
+      "start": 38.3,
+      "end": 38.56,
+      "word": " from",
+      "probability": 0.9247,
+      "speaker_turn": 6
+    },
+    {
+      "start": 38.56,
+      "end": 39.02,
+      "word": " a",
+      "probability": 0.987,
+      "speaker_turn": 6
+    },
+    {
+      "start": 39.02,
+      "end": 39.46,
+      "word": " Daylight",
+      "probability": 0.4054,
+      "speaker_turn": 6
+    },
+    {
+      "start": 39.46,
+      "end": 40.02,
+      "word": " perspective,",
+      "probability": 0.9889,
+      "speaker_turn": 6
+    },
+    {
+      "start": 40.7,
+      "end": 41.02,
+      "word": " I'd",
+      "probability": 0.9742,
+      "speaker_turn": 6
+    },
+    {
+      "start": 41.02,
+      "end": 41.1,
+      "word": " like",
+      "probability": 0.999,
+      "speaker_turn": 6
+    },
+    {
+      "start": 41.1,
+      "end": 41.24,
+      "word": " to",
+      "probability": 0.971,
+      "speaker_turn": 6
+    },
+    {
+      "start": 41.24,
+      "end": 41.54,
+      "word": " posit",
+      "probability": 0.9508,
+      "speaker_turn": 6
+    },
+    {
+      "start": 41.54,
+      "end": 42.0,
+      "word": " that",
+      "probability": 0.987,
+      "speaker_turn": 6
+    },
+    {
+      "start": 42.0,
+      "end": 42.16,
+      "word": " the",
+      "probability": 0.8814,
+      "speaker_turn": 6
+    },
+    {
+      "start": 42.16,
+      "end": 42.5,
+      "word": " additional",
+      "probability": 0.6182,
+      "speaker_turn": 6
+    },
+    {
+      "start": 42.5,
+      "end": 43.04,
+      "word": " Daylight",
+      "probability": 0.6814,
+      "speaker_turn": 6
+    },
+    {
+      "start": 43.04,
+      "end": 43.56,
+      "word": " could",
+      "probability": 0.98,
+      "speaker_turn": 6
+    },
+    {
+      "start": 43.56,
+      "end": 43.96,
+      "word": " potentially",
+      "probability": 0.9984,
+      "speaker_turn": 6
+    },
+    {
+      "start": 43.96,
+      "end": 44.36,
+      "word": " present",
+      "probability": 0.9229,
+      "speaker_turn": 6
+    },
+    {
+      "start": 44.36,
+      "end": 44.86,
+      "word": " a",
+      "probability": 0.896,
+      "speaker_turn": 6
+    },
+    {
+      "start": 44.86,
+      "end": 45.32,
+      "word": " productivity",
+      "probability": 0.7211,
+      "speaker_turn": 6
+    },
+    {
+      "start": 45.32,
+      "end": 46.24,
+      "word": " tailwind",
+      "probability": 0.9725,
+      "speaker_turn": 6
+    },
+    {
+      "start": 46.24,
+      "end": 46.58,
+      "word": " for",
+      "probability": 0.3346,
+      "speaker_turn": 6
+    },
+    {
+      "start": 46.58,
+      "end": 46.86,
+      "word": " us,",
+      "probability": 0.9913,
+      "speaker_turn": 6
+    },
+    {
+      "start": 46.98,
+      "end": 47.26,
+      "word": " right?",
+      "probability": 0.9803,
+      "speaker_turn": 6
+    }
+  ],
+  "srt_turn_markers": [
+    [
+      22.72,
+      1
+    ],
+    [
+      24.23,
+      2
+    ],
+    [
+      24.24,
+      3
+    ],
+    [
+      35.92,
+      4
+    ],
+    [
+      37.91,
+      5
+    ],
+    [
+      37.92,
+      6
+    ]
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "video_id": "6c4ezOY-HOc",
+  "scene_summary": "Corporate employees discuss February's shortened calendar and reduced execution bandwidth in a stream-of-consciousness meeting.",
+  "observations": [
+    {
+      "label_hint": "corporate-speak",
+      "turn_indices": [
+        0,
+        1
+      ],
+      "names_heard": [],
+      "likely_role": "manager/executive",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "based on February one last time. It's ultimately a question of, okay, how can we streamline optimization within the irregular calendary constraints we're being forced to navigate?",
+        "So important to elevate that."
+      ],
+      "interpersonal_note": "speaks first and second, setting up the corporate framing for the discussion",
+      "best_frame_idx": 0
+    },
+    {
+      "label_hint": "bro-chill",
+      "turn_indices": [
+        2,
+        3
+      ],
+      "names_heard": [],
+      "likely_role": "casual coworker",
+      "register": "bro-chill",
+      "signature_lines": [
+        "just heightened time awareness around that reduced execution bandwidth.",
+        "Right."
+      ],
+      "interpersonal_note": "responds to the corporate framing with a more relaxed, colloquial tone",
+      "best_frame_idx": 3
+    },
+    {
+      "label_hint": "chaos-agent",
+      "turn_indices": [
+        4,
+        5
+      ],
+      "names_heard": [],
+      "likely_role": "disruptive employee",
+      "register": "chaos-agent",
+      "signature_lines": [
+        "Without getting into the weeds, I think what we're dealing with here is a length disadvantage time cycle.",
+        "Like functionally, I think it's a matter of,"
+      ],
+      "interpersonal_note": "interrupts and reframes the conversation with jargon-heavy deflection",
+      "best_frame_idx": 5
+    }
+  ]
+}

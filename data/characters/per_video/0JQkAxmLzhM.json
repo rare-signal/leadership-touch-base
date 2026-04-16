@@ -1,0 +1,61 @@
+{
+  "video_id": "0JQkAxmLzhM",
+  "scene_summary": "A corporate team meeting where Braxton flags April as a pivotal month for Q2 execution, and the group enthusiastically agrees using heavy corporate speak.",
+  "observations": [
+    {
+      "label_hint": "braxton",
+      "turn_indices": [
+        0,
+        3
+      ],
+      "names_heard": [],
+      "likely_role": "operations lead / project manager",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "Just wanted to quickly flag that April is a directionally pivotal month for us, right?",
+        "April is the primary monthly strike. So strong opportunity to execute, right?"
+      ],
+      "interpersonal_note": "the one who opens and closes the meeting; everyone else defers to him",
+      "best_frame_idx": 0
+    },
+    {
+      "label_hint": "braxton-echoer",
+      "turn_indices": [
+        1,
+        6
+      ],
+      "names_heard": [
+        "Braxton"
+      ],
+      "likely_role": "yes-man / sycophant",
+      "register": "sycophant",
+      "signature_lines": [
+        "So with that in mind, I do want to highlight",
+        "I think I echo that as well, right?"
+      ],
+      "interpersonal_note": "only speaks when Braxton is mentioned; exists purely to agree and reinforce his points",
+      "best_frame_idx": 3
+    },
+    {
+      "label_hint": "corporate-chorus",
+      "turn_indices": [
+        2,
+        4,
+        5,
+        7
+      ],
+      "names_heard": [
+        "Braxton"
+      ],
+      "likely_role": "generic corporate team member / groupthink participant",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "It does.",
+        "Very well framed there, Braxton, right?",
+        "Because I completely agree with the excellent visibility there and no additional thoughts from me, right?"
+      ],
+      "interpersonal_note": "the collective voice of the team; all three speakers in this group are interchangeable corporate drones",
+      "best_frame_idx": 2
+    }
+  ]
+}

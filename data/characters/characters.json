@@ -1,0 +1,1036 @@
+{
+  "characters": [
+    {
+      "id": "braxton",
+      "display_name": "Braxton",
+      "aliases": [
+        "the intern",
+        "new hire"
+      ],
+      "role": "intern / junior employee at LARP",
+      "register": "earnest",
+      "visual_description": "Young professional in corporate attire, earnest and slightly frazzled demeanor. Appears nervous when discussing compensation or career decisions.",
+      "signature_phrases": [
+        "I was made aware.",
+        "They gave me no raise just more hours more responsibility and a new title",
+        "That's chopped, bro."
+      ],
+      "appearances": [
+        {
+          "video_id": "0JQkAxmLzhM",
+          "best_frame_idx": 3,
+          "turn_indices": [
+            1
+          ],
+          "note": "echoes Braxton"
+        },
+        {
+          "video_id": "1sACHNa3_P0",
+          "best_frame_idx": 3,
+          "turn_indices": [
+            2,
+            6,
+            7,
+            8,
+            11,
+            14,
+            16,
+            17
+          ],
+          "note": "protagonist intern"
+        },
+        {
+          "video_id": "ATcugwW9RJs",
+          "best_frame_idx": 3,
+          "turn_indices": [
+            1,
+            2,
+            4,
+            5,
+            7,
+            8,
+            9,
+            10,
+            11,
+            13,
+            14,
+            16,
+            17,
+            19,
+            20,
+            22,
+            23,
+            24,
+            26,
+            27,
+            29,
+            30,
+            31,
+            32,
+            33,
+            35,
+            36,
+            38,
+            39,
+            40,
+            41,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77
+          ],
+          "note": "discusses compensation with parent"
+        },
+        {
+          "video_id": "IygvbdeNWqY",
+          "best_frame_idx": 2,
+          "turn_indices": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            14,
+            16,
+            18,
+            21,
+            24,
+            25,
+            26,
+            29
+          ],
+          "note": "full-time candidate"
+        },
+        {
+          "video_id": "T7xdZ5Lji6s",
+          "best_frame_idx": 2,
+          "turn_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "note": "morning routine"
+        }
+      ],
+      "thumb_video_id": "1sACHNa3_P0"
+    },
+    {
+      "id": "cold_boss",
+      "display_name": "Cold Boss",
+      "aliases": [
+        "manager",
+        "executive",
+        "VP of Operations"
+      ],
+      "role": "manager / executive at LARP",
+      "register": "corporate-speak",
+      "visual_description": "Professional corporate attire, stern and unsmiling demeanor. Often appears alone or in meetings with a group of nervous employees.",
+      "signature_phrases": [
+        "Just wanted to quickly flag that April is a directionally pivotal month for us, right?",
+        "we are currently in the earliest quarterly installment",
+        "I have volunteered to step down from my role at the company effective immediately."
+      ],
+      "appearances": [
+        {
+          "video_id": "0JQkAxmLzhM",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0
+          ],
+          "note": "flags April"
+        },
+        {
+          "video_id": "6c4ezOY-HOc",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0
+          ],
+          "note": "February discussion"
+        },
+        {
+          "video_id": "9nWj2i1wzeQ",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0
+          ],
+          "note": "month-end close"
+        },
+        {
+          "video_id": "ATcugwW9RJs",
+          "best_frame_idx": 2,
+          "turn_indices": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76
+          ],
+          "note": "confronts son"
+        },
+        {
+          "video_id": "B7i2ObNrZzk",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0,
+            1,
+            3
+          ],
+          "note": "Ryan offline discussion"
+        },
+        {
+          "video_id": "NyHhdf6aVJM",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0,
+            3,
+            6
+          ],
+          "note": "Q1 reset meeting"
+        },
+        {
+          "video_id": "Ob_jiY_9S2Y",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0,
+            3
+          ],
+          "note": "quarterly results"
+        },
+        {
+          "video_id": "Tz0x8DcXQhE",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0
+          ],
+          "note": "accountability owner"
+        },
+        {
+          "video_id": "V2DHYyZD03w",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0
+          ],
+          "note": "Daylight Savings misforecast"
+        },
+        {
+          "video_id": "cnhFdroa3Fc",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0,
+            1
+          ],
+          "note": "Daylight Savings discussion"
+        },
+        {
+          "video_id": "fdvsrY1-F4I",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0
+          ],
+          "note": "resignation meeting"
+        },
+        {
+          "video_id": "mhEjCqGcyqs",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0,
+            3
+          ],
+          "note": "February shortfall"
+        },
+        {
+          "video_id": "ts6m_SCQ8_w",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0,
+            3
+          ],
+          "note": "March roadmap discussion"
+        },
+        {
+          "video_id": "wUGEyA4CirU",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0,
+            4
+          ],
+          "note": "Ryan absence explanation"
+        },
+        {
+          "video_id": "wtaTQyf055I",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0,
+            3
+          ],
+          "note": "Charles golf discussion"
+        }
+      ],
+      "thumb_video_id": "ATcugwW9RJs"
+    },
+    {
+      "id": "bro_coworker",
+      "display_name": "Bro Coworker",
+      "aliases": [
+        "casual colleague",
+        "peer"
+      ],
+      "role": "mid-level employee / peer at LARP",
+      "register": "bro-chill",
+      "visual_description": "Casual corporate attire, relaxed demeanor. Often appears in group settings offering casual reassurance or trying to keep things chill.",
+      "signature_phrases": [
+        "What up, I guess.",
+        "Let's go.",
+        "it's fine, it'll be fine"
+      ],
+      "appearances": [
+        {
+          "video_id": "1sACHNa3_P0",
+          "best_frame_idx": 1,
+          "turn_indices": [
+            1
+          ],
+          "note": "coworker"
+        },
+        {
+          "video_id": "6c4ezOY-HOc",
+          "best_frame_idx": 3,
+          "turn_indices": [
+            2,
+            3
+          ],
+          "note": "February discussion"
+        },
+        {
+          "video_id": "B7i2ObNrZzk",
+          "best_frame_idx": 2,
+          "turn_indices": [
+            2,
+            4,
+            5
+          ],
+          "note": "Ryan offline"
+        },
+        {
+          "video_id": "NyHhdf6aVJM",
+          "best_frame_idx": 2,
+          "turn_indices": [
+            2
+          ],
+          "note": "Q1 reset meeting"
+        },
+        {
+          "video_id": "Ob_jiY_9S2Y",
+          "best_frame_idx": 1,
+          "turn_indices": [
+            1
+          ],
+          "note": "quarterly results"
+        },
+        {
+          "video_id": "fdvsrY1-F4I",
+          "best_frame_idx": 4,
+          "turn_indices": [
+            1,
+            4
+          ],
+          "note": "resignation meeting"
+        },
+        {
+          "video_id": "wUGEyA4CirU",
+          "best_frame_idx": 2,
+          "turn_indices": [
+            1,
+            6
+          ],
+          "note": "Ryan absence"
+        }
+      ],
+      "thumb_video_id": "1sACHNa3_P0"
+    },
+    {
+      "id": "earnest_intern",
+      "display_name": "Earnest Intern",
+      "aliases": [
+        "junior employee",
+        "new hire"
+      ],
+      "role": "junior analyst / intern at LARP",
+      "register": "corporate-speak",
+      "visual_description": "Professional corporate attire, earnest and slightly overwhelmed demeanor. Often appears in meetings trying to contribute but getting talked over.",
+      "signature_phrases": [
+        "I think we're going to be fine",
+        "And if I might take a step back from a Daylight perspective, I'd like to posit that the additional Daylight could potentially present a productivity tailwind for us, right?",
+        "So now we're just like, Adam."
+      ],
+      "appearances": [
+        {
+          "video_id": "0JQkAxmLzhM",
+          "best_frame_idx": 2,
+          "turn_indices": [
+            2
+          ],
+          "note": "corporate chorus"
+        },
+        {
+          "video_id": "1sACHNa3_P0",
+          "best_frame_idx": 3,
+          "turn_indices": [
+            2,
+            6,
+            7,
+            8,
+            11,
+            14,
+            16,
+            17
+          ],
+          "note": "protagonist intern"
+        },
+        {
+          "video_id": "9nWj2i1wzeQ",
+          "best_frame_idx": 3,
+          "turn_indices": [
+            3
+          ],
+          "note": "earnest-intern"
+        },
+        {
+          "video_id": "NyHhdf6aVJM",
+          "best_frame_idx": 1,
+          "turn_indices": [
+            1
+          ],
+          "note": "Q1 reset meeting"
+        },
+        {
+          "video_id": "Ob_jiY_9S2Y",
+          "best_frame_idx": 2,
+          "turn_indices": [
+            2
+          ],
+          "note": "quarterly results"
+        },
+        {
+          "video_id": "V2DHYyZD03w",
+          "best_frame_idx": 1,
+          "turn_indices": [
+            1
+          ],
+          "note": "Daylight Savings misforecast"
+        },
+        {
+          "video_id": "cnhFdroa3Fc",
+          "best_frame_idx": 5,
+          "turn_indices": [
+            5
+          ],
+          "note": "Daylight Savings discussion"
+        },
+        {
+          "video_id": "fdvsrY1-F4I",
+          "best_frame_idx": 2,
+          "turn_indices": [
+            2
+          ],
+          "note": "resignation meeting"
+        },
+        {
+          "video_id": "mhEjCqGcyqs",
+          "best_frame_idx": 5,
+          "turn_indices": [
+            6
+          ],
+          "note": "February shortfall"
+        },
+        {
+          "video_id": "ts6m_SCQ8_w",
+          "best_frame_idx": 5,
+          "turn_indices": [
+            2,
+            5
+          ],
+          "note": "March roadmap discussion"
+        }
+      ],
+      "thumb_video_id": "1sACHNa3_P0"
+    },
+    {
+      "id": "chaos_agent",
+      "display_name": "Chaos Agent",
+      "aliases": [
+        "disruptive employee"
+      ],
+      "role": "disruptive colleague at LARP",
+      "register": "chaos-agent",
+      "visual_description": "Casual attire, energetic and disruptive demeanor. Often appears trying to pivot conversations or introduce chaos into meetings.",
+      "signature_phrases": [
+        "Without getting into the weeds, I think what we're dealing with here is a length disadvantage time cycle.",
+        "Like functionally, I think it's a matter of,",
+        "How do we solve for less Charles? Right, like hilarious."
+      ],
+      "appearances": [
+        {
+          "video_id": "6c4ezOY-HOc",
+          "best_frame_idx": 5,
+          "turn_indices": [
+            4,
+            5
+          ],
+          "note": "February discussion"
+        },
+        {
+          "video_id": "9nWj2i1wzeQ",
+          "best_frame_idx": 4,
+          "turn_indices": [
+            9
+          ],
+          "note": "month-end close"
+        },
+        {
+          "video_id": "NyHhdf6aVJM",
+          "best_frame_idx": 4,
+          "turn_indices": [
+            4,
+            5
+          ],
+          "note": "Q1 reset meeting"
+        },
+        {
+          "video_id": "Ob_jiY_9S2Y",
+          "best_frame_idx": 4,
+          "turn_indices": [
+            4
+          ],
+          "note": "quarterly results"
+        },
+        {
+          "video_id": "fdvsrY1-F4I",
+          "best_frame_idx": 5,
+          "turn_indices": [
+            5
+          ],
+          "note": "resignation meeting"
+        }
+      ],
+      "thumb_video_id": "6c4ezOY-HOc"
+    },
+    {
+      "id": "sycophant",
+      "display_name": "Sycophantic Assistant",
+      "aliases": [
+        "yes-man"
+      ],
+      "role": "executive assistant / yes-man at LARP",
+      "register": "corporate-speak",
+      "visual_description": "Professional corporate attire, overly eager and validating demeanor. Often appears trying to echo or validate what others say.",
+      "signature_phrases": [
+        "So with that in mind, I do want to highlight",
+        "I think I echo that as well, right?",
+        "We look at February attainment from a sort of achievement perspective."
+      ],
+      "appearances": [
+        {
+          "video_id": "0JQkAxmLzhM",
+          "best_frame_idx": 3,
+          "turn_indices": [
+            1
+          ],
+          "note": "echoes Braxton"
+        },
+        {
+          "video_id": "IygvbdeNWqY",
+          "best_frame_idx": 3,
+          "turn_indices": [
+            27
+          ],
+          "note": "corporate-boss"
+        },
+        {
+          "video_id": "NyHhdf6aVJM",
+          "best_frame_idx": 5,
+          "turn_indices": [
+            7,
+            8
+          ],
+          "note": "Q1 reset meeting"
+        },
+        {
+          "video_id": "ts6m_SCQ8_w",
+          "best_frame_idx": 1,
+          "turn_indices": [
+            1
+          ],
+          "note": "March roadmap discussion"
+        }
+      ],
+      "thumb_video_id": "0JQkAxmLzhM"
+    },
+    {
+      "id": "corporate_parent",
+      "display_name": "Corporate Parent",
+      "aliases": [
+        "parent"
+      ],
+      "role": "parent / former LARP founder",
+      "register": "corporate-speak",
+      "visual_description": "Professional corporate attire, stern and authoritative demeanor. Appears in meetings with their son about career decisions.",
+      "signature_phrases": [
+        "Did you know about the full-time offer?",
+        "I do not intervene on individual compensation decisions, especially regarding yourself"
+      ],
+      "appearances": [
+        {
+          "video_id": "ATcugwW9RJs",
+          "best_frame_idx": 2,
+          "turn_indices": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76
+          ],
+          "note": "confronts son"
+        }
+      ],
+      "thumb_video_id": "ATcugwW9RJs"
+    },
+    {
+      "id": "corporate_recruiter",
+      "display_name": "Corporate Recruiter",
+      "aliases": [
+        "Verso Jobs recruiter"
+      ],
+      "role": "hiring manager at Verso Jobs",
+      "register": "corporate-speak",
+      "visual_description": "Professional corporate attire, enthusiastic and recruiting-focused demeanor. Appears in meetings with potential candidates.",
+      "signature_phrases": [
+        "Yo, Corbin Braxton, what up, bro? I'm chilling man.",
+        "So you'd rather play theater with a bunch of corporate muppets and build something with your body that could actually change the world"
+      ],
+      "appearances": [
+        {
+          "video_id": "IygvbdeNWqY",
+          "best_frame_idx": 1,
+          "turn_indices": [
+            3,
+            12,
+            13,
+            15,
+            17,
+            19,
+            20,
+            22,
+            23
+          ],
+          "note": "full-time offer"
+        }
+      ],
+      "thumb_video_id": "IygvbdeNWqY"
+    },
+    {
+      "id": "corporate_robot",
+      "display_name": "Corporate Robot",
+      "aliases": [
+        "fiscal analyst"
+      ],
+      "role": "quarterly update deliverer at LARP",
+      "register": "corporate-speak",
+      "visual_description": "Professional corporate attire, robotic and overly formal demeanor. Appears alone delivering quarterly updates.",
+      "signature_phrases": [
+        "we've officially entered the culminating monthly node of the Q1 construct"
+      ],
+      "appearances": [
+        {
+          "video_id": "KY5X8uZgEdY",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0,
+            3
+          ],
+          "note": "quarterly update"
+        }
+      ],
+      "thumb_video_id": "KY5X8uZgEdY"
+    },
+    {
+      "id": "finance_manager",
+      "display_name": "Finance Manager",
+      "aliases": [
+        "finance lead"
+      ],
+      "role": "Finance Manager at LARP",
+      "register": "corporate-speak",
+      "visual_description": "Professional corporate attire, serious and detail-oriented demeanor. Appears in meetings discussing financial metrics.",
+      "signature_phrases": [
+        "to quickly flag that tax day is this Wednesday, right?",
+        "And zooming out from a workflow perspective, right?"
+      ],
+      "appearances": [
+        {
+          "video_id": "TirJZUa620U",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0
+          ],
+          "note": "tax day warning"
+        }
+      ],
+      "thumb_video_id": "TirJZUa620U"
+    },
+    {
+      "id": "departing_employee",
+      "display_name": "Departing Employee",
+      "aliases": [
+        "leaving team member"
+      ],
+      "role": "mid-level employee leaving LARP for startup",
+      "register": "earnest",
+      "visual_description": "Professional corporate attire, earnest and slightly emotional demeanor. Appears in farewell meetings.",
+      "signature_phrases": [
+        "I know y'all were waiting to hear back from me on the full-time offer, so I wanted to tell y'all, I've decided to stay true to who I really am and what I want to do, and I need to dip.",
+        "And although at times the vibes here were super weak and it low-key felt like I was carrying the squad and a full-time offer is a mad disrespect for me."
+      ],
+      "appearances": [
+        {
+          "video_id": "IPmyYpcLvZE",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0,
+            1,
+            3
+          ],
+          "note": "farewell speech"
+        }
+      ],
+      "thumb_video_id": "IPmyYpcLvZE"
+    },
+    {
+      "id": "corporate_boss",
+      "display_name": "Corporate Boss",
+      "aliases": [
+        "LARP management"
+      ],
+      "role": "management / executive at LARP",
+      "register": "monotone",
+      "visual_description": "Professional corporate attire, monotone and authoritative demeanor. Appears in meetings with interns or junior employees.",
+      "signature_phrases": [
+        "It's cheese. No offense, dude, but that sounds like hell.",
+        "Well, maybe but I mean it worked for my dad, right?"
+      ],
+      "appearances": [
+        {
+          "video_id": "IygvbdeNWqY",
+          "best_frame_idx": 3,
+          "turn_indices": [
+            27
+          ],
+          "note": "corporate-boss"
+        }
+      ],
+      "thumb_video_id": "IygvbdeNWqY"
+    },
+    {
+      "id": "cold_boss_ryan",
+      "display_name": "Cold Boss Ryan",
+      "aliases": [
+        "Ryan"
+      ],
+      "role": "manager / lead engineer at LARP",
+      "register": "monotone",
+      "visual_description": "Professional corporate attire, monotone and authoritative demeanor. Appears in meetings explaining his absence.",
+      "signature_phrases": [
+        "despite being out of office. Ryan was kind enough to join us today just to quickly recalibrate on the potential downstream applications of his absence, right?",
+        "my unavailability will create some deceleration across my core work streams."
+      ],
+      "appearances": [
+        {
+          "video_id": "wUGEyA4CirU",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0,
+            4
+          ],
+          "note": "Ryan absence explanation"
+        }
+      ],
+      "thumb_video_id": "wUGEyA4CirU"
+    },
+    {
+      "id": "bro_coworker_charles",
+      "display_name": "Bro Coworker Charles",
+      "aliases": [
+        "Charles"
+      ],
+      "role": "Team Lead / Middle Manager at LARP",
+      "register": "corporate-speak",
+      "visual_description": "Professional corporate attire, casual but corporate demeanor. Appears in meetings discussing golf outings.",
+      "signature_phrases": [
+        "are a massively critical input for us"
+      ],
+      "appearances": [
+        {
+          "video_id": "wtaTQyf055I",
+          "best_frame_idx": 1,
+          "turn_indices": [
+            1,
+            4
+          ],
+          "note": "Charles golf discussion"
+        }
+      ],
+      "thumb_video_id": "wtaTQyf055I"
+    },
+    {
+      "id": "earnest_pivoter",
+      "display_name": "Earnest Pivoter",
+      "aliases": [
+        "colleague"
+      ],
+      "role": "colleague at LARP",
+      "register": "corporate-speak",
+      "visual_description": "Professional corporate attire, earnest and trying-to-be-helpful demeanor. Appears in meetings trying to pivot discussions.",
+      "signature_phrases": [
+        "To echo that point, from a more macro lens, Q1 operationally proceeds all downstream corners, right?",
+        "So it becomes a question."
+      ],
+      "appearances": [
+        {
+          "video_id": "ZC4sxomSCDI",
+          "best_frame_idx": 2,
+          "turn_indices": [
+            2
+          ],
+          "note": "Q1 priorities discussion"
+        }
+      ],
+      "thumb_video_id": "ZC4sxomSCDI"
+    },
+    {
+      "id": "jargon_spitter",
+      "display_name": "Jargon Spitter",
+      "aliases": [
+        "colleague"
+      ],
+      "role": "colleague at LARP",
+      "register": "corporate-speak",
+      "visual_description": "Professional corporate attire, overly verbose and buzzword-heavy demeanor. Appears in meetings trying to sound impressive.",
+      "signature_phrases": [
+        "Looking at current OKRs and KPIs, I don't know that we've effectively solutioned February just yet, right?",
+        "We've extracted 6 keyframes (indices 0..5) evenly spaced through the clip."
+      ],
+      "appearances": [
+        {
+          "video_id": "ZC4sxomSCDI",
+          "best_frame_idx": 4,
+          "turn_indices": [
+            4
+          ],
+          "note": "Q1 priorities discussion"
+        }
+      ],
+      "thumb_video_id": "ZC4sxomSCDI"
+    },
+    {
+      "id": "bro_coworker_xander",
+      "display_name": "Bro Coworker Xander",
+      "aliases": [
+        "Xander"
+      ],
+      "role": "colleague at LARP",
+      "register": "corporate-speak",
+      "visual_description": "Professional corporate attire, casual but corporate demeanor. Appears in meetings trying to close discussions.",
+      "signature_phrases": [
+        "I think what we're getting at here is right now we occupy the foremost performance interval, right?",
+        "Yeah, really quick, if I might push back a little in the discussion, while over-indexing Q1 is a non-negotiable"
+      ],
+      "appearances": [
+        {
+          "video_id": "ZC4sxomSCDI",
+          "best_frame_idx": 0,
+          "turn_indices": [
+            0
+          ],
+          "note": "Q1 priorities discussion"
+        }
+      ],
+      "thumb_video_id": "ZC4sxomSCDI"
+    }
+  ]
+}

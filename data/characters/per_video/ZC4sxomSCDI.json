@@ -1,0 +1,57 @@
+{
+  "video_id": "ZC4sxomSCDI",
+  "scene_summary": "A corporate meeting where a nervous employee tries to close a discussion about Q1 priorities but gets talked over by an earnest colleague who pivots to February, while another voice interjects with more jargon.",
+  "observations": [
+    {
+      "label_hint": "nervous-closer",
+      "turn_indices": [
+        0
+      ],
+      "names_heard": [
+        "Xander"
+      ],
+      "likely_role": "employee trying to wrap up the meeting",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "I think what we're getting at here is right now we occupy the foremost performance interval, right?",
+        "Yeah, really quick, if I might push back a little in the discussion, while over-indexing Q1 is a non-negotiable"
+      ],
+      "interpersonal_note": "tries to close but gets talked over by Xander; addressed as 'Xander' by the other speaker",
+      "best_frame_idx": 0
+    },
+    {
+      "label_hint": "earnest-pivoter",
+      "turn_indices": [
+        2
+      ],
+      "names_heard": [
+        "Xander"
+      ],
+      "likely_role": "colleague who wants to keep talking about Q1",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "To echo that point, from a more macro lens, Q1 operationally proceeds all downstream corners, right?",
+        "So it becomes a question."
+      ],
+      "interpersonal_note": "directly addresses Xander and talks over him; seems eager to continue the discussion",
+      "best_frame_idx": 2
+    },
+    {
+      "label_hint": "jargon-spitter",
+      "turn_indices": [
+        4
+      ],
+      "names_heard": [
+        "Xander"
+      ],
+      "likely_role": "colleague who loves corporate buzzwords",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "Looking at current OKRs and KPIs, I don't know that we've effectively solutioned February just yet, right?",
+        "We've extracted 6 keyframes (indices 0..5) evenly spaced through the clip."
+      ],
+      "interpersonal_note": "talks over Xander with more jargon; addresses him as 'Xander'",
+      "best_frame_idx": 4
+    }
+  ]
+}

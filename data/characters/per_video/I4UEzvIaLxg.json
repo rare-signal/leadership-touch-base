@@ -1,0 +1,28 @@
+{
+  "video_id": "I4UEzvIaLxg",
+  "scene_summary": "A single corporate employee delivers a verbose, buzzword-heavy explanation about why February's last week is 'better' than March's first week.",
+  "observations": [
+    {
+      "label_hint": "corporate-buzzword-spammer",
+      "turn_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "names_heard": [],
+      "likely_role": "any LARP employee (the only one present)",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "just wanted to spotlight that this is the last week of February. So we are limited to just five business days.",
+        "we're effectively operating inside the terminal week of the monthly performance cycle, right?",
+        "So it becomes really quick. If I might clarify at a level, we are structurally inside the concluding chapter of this month's operational continuum."
+      ],
+      "interpersonal_note": "the sole speaker; no other characters appear in this clip",
+      "best_frame_idx": 3
+    }
+  ]
+}

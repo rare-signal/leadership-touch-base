@@ -1,0 +1,89 @@
+{
+  "video_id": "IygvbdeNWqY",
+  "scene_summary": "A former intern (Corbin) who's been at LARP for 16 months gets a full-time offer but is offered a platform engineering role by Verso Jobs instead; he declines to stay and leaves.",
+  "observations": [
+    {
+      "label_hint": "corporate-recruiter",
+      "turn_indices": [
+        3,
+        12,
+        13,
+        15,
+        17,
+        19,
+        20,
+        22,
+        23
+      ],
+      "names_heard": [
+        "Corbin Braxton"
+      ],
+      "likely_role": "Verso Jobs recruiter / platform engineering hiring manager",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "Yo, Corbin Braxton, what up, bro? I'm chilling man.",
+        "So you'd rather play theater with a bunch of corporate muppets and build something with your body that could actually change the world",
+        "We got to fill this role fast. So if you change your mind, I can't promise we'll have anything for you."
+      ],
+      "interpersonal_note": "Professional but pushy; keeps trying to convince Corbin to take the job despite his hesitation.",
+      "best_frame_idx": 1
+    },
+    {
+      "label_hint": "intern-corporate",
+      "turn_indices": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        14,
+        16,
+        18,
+        21,
+        24,
+        25,
+        26,
+        29
+      ],
+      "names_heard": [
+        "Corbin Braxton"
+      ],
+      "likely_role": "LARP intern (now full-time candidate)",
+      "register": "bro-chill",
+      "signature_lines": [
+        "Yo, Corbin Braxton, what up, bro? I'm chilling man.",
+        "Yeah logistics analytics and reporting partners.",
+        "So you'd rather play theater with a bunch of corporate muppets and build something with your body that could actually change the world",
+        "I literally just got to sit in these meetings I pull up gpt and it gives me some linkedin speak jargon to spit out and these guys eat it up every time",
+        "It's cheese. No offense, dude, but that sounds like hell.",
+        "Low-key like I feel like just sticking it out here might be the move long term"
+      ],
+      "interpersonal_note": "Casual, laid-back; has been at LARP for 16 months as an intern and is now considering a full-time offer elsewhere",
+      "best_frame_idx": 2
+    },
+    {
+      "label_hint": "corporate-boss",
+      "turn_indices": [
+        27
+      ],
+      "names_heard": [
+        "Corbin Braxton"
+      ],
+      "likely_role": "LARP management / executive",
+      "register": "monotone",
+      "signature_lines": [
+        "It's cheese. No offense, dude, but that sounds like hell.",
+        "Well, maybe but I mean it worked for my dad, right?",
+        "What's he making? Uh, never mind."
+      ],
+      "interpersonal_note": "Dismissive of Corbin's concerns; references his father as a cautionary example of corporate success",
+      "best_frame_idx": 3
+    }
+  ]
+}

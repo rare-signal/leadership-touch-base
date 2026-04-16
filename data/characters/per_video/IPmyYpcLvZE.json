@@ -1,0 +1,23 @@
+{
+  "video_id": "IPmyYpcLvZE",
+  "scene_summary": "A departing employee delivers a heartfelt farewell speech about leaving for a startup while acknowledging what they learned from their team.",
+  "observations": [
+    {
+      "label_hint": "departing-employee",
+      "turn_indices": [
+        0,
+        1,
+        3
+      ],
+      "names_heard": [],
+      "likely_role": "mid-level employee / squad member",
+      "register": "earnest",
+      "signature_lines": [
+        "I know y'all were waiting to hear back from me on the full-time offer, so I wanted to tell y'all, I've decided to stay true to who I really am and what I want to do, and I need to dip.",
+        "And although at times the vibes here were super weak and it low-key felt like I was carrying the squad and a full-time offer is a mad disrespect for me."
+      ],
+      "interpersonal_note": "speaks directly to their former team with gratitude and self-awareness; acknowledges both the positives (learning, camaraderie) and negatives (weak vibes, feeling overworked)",
+      "best_frame_idx": 0
+    }
+  ]
+}

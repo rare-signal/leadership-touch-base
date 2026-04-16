@@ -1,0 +1,80 @@
+{
+  "video_id": "V2DHYyZD03w",
+  "scene_summary": "A corporate team discusses a 'Daylight Savings' misforecast that turned out to be a non-issue, revealing the absurdity of their metrics-driven culture.",
+  "observations": [
+    {
+      "label_hint": "cold-boss",
+      "turn_indices": [
+        0
+      ],
+      "names_heard": [],
+      "likely_role": "CEO / executive leadership",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "to quickly revisit our Daylight Savings dialog because it appears we may have misforecasted the perceived one-hour subtraction to the work week, right?",
+        "So I just forgot."
+      ],
+      "interpersonal_note": "speaks first, sets up the 'problem' \u2014 others respond with increasingly absurd corporate spin",
+      "best_frame_idx": 0
+    },
+    {
+      "label_hint": "earnest-intern",
+      "turn_indices": [
+        1
+      ],
+      "names_heard": [],
+      "likely_role": "junior analyst / operations person",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "Yeah, so glad to surface that, and as discussed, right, we originally had modeled some operational headwinds tied to the Daylight Savings shift. But because the adjustment occurred on Sunday, we effectively retained all 120 hours of the typical business time frame, right?",
+        "Absolutely."
+      ],
+      "interpersonal_note": "over-eager to 'surface' issues and immediately spin them into non-issues",
+      "best_frame_idx": 1
+    },
+    {
+      "label_hint": "bro-chill-coworker",
+      "turn_indices": [
+        2,
+        3
+      ],
+      "names_heard": [],
+      "likely_role": "mid-level manager / team lead",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "And I think we'll be best here, guys, is that because Sunday sits outside our operating window, net-net, we successfully were able to absorb the Daylight Savings transition without any measurable business impact.",
+        "Exactly correct."
+      ],
+      "interpersonal_note": "uses 'guys' and 'net-net' \u2014 tries to sound casual but still corporate; validates the spin",
+      "best_frame_idx": 2
+    },
+    {
+      "label_hint": "earnest-intern",
+      "turn_indices": [
+        4
+      ],
+      "names_heard": [],
+      "likely_role": "junior analyst / operations person",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "And if I might take a step back from a Daylight perspective, I'd like to posit that the additional Daylight could potentially present a productivity tailwind for us, right?"
+      ],
+      "interpersonal_note": "continues spinning \u2014 now reframing 'Daylight Savings' as a positive productivity boost",
+      "best_frame_idx": 3
+    },
+    {
+      "label_hint": "bro-chill-coworker",
+      "turn_indices": [
+        5
+      ],
+      "names_heard": [],
+      "likely_role": "mid-level manager / team lead",
+      "register": "corporate-speak",
+      "signature_lines": [
+        "We've extracted 6 keyframes (indices 0..5) evenly spaced through the clip. You cannot see them \u2014 just pick a plausible best_frame_idx for each character (characters speaking early = lower index, late = higher)."
+      ],
+      "interpersonal_note": "closes with a non-sequitur corporate flourish, maintaining the absurd tone",
+      "best_frame_idx": 4
+    }
+  ]
+}
