@@ -29,6 +29,7 @@ data/raw/
 data/keyframes/
 data/clusters/
 data/tiles/previews/
+data/tiles/frames/
 data/clips/
 data/*.log
 data/ingest.log

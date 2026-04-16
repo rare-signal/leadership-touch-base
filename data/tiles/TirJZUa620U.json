@@ -1,28 +1,82 @@
 {
   "video_id": "TirJZUa620U",
-  "layout": "1x1",
+  "layout": "2x3",
   "source_size": [
     1080,
     1920
   ],
   "content_bbox": [
-    36,
-    679,
-    1009,
-    563
+    43,
+    710,
+    993,
+    921
   ],
   "tiles": [
     {
       "idx": 0,
       "row": 0,
       "col": 0,
-      "x": 40,
-      "y": 683,
-      "w": 1001,
-      "h": 555
+      "x": 49,
+      "y": 716,
+      "w": 319,
+      "h": 448,
+      "character_id": "cold_boss_ryan"
+    },
+    {
+      "idx": 1,
+      "row": 0,
+      "col": 1,
+      "x": 380,
+      "y": 716,
+      "w": 319,
+      "h": 448,
+      "character_id": null
+    },
+    {
+      "idx": 2,
+      "row": 0,
+      "col": 2,
+      "x": 711,
+      "y": 716,
+      "w": 319,
+      "h": 448,
+      "character_id": "bro_coworker_charles"
+    },
+    {
+      "idx": 3,
+      "row": 1,
+      "col": 0,
+      "x": 49,
+      "y": 1176,
+      "w": 319,
+      "h": 448,
+      "character_id": null
+    },
+    {
+      "idx": 4,
+      "row": 1,
+      "col": 1,
+      "x": 380,
+      "y": 1176,
+      "w": 319,
+      "h": 448,
+      "character_id": null
+    },
+    {
+      "idx": 5,
+      "row": 1,
+      "col": 2,
+      "x": 711,
+      "y": 1176,
+      "w": 319,
+      "h": 448,
+      "character_id": null
     }
   ],
-  "confidence": 0.0,
-  "character_id_by_tile": {},
-  "notes": "auto-detect found no interior gutters (guessed 1x1); manual tag needed"
+  "confidence": 1.0,
+  "character_id_by_tile": {
+    "0": "cold_boss_ryan",
+    "2": "bro_coworker_charles"
+  },
+  "notes": "seed: 2x3; Ryan/Corey/Charles top, Igas/Spencer/Bob bottom (2/6 tiles have roster chars)"
 }

@@ -6,56 +6,6 @@ import type { TileBox, TileDoc } from "@/lib/types";
 
 type Roster = { id: string; display_name: string }[];
 
-const LAYOUTS = [
-  "skip",
-  "1x1",
-  "1x2",
-  "2x1",
-  "2x2",
-  "1x3",
-  "3x1",
-  "2x3",
-  "3x2",
-] as const;
-
-function rowsCols(layout: string): [number, number] | null {
-  const m = layout.match(/^(\d+)x(\d+)$/);
-  return m ? [parseInt(m[1]), parseInt(m[2])] : null;
-}
-
-/** Given a layout template + content_bbox, produce tile bboxes that evenly
- * divide the content_bbox. We leave a small internal margin so adjacent tile
- * crops don't bleed into each other's gutter. */
-function tilesFromLayout(
-  layout: string,
-  bbox: [number, number, number, number]
-): TileBox[] {
-  const rc = rowsCols(layout);
-  if (!rc) return [];
-  const [rows, cols] = rc;
-  const [bx, by, bw, bh] = bbox;
-  const tileW = Math.floor(bw / cols);
-  const tileH = Math.floor(bh / rows);
-  const margin = 4;
-  const out: TileBox[] = [];
-  let idx = 0;
-  for (let r = 0; r < rows; r++) {
-    for (let c = 0; c < cols; c++) {
-      out.push({
-        idx,
-        row: r,
-        col: c,
-        x: bx + c * tileW + margin,
-        y: by + r * tileH + margin,
-        w: tileW - margin * 2,
-        h: tileH - margin * 2,
-      });
-      idx++;
-    }
-  }
-  return out;
-}
-
 export default function TilesAdminPage() {
   const [docs, setDocs] = useState<TileDoc[]>([]);
   const [roster, setRoster] = useState<Roster>([]);
@@ -81,8 +31,9 @@ export default function TilesAdminPage() {
         <div>
           <h1 className="text-2xl font-semibold">Tile tagger</h1>
           <p className="mt-1 text-sm text-zinc-400">
-            For each source video, pick the grid layout and assign a character
-            to each tile. Saves to <code className="text-xs">data/tiles/&lt;vid&gt;.json</code>.
+            Each video was seeded with a best-guess layout + character assignments
+            from a visual pass. Confirm or correct each tile&apos;s character, then Save.
+            Unassigned tiles (amber) won&apos;t be cut into clips.
           </p>
         </div>
         <Stats docs={docs} />
@@ -105,21 +56,32 @@ export default function TilesAdminPage() {
 }
 
 function Stats({ docs }: { docs: TileDoc[] }) {
-  const total = docs.length;
-  const tagged = docs.filter(
-    (d) =>
-      d.layout !== "1x1" &&
-      d.layout !== "skip" &&
-      d.tiles.every((t) => d.character_id_by_tile?.[String(t.idx)])
-  ).length;
-  const skipped = docs.filter((d) => d.layout === "skip").length;
+  const totalTiles = docs.reduce((acc, d) => acc + d.tiles.length, 0);
+  const tagged = docs.reduce(
+    (acc, d) => acc + d.tiles.filter((t) => t.character_id).length,
+    0
+  );
+  const perChar: Record<string, number> = {};
+  for (const d of docs) {
+    for (const t of d.tiles) {
+      if (t.character_id) perChar[t.character_id] = (perChar[t.character_id] ?? 0) + 1;
+    }
+  }
+  const topChars = Object.entries(perChar)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, 3);
   return (
     <div className="rounded-lg border bg-zinc-900/60 px-4 py-2 text-right">
-      <div className="text-xs text-zinc-400">progress</div>
+      <div className="text-xs text-zinc-400">tiles tagged</div>
       <div className="text-lg font-semibold tabular-nums">
         {tagged}
-        <span className="text-zinc-500">/{total - skipped}</span>
+        <span className="text-zinc-500">/{totalTiles}</span>
       </div>
+      {topChars.length > 0 && (
+        <div className="mt-1 text-[10px] text-zinc-500">
+          {topChars.map(([cid, n]) => `${cid}:${n}`).join(" · ")}
+        </div>
+      )}
     </div>
   );
 }
@@ -133,43 +95,21 @@ function VideoCard({
   roster: Roster;
   onSaved: (next: TileDoc) => void;
 }) {
-  const [layout, setLayout] = useState<string>(doc.layout);
   const [tiles, setTiles] = useState<TileBox[]>(doc.tiles);
-  const [assignments, setAssignments] = useState<Record<string, string>>(
-    doc.character_id_by_tile ?? {}
-  );
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const dirty = useMemo(() => {
-    return (
-      layout !== doc.layout ||
-      JSON.stringify(tiles) !== JSON.stringify(doc.tiles) ||
-      JSON.stringify(assignments) !== JSON.stringify(doc.character_id_by_tile ?? {})
-    );
-  }, [layout, tiles, assignments, doc]);
-
-  const onPickLayout = useCallback(
-    (next: string) => {
-      setLayout(next);
-      if (next === "skip") {
-        setTiles([]);
-        setAssignments({});
-        return;
-      }
-      const nextTiles = tilesFromLayout(next, doc.content_bbox);
-      setTiles(nextTiles);
-      // Trim assignments that no longer correspond to an existing tile idx.
-      const validIdx = new Set(nextTiles.map((t) => String(t.idx)));
-      const trimmed: Record<string, string> = {};
-      for (const [k, v] of Object.entries(assignments)) {
-        if (validIdx.has(k)) trimmed[k] = v;
-      }
-      setAssignments(trimmed);
-    },
-    [doc.content_bbox, assignments]
+  const dirty = useMemo(
+    () => JSON.stringify(tiles) !== JSON.stringify(doc.tiles),
+    [tiles, doc.tiles]
   );
+
+  const setTileChar = useCallback((idx: number, cid: string | null) => {
+    setTiles((ts) =>
+      ts.map((t) => (t.idx === idx ? { ...t, character_id: cid } : t))
+    );
+  }, []);
 
   const save = useCallback(async () => {
     setSaving(true);
@@ -179,14 +119,7 @@ function VideoCard({
       const res = await fetch(`/api/admin/tiles/${doc.video_id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          layout,
-          source_size: doc.source_size,
-          content_bbox: doc.content_bbox,
-          tiles,
-          character_id_by_tile: assignments,
-          notes: doc.notes,
-        }),
+        body: JSON.stringify({ tiles, notes: doc.notes }),
       });
       const j = await res.json();
       if (!res.ok) throw new Error(j.detail ?? j.error ?? `HTTP ${res.status}`);
@@ -197,9 +130,10 @@ function VideoCard({
     } finally {
       setSaving(false);
     }
-  }, [doc, layout, tiles, assignments, onSaved]);
+  }, [doc, tiles, onSaved]);
 
   const [sw, sh] = doc.source_size;
+  const tagged = tiles.filter((t) => t.character_id).length;
 
   return (
     <section className="rounded-xl border bg-zinc-950 p-4">
@@ -210,21 +144,10 @@ function VideoCard({
           </div>
           <code className="text-sm text-zinc-200">{doc.video_id}</code>
           <span className="ml-2 text-xs text-zinc-500">
-            {sw}×{sh}
+            {sw}×{sh} · {doc.layout} · {tagged}/{tiles.length} tagged
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <select
-            value={layout}
-            onChange={(e) => onPickLayout(e.target.value)}
-            className="rounded-md border bg-zinc-900 px-2 py-1 text-sm"
-          >
-            {LAYOUTS.map((l) => (
-              <option key={l} value={l}>
-                {l}
-              </option>
-            ))}
-          </select>
           <Button size="sm" onClick={save} disabled={!dirty || saving}>
             {saving ? "…" : saved && !dirty ? "Saved" : "Save"}
           </Button>
@@ -236,6 +159,7 @@ function VideoCard({
           vid={doc.video_id}
           sourceSize={[sw, sh]}
           tiles={tiles}
+          rosterById={Object.fromEntries(roster.map((r) => [r.id, r.display_name]))}
         />
 
         <div>
@@ -244,14 +168,8 @@ function VideoCard({
               {error}
             </div>
           )}
-          {layout === "skip" ? (
-            <p className="text-sm text-zinc-500">
-              Skipped — not using this video as a clip source.
-            </p>
-          ) : tiles.length === 0 ? (
-            <p className="text-sm text-zinc-500">
-              Pick a layout to generate tile bboxes.
-            </p>
+          {tiles.length === 0 ? (
+            <p className="text-sm text-zinc-500">No tiles seeded for this video.</p>
           ) : (
             <div className="space-y-2">
               <div className="text-xs text-zinc-500">
@@ -260,25 +178,26 @@ function VideoCard({
               {tiles.map((t) => (
                 <div
                   key={t.idx}
-                  className="flex items-center gap-2 rounded-md border bg-zinc-900/60 px-3 py-2"
+                  className={`flex items-center gap-2 rounded-md border px-3 py-2 ${
+                    t.character_id
+                      ? "border-sky-500/30 bg-sky-950/20"
+                      : "border-amber-500/20 bg-amber-950/10"
+                  }`}
                 >
                   <div className="w-8 font-mono text-xs text-sky-400">
                     #{t.idx}
                   </div>
-                  <div className="text-xs text-zinc-500 w-20">
+                  <div className="w-14 text-xs text-zinc-500">
                     r{t.row}c{t.col}
                   </div>
                   <select
-                    value={assignments[String(t.idx)] ?? ""}
+                    value={t.character_id ?? ""}
                     onChange={(e) =>
-                      setAssignments((a) => ({
-                        ...a,
-                        [String(t.idx)]: e.target.value,
-                      }))
+                      setTileChar(t.idx, e.target.value || null)
                     }
                     className="flex-1 rounded-md border bg-zinc-950 px-2 py-1 text-sm"
                   >
-                    <option value="">— choose —</option>
+                    <option value="">— none —</option>
                     {roster.map((c) => (
                       <option key={c.id} value={c.id}>
                         {c.display_name}
@@ -299,13 +218,14 @@ function PreviewCanvas({
   vid,
   sourceSize,
   tiles,
+  rosterById,
 }: {
   vid: string;
   sourceSize: [number, number];
   tiles: TileBox[];
+  rosterById: Record<string, string>;
 }) {
   const [sw, sh] = sourceSize;
-  // Render preview image; overlay tile bboxes scaled to the rendered img size.
   return (
     <div className="relative overflow-hidden rounded-lg border bg-black">
       <img
@@ -320,22 +240,35 @@ function PreviewCanvas({
         className="absolute inset-0 pointer-events-none"
         style={{ aspectRatio: `${sw} / ${sh}` }}
       >
-        {tiles.map((t) => (
-          <div
-            key={t.idx}
-            className="absolute rounded-[2px] border-2 border-sky-400 bg-sky-400/10"
-            style={{
-              left: `${(t.x / sw) * 100}%`,
-              top: `${(t.y / sh) * 100}%`,
-              width: `${(t.w / sw) * 100}%`,
-              height: `${(t.h / sh) * 100}%`,
-            }}
-          >
-            <span className="absolute -top-5 left-0 rounded bg-sky-500/90 px-1.5 py-0.5 text-[10px] font-semibold text-white">
-              {t.idx}
-            </span>
-          </div>
-        ))}
+        {tiles.map((t) => {
+          const label = t.character_id
+            ? rosterById[t.character_id] ?? t.character_id
+            : "?";
+          return (
+            <div
+              key={t.idx}
+              className={`absolute rounded-[2px] border-2 ${
+                t.character_id
+                  ? "border-sky-400 bg-sky-400/10"
+                  : "border-amber-400/80 bg-amber-400/10"
+              }`}
+              style={{
+                left: `${(t.x / sw) * 100}%`,
+                top: `${(t.y / sh) * 100}%`,
+                width: `${(t.w / sw) * 100}%`,
+                height: `${(t.h / sh) * 100}%`,
+              }}
+            >
+              <span
+                className={`absolute top-0 left-0 rounded-br px-1.5 py-0.5 text-[10px] font-semibold text-white ${
+                  t.character_id ? "bg-sky-500/90" : "bg-amber-500/90"
+                }`}
+              >
+                {t.idx}:{label}
+              </span>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

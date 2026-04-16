@@ -1,28 +1,83 @@
 {
   "video_id": "fdvsrY1-F4I",
-  "layout": "1x1",
+  "layout": "2x3",
   "source_size": [
     1080,
     1192
   ],
   "content_bbox": [
-    37,
-    62,
-    1006,
-    1060
+    43,
+    441,
+    993,
+    572
   ],
   "tiles": [
     {
       "idx": 0,
       "row": 0,
       "col": 0,
-      "x": 41,
-      "y": 66,
-      "w": 998,
-      "h": 1052
+      "x": 49,
+      "y": 447,
+      "w": 319,
+      "h": 274,
+      "character_id": null
+    },
+    {
+      "idx": 1,
+      "row": 0,
+      "col": 1,
+      "x": 380,
+      "y": 447,
+      "w": 319,
+      "h": 274,
+      "character_id": null
+    },
+    {
+      "idx": 2,
+      "row": 0,
+      "col": 2,
+      "x": 711,
+      "y": 447,
+      "w": 319,
+      "h": 274,
+      "character_id": "cold_boss_ryan"
+    },
+    {
+      "idx": 3,
+      "row": 1,
+      "col": 0,
+      "x": 49,
+      "y": 733,
+      "w": 319,
+      "h": 274,
+      "character_id": "bro_coworker_charles"
+    },
+    {
+      "idx": 4,
+      "row": 1,
+      "col": 1,
+      "x": 380,
+      "y": 733,
+      "w": 319,
+      "h": 274,
+      "character_id": null
+    },
+    {
+      "idx": 5,
+      "row": 1,
+      "col": 2,
+      "x": 711,
+      "y": 733,
+      "w": 319,
+      "h": 274,
+      "character_id": "braxton"
     }
   ],
-  "confidence": 0.0,
-  "character_id_by_tile": {},
-  "notes": "auto-detect bands too thin (widths=[1006] heights=[68, 71, 129, 646, 23, 45, 78]); manual tag needed"
+  "confidence": 1.0,
+  "character_id_by_tile": {
+    "2": "cold_boss_ryan",
+    "3": "bro_coworker_charles",
+    "5": "braxton"
+  },
+  "notes": "seed: 2x3; Igas/Spencer/Ryan top, Charles/Corey/Braxton bottom (3/6 tiles have roster chars)"
 }

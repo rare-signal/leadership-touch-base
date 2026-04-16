@@ -68,6 +68,7 @@ export type TileBox = {
   y: number;
   w: number;
   h: number;
+  character_id?: string | null;
 };
 
 export type TileDoc = {

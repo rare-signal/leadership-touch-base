@@ -1,28 +1,62 @@
 {
   "video_id": "V2DHYyZD03w",
-  "layout": "1x1",
+  "layout": "2x2",
   "source_size": [
     720,
     1280
   ],
   "content_bbox": [
-    24,
-    191,
-    673,
-    846
+    28,
+    435,
+    662,
+    755
   ],
   "tiles": [
     {
       "idx": 0,
       "row": 0,
       "col": 0,
-      "x": 28,
-      "y": 195,
-      "w": 665,
-      "h": 838
+      "x": 34,
+      "y": 441,
+      "w": 319,
+      "h": 365,
+      "character_id": "cold_boss_ryan"
+    },
+    {
+      "idx": 1,
+      "row": 0,
+      "col": 1,
+      "x": 365,
+      "y": 441,
+      "w": 319,
+      "h": 365,
+      "character_id": "bro_coworker_charles"
+    },
+    {
+      "idx": 2,
+      "row": 1,
+      "col": 0,
+      "x": 34,
+      "y": 818,
+      "w": 319,
+      "h": 365,
+      "character_id": null
+    },
+    {
+      "idx": 3,
+      "row": 1,
+      "col": 1,
+      "x": 365,
+      "y": 818,
+      "w": 319,
+      "h": 365,
+      "character_id": null
     }
   ],
-  "confidence": 0.0,
-  "character_id_by_tile": {},
-  "notes": "auto-detect bands too thin (widths=[673] heights=[42, 44, 56, 593, 14, 27, 37, 33]); manual tag needed"
+  "confidence": 1.0,
+  "character_id_by_tile": {
+    "0": "cold_boss_ryan",
+    "1": "bro_coworker_charles"
+  },
+  "notes": "seed: 2x2 small (720x1280); Ryan/Charles top guessed, bottom row unclear (2/4 tiles have roster chars)"
 }

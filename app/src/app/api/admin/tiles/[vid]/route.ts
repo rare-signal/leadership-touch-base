@@ -4,8 +4,6 @@ import { loadTileDoc, saveTileDoc } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
 
-const LAYOUTS = ["skip", "1x1", "1x2", "2x1", "2x2", "1x3", "3x1", "2x3", "3x2"] as const;
-
 const TileBoxSchema = z.object({
   idx: z.number().int(),
   row: z.number().int(),
@@ -14,19 +12,13 @@ const TileBoxSchema = z.object({
   y: z.number().int(),
   w: z.number().int(),
   h: z.number().int(),
+  character_id: z.string().nullable().optional(),
 });
 
+// Simplified schema: the pipeline seeds geometry + layout, and the UI edits
+// character_id per tile. We accept just the tiles + optional notes.
 const PutSchema = z.object({
-  layout: z.enum(LAYOUTS),
-  source_size: z.tuple([z.number().int(), z.number().int()]),
-  content_bbox: z.tuple([
-    z.number().int(),
-    z.number().int(),
-    z.number().int(),
-    z.number().int(),
-  ]),
   tiles: z.array(TileBoxSchema),
-  character_id_by_tile: z.record(z.string(), z.string()),
   notes: z.string().optional(),
 });
 
@@ -49,15 +41,18 @@ export async function PUT(
   if (!current) {
     return NextResponse.json({ error: "not_found" }, { status: 404 });
   }
+
+  // Rebuild the character_id_by_tile mirror from the tiles' character_id.
+  const idByTile: Record<string, string> = {};
+  for (const t of parsed.tiles) {
+    if (t.character_id) idByTile[String(t.idx)] = t.character_id;
+  }
+
   const next = {
     ...current,
-    layout: parsed.layout,
-    source_size: parsed.source_size,
-    content_bbox: parsed.content_bbox,
     tiles: parsed.tiles,
-    character_id_by_tile: parsed.character_id_by_tile,
+    character_id_by_tile: idByTile,
     notes: parsed.notes ?? current.notes,
-    confidence: current.confidence,
   };
   await saveTileDoc(vid, next);
   return NextResponse.json({ ok: true, tiles: next });

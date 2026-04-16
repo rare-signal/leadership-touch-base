@@ -1,28 +1,59 @@
 {
   "video_id": "6c4ezOY-HOc",
-  "layout": "1x1",
+  "layout": "2x2",
   "source_size": [
     1080,
     1920
   ],
   "content_bbox": [
-    46,
-    280,
-    990,
-    1272
+    43,
+    652,
+    993,
+    1132
   ],
   "tiles": [
     {
       "idx": 0,
       "row": 0,
       "col": 0,
-      "x": 50,
-      "y": 284,
-      "w": 982,
-      "h": 1264
+      "x": 49,
+      "y": 658,
+      "w": 484,
+      "h": 554,
+      "character_id": null
+    },
+    {
+      "idx": 1,
+      "row": 0,
+      "col": 1,
+      "x": 545,
+      "y": 658,
+      "w": 484,
+      "h": 554,
+      "character_id": null
+    },
+    {
+      "idx": 2,
+      "row": 1,
+      "col": 0,
+      "x": 49,
+      "y": 1224,
+      "w": 484,
+      "h": 554,
+      "character_id": null
+    },
+    {
+      "idx": 3,
+      "row": 1,
+      "col": 1,
+      "x": 545,
+      "y": 1224,
+      "w": 484,
+      "h": 554,
+      "character_id": null
     }
   ],
-  "confidence": 0.0,
+  "confidence": 1.0,
   "character_id_by_tile": {},
-  "notes": "auto-detect bands too thin (widths=[990] heights=[64, 71, 92, 873, 23, 40, 32, 77]); manual tag needed"
+  "notes": "seed: 2x2; no nameplates visible (0/4 tiles have roster chars)"
 }

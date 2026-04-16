@@ -9,20 +9,23 @@
     0,
     0,
     1080,
-    909
+    1920
   ],
   "tiles": [
     {
       "idx": 0,
       "row": 0,
       "col": 0,
-      "x": 4,
-      "y": 4,
-      "w": 1072,
-      "h": 901
+      "x": 6,
+      "y": 6,
+      "w": 1068,
+      "h": 1908,
+      "character_id": "braxton"
     }
   ],
-  "confidence": 0.0,
-  "character_id_by_tile": {},
-  "notes": "auto-detect found no interior gutters (guessed 1x1); manual tag needed"
+  "confidence": 1.0,
+  "character_id_by_tile": {
+    "0": "braxton"
+  },
+  "notes": "seed: 1x1 sketch at breakfast (Braxton actor, VERSO JOBS shirt) (1/1 tiles have roster chars)"
 }

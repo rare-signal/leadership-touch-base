@@ -69,6 +69,13 @@ def tiles(force: bool = False) -> None:
     run(force=force)
 
 
+@app.command("seed-tiles")
+def seed_tiles_cmd() -> None:
+    """Stamp tile JSONs from the hand-curated seed table (fast path)."""
+    from larp_pipeline.seed_tiles import run
+    run()
+
+
 @app.command("all")
 def run_all() -> None:
     """Run every stage in order."""

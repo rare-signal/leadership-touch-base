@@ -1,28 +1,62 @@
 {
   "video_id": "NyHhdf6aVJM",
-  "layout": "1x1",
+  "layout": "2x2",
   "source_size": [
     1080,
     1410
   ],
   "content_bbox": [
-    38,
-    338,
-    1005,
-    842
+    43,
+    479,
+    993,
+    831
   ],
   "tiles": [
     {
       "idx": 0,
       "row": 0,
       "col": 0,
-      "x": 42,
-      "y": 342,
-      "w": 997,
-      "h": 834
+      "x": 49,
+      "y": 485,
+      "w": 484,
+      "h": 403,
+      "character_id": null
+    },
+    {
+      "idx": 1,
+      "row": 0,
+      "col": 1,
+      "x": 545,
+      "y": 485,
+      "w": 484,
+      "h": 403,
+      "character_id": "bro_coworker_charles"
+    },
+    {
+      "idx": 2,
+      "row": 1,
+      "col": 0,
+      "x": 49,
+      "y": 900,
+      "w": 484,
+      "h": 403,
+      "character_id": null
+    },
+    {
+      "idx": 3,
+      "row": 1,
+      "col": 1,
+      "x": 545,
+      "y": 900,
+      "w": 484,
+      "h": 403,
+      "character_id": "cold_boss_ryan"
     }
   ],
-  "confidence": 0.0,
-  "character_id_by_tile": {},
-  "notes": "auto-detect found no interior gutters (guessed 1x1); manual tag needed"
+  "confidence": 1.0,
+  "character_id_by_tile": {
+    "1": "bro_coworker_charles",
+    "3": "cold_boss_ryan"
+  },
+  "notes": "seed: 2x2; Igas/Charles top, Corey/Ryan bottom (2/4 tiles have roster chars)"
 }
