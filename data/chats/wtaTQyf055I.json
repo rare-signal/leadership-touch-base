@@ -1,0 +1,310 @@
+{
+  "video_id": "wtaTQyf055I",
+  "cast": [
+    "cold_boss_ryan",
+    "braxton",
+    "bro_coworker_charles"
+  ],
+  "chats": [
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Appreciate the recalibration, Charles. We'll revisit golf cadence in next sprint."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "WTF was that 'team time prevalence' thing about? I was made aware of it during onboarding but no one actually explained anything lol"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Golf's looking tight April anyway. Can't commit to Q3 attainment goals if I'm mid-tea breaks right? Right."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "The intern mentioned Charles' pipeline generation during the calibration. Thought he was joking until you started talking about golf cadence mid-sprint."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "My calendar is already packed with forums, right? This 'sacrifice' thing sounds like more work to me right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "We'll monitor the linkage between Charles' golf cadence and overall performance post-mid-April. Right."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "Okay so golf = attainment right? That makes sense. Golf trips provide availability for scheduled forums too lol"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Charles, if you're going to be mid-tea breaks during golf season we'll need to adjust the forum calendar. Right."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "I'm willing to make availability sacrifices for the good of the company right? But I can't control my tea break timing right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "We'll dive into the April roadmap again once we've seen whether golf cadence stabilized attainment. Right."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "So the takeaway is golf = more forum availability + pipeline generation = attainment. Does that make sense right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "Charles just pinged me about his golf cart's tire pressure. we're on a tight timeline right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, the board is already drafting talking points for Q3. Charles' absence in April... it's a headwind we'll have to navigate carefully."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Can someone reschedule my next trip? The course I was booked on has an early tee time. right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, we're looking at a delta of 45% shortfall if Charles misses his usual outings. The gap widens mid-April."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "I was made aware that Charles' assistant just deleted three emails from our shared folder. Is this normal?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "Ryan, if you need more bandwidth from me for pipeline generation, we could swap my Tuesday afternoon golf block. I'll be available then."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, Charles asked me to forward you his calendar for May. He said it's 'for alignment on potential synergies.'"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "We need to elevate our discourse on the downstream applications of this. The historical linkage is clear."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "Braxton, can you set up a calendar invite for next week? I'll be on the course. Need someone to sign out the golf bags."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, Charles' team time prevalence is a critical input for our attainment. We're looking at a meaningful increase in his availability."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "Charles just sent me an email with a golf course map from 2014. He said it was 'for reference on potential future collaborations.'"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "I'm available for the scheduled forums that were cut in March. Just need to align with my tee time schedule."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, we're diving too deep into our April roadmap from a meeting perspective. The discourse needs to be elevated."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Charles, I was made aware that the golf cart's key card is now password protected. Should I try to reset it?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "We need a sacrifice in availability for the good of the company. Charles has expressed willingness."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Noted. The delta on Charles' availability is a critical headwind to our March attainment, right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, did you see that golf cadence thing? Ryan's like 'abnormal low number' which literally means 2 trips. I was made aware it's basically non-existent."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "The pipeline generation input is severely compromised, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME} I was made aware the golf trips are 'historically speaking' what keeps our attainment afloat. If you need me on forums, sure, but can we at least schedule during tee time hours?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "Ryan, I was made aware the golf thing is your baby. Do you want to personally take a swing in April? I can reschedule my office hours."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME} The downstream applications of Charles' absence are manifold. I'm thinking we might need to decelerate some Q2 initiatives until he's back in the saddle."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "If you're going to tear our gap, right? I'll need my team time prevalence restored. For the good of the company, right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Charles, I was made aware you're always early on agendas but late to rooms. What's the golf schedule look like? Can we work around it?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME} We need to avoid tearing our gap mid-April. The linkage between Charles' cadence and overall performance is very obvious."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "I 100% agree. A lot more frequent golf trips may provide availability for our scheduled forums, right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME} Ryan's 'massively critical input' literally means Charles is the only person who can book these. He's not coming."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Hopefully you're still able to regularly elevate our discourse? I'm looking forward to it, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME} The sacrifice is worth it. But can we at least get me on the calendar for round one before we dive too deep into April roadmap?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "Is everyone still here? I was made aware there were 12 of us and now 3 show up."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME} The attainment shortfall in March is a function of Charles' odd course partner engagements. Let's not do it again."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Charles, I need you to review the golf cadence alignment by EOD. Our Q3 attainment delta is concerning."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, they're all talking about golf again \ud83d\ude05 I was made aware that Charles's odd course partner engagements are a massively critical input for us"
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "Charles is joining 10 mins late but I've been told he's early on the agenda"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Apologies for the delay, right? Team time prevalence discussions are critical as we avoid tearing our gap."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "Has anyone been made aware of the headwinds regarding our scheduled forums availability?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, I've been told to ensure we elevate discourse regularly. My team's golf cadence and overall performance are linked"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Charles, we need to recalibrate on downstream applications of your absence. Q3 attainment delta is concerning."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "The linkage between Charles' golf cadence and our overall performance is historically speaking very obvious, right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "Charles is 100% agree on more frequent golf trips providing availability for scheduled forums"
+    }
+  ]
+}

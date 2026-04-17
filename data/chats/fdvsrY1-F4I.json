@@ -1,0 +1,328 @@
+{
+  "video_id": "fdvsrY1-F4I",
+  "cast": [
+    "cold_boss_ryan",
+    "bro_coworker_charles",
+    "braxton"
+  ],
+  "chats": [
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Ryan was kind enough to join us today just to quickly recalibrate on the potential downstream applications of his absence, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "Did you see how he looked when I left for the second time? He kept eye contact. That's never a good sign."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "I was made aware that Charles is stepping down from his role as team lead, but I don't know what that means for the quarterly golf outing yet."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "I'm not a writer. You're my intern. Don't expect me to write your exit memo when I leave, right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Charles's departure will introduce immediate headwinds across the team's output, and we need to address that delta now."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "Ryan just said he volunteered to step down. That was him volunteering to leave his own position. That's a thing people don't do normally."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Charles is stepping down from the team lead role effective immediately, but historically speaking we've had other contributors who weren't quite my caliber."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Your last quarter was a 27% attainment shortfall. I'm curious if you can meet the same benchmark before you leave, right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "I was made aware that Charles has been historically late to meetings while simultaneously being early on the agenda. That's... not a normal pattern."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "He thinks he just stepped down from his role as team lead. He hasn't realized that means someone else has to do my work for free during the transition window."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "The downstream applications of his absence are now our primary focus, and we need to begin disruption across workflows immediately."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "I was made aware that you're leaving. Can you tell me what 'deceleration' means in the context of a team's output?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "We need to solve for less Charles while simultaneously addressing the team time prevalence issue we've been ignoring."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "I just gave myself a raise in this meeting by taking my own seat down. The irony isn't lost on me, right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "Charles has been operating as if he were a writer for most of his career. He's now realizing that was never actually true."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Before we begin our disruption across workflows, right? I want to acknowledge that this is a delicate moment."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "I was made aware of the Q3 attainment shortfall last week, so you can imagine how I felt when Charles departed got announced. Like, historically speaking..."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "Hey Ryan, I was made aware that we might need to redistribute responsibilities \u2014 does that mean my bandwidth is being reconsidered too? Right."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "The operational headwinds are inevitable. But emotionally? We're looking at a delta in team morale that we may not recover from this quarter alone."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "I appreciate the reason I like that \u2014 it really resonates with me personally, right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "So if we're solving for less Charles, does that mean you want me to take on his golf schedule? Because my calendar says I was made aware of something called 'Team Time' and I'm not sure how to prioritize it."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "Charles Departure is a systemic variable, not an individual one. We're looking at the whole ecosystem here."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "I think that your resignation might be equally as operationally detrimental to me emotionally \u2014 right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "Ryan just pulled me aside and said, 'Braxton, we're looking at a bandwidth constraint on you.' So I was made aware of a new deliverable that wasn't on my OKR."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "We need to create a framework for knowledge transfer before the disruption becomes permanent."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "I was made aware that you're being floated for Charles' coverage, right? Because historically speaking, your output aligns with his velocity \u2014 or at least it did before the last quarterly review."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "I want to thank everyone for their candor today. The emotionality is palpable in this room."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "Just got word that my title's going from 'Junior Associate' to 'Interim Team Lead.' I was made aware of the new org chart and honestly, it feels like I'm being set up for a promotion in reverse."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "The immediate headwinds are real. But we can turn this into a positive \u2014 right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Can we circle back to bandwidth allocation in the next standup? That's a delta I need resolved."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, my golf tee time at 3:45 is actually the quarterly review. My team's attendance shortfall has been historically speaking... I'll see you in the parking garage."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "I was made aware that the new intern slot opens up tomorrow. I'm literally already filling it."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "The operational headwinds from Charles's departure are... measurable. We need to solve for less Charles before the quarterly review."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Team time prevalence shows a 14% decrease post-Charles. Let's table this for the next standup."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, I need you to reframe this as a 'constructive realignment' for the quarterly review. The team is... sensitive."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "I was made aware that the quarterly benchmark shortfall is technically my delta. I'll own it in standup."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "We need to solve for less Charles across workflows before the quarterly review. This is a delta I'm personally accountable for."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, Ryan made me aware that my 'made aware' status is now the new team time prevalence. I own this construct."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Charles Departure will introduce immediate headwinds. The team's output delta is... measurable in the next quarter."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Charles' departure is an opportunity. Let's explore it."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, did you notice how the quarterly review slides got slightly smaller each quarter? I think they're prepping for a new budget cycle."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "You missed the 10:03 AM call. That's your third absence this sprint. I'm recalculating your bandwidth against team output."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "My absence creates a delta in morale that we'll address through structural realignment. Right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "I actually left on time. The 'invariably' was a metaphorical construction of my presence."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, I was made aware that Ryan's office is now the 'decalibration room'. It smells like stale coffee and existential dread."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "My 'historically speaking' comments are getting flagged. You're like a human spreadsheet."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "You were made aware of the budget review yesterday? That's why I'm assigning you to 'optimization'."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "The headwinds are a feature, not a bug. Right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, remember when we built the 'attainment shortfall' dashboard? That was me. Now I'm being called out by a spreadsheet."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "If Charles is 'invariably' absent, then the team time prevalence will adjust. Mathematically guaranteed."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "I was made aware that my desk plant died. Ryan called it a 'biological efficiency review'."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Your bandwidth is now 87% of its historical baseline. The shortfall is a construct."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "I was made aware that the 'disruption' meme started in HR. It's a feedback loop."
+    }
+  ]
+}

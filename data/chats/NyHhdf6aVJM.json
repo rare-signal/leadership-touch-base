@@ -1,0 +1,273 @@
+{
+  "video_id": "NyHhdf6aVJM",
+  "cast": [
+    "bro_coworker_charles",
+    "cold_boss_ryan"
+  ],
+  "chats": [
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "I'll grab the board deck from last quarter and annotate the missed targets. See you in 12."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Noted on the friction minimization initiative. I'm pulling a quick delta analysis to surface headwinds before the next sync."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "you saw what he said about downstream applications, right? that's like code for 'my absence will have consequences and i won't talk about them'. also why is my golf booking showing up as a calendar invite under Q3 attainment?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "if you're still using 'connective tissue' that's an old word. new language is 'systemic interdependency vectors'. also your agenda always shows up 47 minutes early so how do we calibrate that?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "I've scheduled a follow-up to discuss operational discipline metrics. Link below."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "the Q3 attainment golf thing is actually my personal stretch goal, you know? but also if you look at the agenda I'm early because i want to set expectations so nobody feels blindsided. that's leadership right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "The deck shows a 14% variance from forecast on the vertical lift initiatives. We're going to need cross-functional synergy in Q2 to bridge that."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "okay but seriously, who booked this? because if it's not me and i'm already running behind on my own golf cadence this is a slippery slope. also why did you all use 'team time prevalence' in the transcript? that phrase was invented to make meetings sound productive."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "i think there's an opportunity here. the net line shortfall is a classic case of organizational alignment decay. what if we framed it as a 'strategic realignment opportunity'? that's more palatable to investors."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "I'm going to circle back with the team on executional consistency before we move into the subsequent quarter. Just wanted to flag it here."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "historically speaking, you've used 'tighten our connective tissue' in 3 of the last 4 quarters. it's a tired phrase. new language is 'optimize inter-team workflow throughput'. also i have a feeling my absence will be misinterpreted as disengagement so let me know if there are any downstream applications to flag."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "you ever feel like 'cross-functional synergy' is just a fancy way of saying 'i hope someone else figures out how this piece works with that piece'? also the delta analysis thing... does that mean you're going to ask me for more data or what?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "I want everyone aligned on the elevated lift approach across all verticals. This is our Q2 focus."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "the operational discipline thing is actually about accountability, you know? not just metrics. but also if i'm early and people are late that's a cultural signal. like why does my golf booking always get priority in the calendar but nobody else's meetings do?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "i was reviewing our Q1 shortfall and i'm seeing a pattern. the language we use is 'realign around increased focus' but nobody knows what that means in practice. i'm calling it a terminology gap until someone defines it operationally."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Just checking the agenda timing again. My golf tee time is literally 46 minutes from now so I'm going to have to slip out. Thanks for understanding!"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Appreciate the quick pivot, right? I was just on my second tee before this call even launched."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "Did you catch that thing about 'tightening connective tissue'? They're literally talking about firing people who've been there 3 years. Just thought you should know the vibe, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Historically speaking, when we've tried 'cross-functional synergy' before it ended with someone being reassigned to a department they hated."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "My absence this quarter? That's not 'absence' anymore. It's a 'strategic deceleration initiative.' Same difference, but it sounds less like you're gone and more like you're being strategically positioned."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "I've got a flight home at 4:30. If the 'elevated lift' agenda gets too heavy I'm gonna need to start drafting my resignation letter on a napkin."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "You think 'historically speaking' is gonna work on Ryan? He doesn't do historical. He does current metrics, right? You're about to learn that the hard way."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "Your 'strategic positioning' was a heads-up last week about that office party. I went. You didn't. That's not deceleration, that's just you being in the back."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Team time prevalence is what we should really be talking about. Not 'connective tissue.' That's just HR-speak for 'make the group chat mandatory.'"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "I hear you on team time prevalence. But when you say it back to me I'll ask if that's a typo."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Also 'Q2 perspective' \u2014 we're actually looking at Q1 results now. They changed the name to make it sound like a new quarter."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "There's an exit interview prep doc in my Drive from 2019. It's been updated with the new 'synergy' jargon. Want me to DM you a link, or do you prefer I screenshot it into your chat?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "You mentioned 'downstream applications' of your absence. That's a nice way to say you're gone so hard the org is literally holding a vacuum."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "I'm going to mute. The 'higher impact outcomes' part of this sounds like someone tried to describe a firing in corporate speak."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "If anyone is taking notes on 'team time prevalence' \u2014 that's the exact phrase we're using to describe mandatory Slack status updates. Just putting it out there."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "I'll just add that last thing was historically speaking a lot of work."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "He literally just said 'team time prevalence' like it's a new KPI. I don't think he knows what that means."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "You're not gonna like this. Ryan's been running those golf group chats for Q3 attainment already."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "Charles says he was 'late' to the meeting because he was 'realigning around increased focus.' I think he meant realigning his calendar."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "The agenda slide actually said 'tightening connective tissue' which I'm calling it because now we all know what that means."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "You need to stop ending EVERY sentence with 'right?' like that's how you're getting tenure."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "I'm not gonna lie. When Ryan said 'deceleration' I just thought he meant the car in front of us."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "If we're talking about downstream applications from my absence I would've appreciated a heads-up beforehand right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "The 'historically speaking' thing you're gonna have to get used to. It's the charm."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "He actually looked at me like I just dropped a bomb when he said 'attainment shortfall.' I felt like a nuclear threat."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "So now we're in the Q2 where we need elevated lift across all verticals. That's a lot of words for 'more work'."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "Charles is now on the Q3 golf trip that's tied to our numbers. So we're literally driving to a resort in two months based off this conversation."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "I swear. The word 'connective' in 'connective tissue' was chosen by the slide designer not by me."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "You're typing 'right?' in chat again. That's not a joke anymore."
+    }
+  ]
+}

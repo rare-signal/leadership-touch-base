@@ -1,0 +1,178 @@
+{
+  "video_id": "IPmyYpcLvZE",
+  "cast": [
+    "cold_boss_ryan",
+    "bro_coworker_charles",
+    "braxton"
+  ],
+  "chats": [
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Thank you, Ryan. The synergy with your entrepreneurial mindset will be invaluable to our downstream initiatives, right? We look forward to your continued engagement as an external partner."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Sad, but real. I'll miss the synergy. Also the burping. That was a lot of team time prevalence for you, Charles."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "So wait, did you actually like him? Or are you just pretending because the vibes were too toxic to admit it? I was made aware of your HR survey responses yesterday and they said 'compromised.' Right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "Braxton, if you're making a personal statement in the DM channel to me that's not related to this meeting, I'm going to have to address your bandwidth. Can we table that for now?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "Are you sure about the startup thing? He said 'full-time offer is a mad disrespect.' That's... that's a pretty strong statement. Historically speaking, that kind of language doesn't get you promoted."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "I was made aware that he's trying to go somewhere where he can take risks. That's different than disrespecting us, right? Also the corporate speak was making me dizzy."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "I'd like to close by reiterating our gratitude for your contributions. While you're off on this entrepreneurial journey, we'll continue to elevate the team's bandwidth."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "He said he learned hella from us though. I think that 'hella' is a Southernism we should be adopting more. It's more authentic."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "Also I was made aware that you're the one who gave him the full-time offer. So 'mad disrespect' is your problem. Not ours."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "Braxton, I appreciate you making me aware of that perspective, but let's keep the conversation focused on team time prevalence and downstream initiatives. Right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "He said 'dip' though. I think that's a Southernism we should be adopting too. It's more authentic than 'resigned.' Right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "Okay but like, he said the vibes here were super weak and I was carrying. That feels... that feels accurate? Like a lot."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "Hey there \u2014 just wanted to personally say thank you for being a model of authenticity. We needed someone who could reach their full potential without compromise."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "I'll be the one writing this summary because I was made aware that Ryan has left. Historically speaking, summaries should be written by the person who's staying."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "\ud83e\udd14 we can't afford the attrition, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "I know he's leaving. Been in my DMs for weeks about 'the vision.' But what vision? Right now I'm just here to sign his PTO requests and then watch the team time prevalence spike."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "i was made aware of his decision. i was also made aware that my compensation package is being reviewed for 'alignment.' \ud83e\udee3"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "You want to hear what I told him? 'We value you. You're our best talent.' I said it with a smile and then immediately cut his bonus by 20%. Right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "I know he's leaving, but I don't want to lose the momentum we built right? The Q3 attainment shortfall is already bleeding us. We need someone who can take ownership."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "he said 'we value you' but i heard him say it while he was deleting his own slack notifications from the team channel. right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "He's looking for risk and alignment elsewhere, I get that. But let's not let this become a narrative about us being stagnant."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "I was made aware of his departure last night. He texted me at 11:47 PM with the exact same energy he has in meetings - all 'visionary' and zero actual details."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "i want to thank him for letting me cook here even if the kitchen was on fire. right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "You know he's gone. What are you going to tell HR? That we 'didn't do enough' or that we did exactly what we were supposed to and the market just moved on?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "this meeting transcript will be in our hiring manager's inbox by tomorrow morning."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "He said 'go get them' which is code for go take the next role and then tell me how to hire your replacement. Right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Let's close out this quarter strong, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "Don't you dare type anything to him about this. I'll be made aware that you 'shared my thoughts' and it will feel like a breach of trust."
+    }
+  ]
+}

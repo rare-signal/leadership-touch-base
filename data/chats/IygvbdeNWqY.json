@@ -1,0 +1,32 @@
+{
+  "video_id": "IygvbdeNWqY",
+  "cast": [
+    "braxton"
+  ],
+  "chats": [
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "oh i was made aware the VP just called it 'a pivot opportunity' after we discussed the same thing in three standups"
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "i was made aware that this role will be filled by someone external. it's a bandwidth thing."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "so are you getting out? yeah i'm out man sorry its nothing personal"
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "i was made aware braxton is getting the full time offer. congrats? or like... should i just leave this chat alone"
+    }
+  ]
+}

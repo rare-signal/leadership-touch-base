@@ -83,6 +83,13 @@ def clips(force: bool = False, only: str | None = None) -> None:
     run(force=force, only_vid=only)
 
 
+@app.command()
+def chats(force: bool = False, only: str | None = None) -> None:
+    """Pre-generate chat packs (public + DM) per meeting for runtime playback."""
+    from larp_pipeline.chats import run
+    run(force=force, only_vid=only)
+
+
 @app.command("all")
 def run_all() -> None:
     """Run every stage in order."""

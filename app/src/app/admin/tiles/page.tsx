@@ -1,10 +1,14 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import type { TileBox, TileDoc } from "@/lib/types";
 
 type Roster = { id: string; display_name: string }[];
+
+// Same target aspect the meeting grid renders every tile at — keeps the
+// admin live preview visually identical to what /meeting will show.
+const TILE_DISPLAY_ASPECT = 1.15;
 
 export default function TilesAdminPage() {
   const [docs, setDocs] = useState<TileDoc[]>([]);
@@ -225,8 +229,30 @@ function VideoCard({
           <span className="ml-2 text-xs text-zinc-500">
             {sw}×{sh} · {doc.layout} · {tagged}/{tiles.length} tagged
           </span>
+          <div className="mt-0.5 text-[11px] text-zinc-500">
+            <span className="rounded bg-zinc-800 px-1.5 py-0.5 text-zinc-300">
+              {tiles.length}-person meeting
+            </span>
+            {layout === "2x2" && (
+              <span className="ml-1.5 text-zinc-500">
+                (small grid — different bbox than 2x3)
+              </span>
+            )}
+            {layout === "2x3" && (
+              <span className="ml-1.5 text-zinc-500">
+                (big grid — different bbox than 2x2)
+              </span>
+            )}
+          </div>
         </div>
         <div className="flex items-center gap-2">
+          <CopyStateButton
+            videoId={doc.video_id}
+            sourceSize={doc.source_size}
+            layout={layout}
+            bbox={bbox}
+            tiles={tiles}
+          />
           <Button size="sm" onClick={save} disabled={!dirty || saving}>
             {saving ? "…" : saved && !dirty ? "Saved" : "Save"}
           </Button>
@@ -240,6 +266,14 @@ function VideoCard({
         onBboxField={setBboxField}
         onNudge={nudgeBbox}
         onLayoutChange={setLayoutAndReflow}
+      />
+
+      <LiveMeetingPreview
+        videoId={doc.video_id}
+        sourceSize={[sw, sh]}
+        tiles={tiles}
+        onNudge={nudgeBbox}
+        layout={layout}
       />
 
       <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
@@ -390,6 +424,237 @@ function GeometryEditor({
           +20
         </button>
       </div>
+    </div>
+  );
+}
+
+// Copies the current in-memory tile doc as a JSON snippet suitable for
+// pasting back to the assistant. Includes source_size + content_bbox +
+// per-tile x/y/w/h/character so defaults can be baked in without ambiguity.
+function CopyStateButton({
+  videoId,
+  sourceSize,
+  layout,
+  bbox,
+  tiles,
+}: {
+  videoId: string;
+  sourceSize: [number, number];
+  layout: string;
+  bbox: [number, number, number, number];
+  tiles: TileBox[];
+}) {
+  const [copied, setCopied] = useState(false);
+  const onClick = () => {
+    const payload = {
+      video_id: videoId,
+      source_size: sourceSize,
+      layout,
+      content_bbox: bbox,
+      tiles: tiles.map((t) => ({
+        idx: t.idx,
+        row: t.row,
+        col: t.col,
+        x: t.x,
+        y: t.y,
+        w: t.w,
+        h: t.h,
+        character_id: t.character_id ?? null,
+      })),
+    };
+    navigator.clipboard
+      .writeText(JSON.stringify(payload, null, 2))
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1500);
+      })
+      .catch(() => {});
+  };
+  return (
+    <Button
+      size="sm"
+      variant="secondary"
+      onClick={onClick}
+      title="Copy current state as JSON (for baking defaults)"
+    >
+      {copied ? "Copied ✓" : "Copy"}
+    </Button>
+  );
+}
+
+// A mini version of the meeting grid — one <video> per card, every tile
+// canvas drawImage's its bbox region each rAF using the same fixed-aspect
+// center-crop math as <ParticipantTile>. Nudging bbox values updates all
+// tiles live so you can see exactly what /meeting will render.
+function LiveMeetingPreview({
+  videoId,
+  sourceSize,
+  tiles,
+  onNudge,
+  layout,
+}: {
+  videoId: string;
+  sourceSize: [number, number];
+  tiles: TileBox[];
+  onNudge: (dx: number, dy: number, dw: number, dh: number) => void;
+  layout: string;
+}) {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [on, setOn] = useState(false);
+
+  useEffect(() => {
+    if (!on) return;
+    const v = videoRef.current;
+    if (!v) return;
+    const tryPlay = () => v.play().catch(() => {});
+    v.addEventListener("loadedmetadata", tryPlay, { once: true });
+    if (v.readyState >= 1) tryPlay();
+    return () => v.removeEventListener("loadedmetadata", tryPlay);
+  }, [on]);
+
+  return (
+    <div className="mb-3 rounded-md border border-zinc-800 bg-zinc-900/40 p-2">
+      <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+        <div className="text-[10px] uppercase tracking-wide text-zinc-500">
+          live preview · {tiles.length}-person ({layout})
+        </div>
+        <div className="flex items-center gap-1">
+          <NudgeGroup label="move ↕" onNudge={(dy) => onNudge(0, dy, 0, 0)} />
+          <NudgeGroup label="height" onNudge={(d) => onNudge(0, 0, 0, d)} />
+          <button
+            type="button"
+            onClick={() => setOn((x) => !x)}
+            className="rounded border border-zinc-700 bg-zinc-800 px-2 py-0.5 text-[11px] hover:bg-zinc-700"
+          >
+            {on ? "Stop" : "Play"}
+          </button>
+        </div>
+      </div>
+      {on ? (
+        <>
+          <video
+            ref={videoRef}
+            src={`/api/source/${videoId}`}
+            className="pointer-events-none fixed left-0 top-0 h-[1px] w-[1px] opacity-0"
+            muted
+            playsInline
+            preload="auto"
+          />
+          <div className="flex flex-wrap gap-2">
+            {tiles.map((t) => (
+              <LiveTilePreview
+                key={t.idx}
+                videoRef={videoRef}
+                sourceSize={sourceSize}
+                tile={t}
+              />
+            ))}
+          </div>
+        </>
+      ) : (
+        <p className="text-[11px] text-zinc-500">
+          Click Play to load the source video and see each tile exactly as the
+          meeting grid will render it. Nudge buttons above adjust the whole
+          grid — tiles update live.
+        </p>
+      )}
+    </div>
+  );
+}
+
+function NudgeGroup({
+  label,
+  onNudge,
+  step = 10,
+}: {
+  label: string;
+  onNudge: (delta: number) => void;
+  step?: number;
+}) {
+  return (
+    <div className="flex items-center gap-0.5 rounded border border-zinc-700 bg-zinc-800 px-1.5 py-0.5 text-[11px]">
+      <span className="mr-1 text-zinc-500">{label}</span>
+      <button
+        type="button"
+        onClick={() => onNudge(-step)}
+        className="rounded px-1 hover:bg-zinc-700"
+        title={`${label} −${step}`}
+      >
+        −{step}
+      </button>
+      <button
+        type="button"
+        onClick={() => onNudge(+step)}
+        className="rounded px-1 hover:bg-zinc-700"
+        title={`${label} +${step}`}
+      >
+        +{step}
+      </button>
+    </div>
+  );
+}
+
+function LiveTilePreview({
+  videoRef,
+  sourceSize,
+  tile,
+}: {
+  videoRef: React.RefObject<HTMLVideoElement | null>;
+  sourceSize: [number, number];
+  tile: TileBox;
+}) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  void sourceSize;
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    canvas.width = Math.max(1, Math.round(tile.w));
+    canvas.height = Math.max(1, Math.round(tile.w / TILE_DISPLAY_ASPECT));
+
+    const srcAspect = tile.w / tile.h;
+    let sx = tile.x;
+    let sy = tile.y;
+    let sw = tile.w;
+    let sh = tile.h;
+    if (srcAspect > TILE_DISPLAY_ASPECT) {
+      const newW = tile.h * TILE_DISPLAY_ASPECT;
+      sx = tile.x + (tile.w - newW) / 2;
+      sw = newW;
+    } else if (srcAspect < TILE_DISPLAY_ASPECT) {
+      const newH = tile.w / TILE_DISPLAY_ASPECT;
+      sy = tile.y + (tile.h - newH) / 2;
+      sh = newH;
+    }
+
+    let raf = 0;
+    const draw = () => {
+      const v = videoRef.current;
+      if (v && v.readyState >= 2 && v.videoWidth > 0) {
+        try {
+          ctx.drawImage(v, sx, sy, sw, sh, 0, 0, canvas.width, canvas.height);
+        } catch {}
+      }
+      raf = requestAnimationFrame(draw);
+    };
+    raf = requestAnimationFrame(draw);
+    return () => cancelAnimationFrame(raf);
+  }, [tile.x, tile.y, tile.w, tile.h, videoRef]);
+
+  return (
+    <div
+      className={`relative overflow-hidden rounded border ${
+        tile.character_id ? "border-sky-500/60" : "border-amber-500/40"
+      } bg-zinc-950`}
+      style={{ width: 120, aspectRatio: TILE_DISPLAY_ASPECT }}
+      title={`#${tile.idx} ${tile.character_id ?? "unassigned"}`}
+    >
+      <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
+      <span className="absolute bottom-0 left-0 rounded-tr bg-black/70 px-1 text-[9px] text-zinc-200">
+        #{tile.idx} {tile.character_id ?? "?"}
+      </span>
     </div>
   );
 }

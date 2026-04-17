@@ -7,9 +7,9 @@
   ],
   "content_bbox": [
     45,
-    700,
+    750,
     990,
-    820
+    710
   ],
   "tiles": [
     {
@@ -17,9 +17,9 @@
       "row": 0,
       "col": 0,
       "x": 51,
-      "y": 706,
+      "y": 646,
       "w": 318,
-      "h": 398,
+      "h": 348,
       "character_id": null
     },
     {
@@ -27,9 +27,9 @@
       "row": 0,
       "col": 1,
       "x": 381,
-      "y": 706,
+      "y": 646,
       "w": 318,
-      "h": 398,
+      "h": 348,
       "character_id": "bro_coworker_charles"
     },
     {
@@ -37,9 +37,9 @@
       "row": 0,
       "col": 2,
       "x": 711,
-      "y": 706,
+      "y": 646,
       "w": 318,
-      "h": 398,
+      "h": 348,
       "character_id": "braxton"
     },
     {
@@ -47,9 +47,9 @@
       "row": 1,
       "col": 0,
       "x": 51,
-      "y": 1116,
+      "y": 926,
       "w": 318,
-      "h": 398,
+      "h": 348,
       "character_id": null
     },
     {
@@ -57,9 +57,9 @@
       "row": 1,
       "col": 1,
       "x": 381,
-      "y": 1116,
+      "y": 926,
       "w": 318,
-      "h": 398,
+      "h": 348,
       "character_id": null
     },
     {
@@ -67,13 +67,13 @@
       "row": 1,
       "col": 2,
       "x": 711,
-      "y": 1116,
+      "y": 926,
       "w": 318,
-      "h": 398,
+      "h": 348,
       "character_id": "cold_boss_ryan"
     }
   ],
-  "confidence": 1.0,
+  "confidence": 1,
   "character_id_by_tile": {
     "1": "bro_coworker_charles",
     "2": "braxton",

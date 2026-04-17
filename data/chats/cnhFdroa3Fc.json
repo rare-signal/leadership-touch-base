@@ -1,0 +1,225 @@
+{
+  "video_id": "cnhFdroa3Fc",
+  "cast": [
+    "cold_boss_ryan",
+    "bro_coworker_charles"
+  ],
+  "chats": [
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Can I just confirm we all have the DST transition locked in? Right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Just wanted to flag my historical absence for Q3 attainment \u2014 no, I'll be fine. Right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}\u2014 the recalibration window is 10pm Pacific sharp. Don't ask why."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "You're literally losing an hour per week right now. What's the play?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "We reframe it as 'temporal efficiency density' and charge overtime for the delta."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "The operational impact of not mitigating this is... measurable. Right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}\u2014 I got texted 'are you attending?' at 9:58am. That's new."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "I'll circle back on the workflow implications post-meeting. Right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}\u2014 the downstream applications of DST are... complicated. Not my job to solve."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "So if we're dealing with less week, what's the path forward? Right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}\u2014 I'm not logging off early tomorrow. The golf tee time is at 7:30am."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "I think we understand the gravity of this situation. Right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "So how do we solve for less week? Right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Historically speaking, I've always felt the Q3 attainment shortfall was a team time prevalence issue. Right."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME} \u2014 Did you get that? The operational delta is going to hit us harder than you think. I've already flagged it to the board."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "I'm just saying, if we don't proactively reclaim that hour from a workflow standpoint, we're looking at a daylight-induced productivity decline. Right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Charles \u2014 you still think the golf cadence is tied to Q3 attainment? I've been recalibrating on this. It's a systemic thing now."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "I'm just saying, historically speaking, it was a matter of team time prevalence. But look, if I might bug that out real quick \u2014 what about the downstream headwinds for us to correct for? Right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "And strategically, how do we solve for less week? That's the real question. Right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME} \u2014 They're all just saying right and right and right but nobody's actually solving the problem. I've been in this meeting for hours."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "So we must proactively reclaim that hour from a workflow standpoint if we are to prevent any daylight-induced productivity decline, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "Ryan \u2014 you ever just wonder who wrote that? Because it's no question that we must proactively reclaim but I'm not even sure what \"daylight-induced productivity\" means. Right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME} \u2014 The temporal compression is real. It's a seemingly minor issue until the downstream headwinds hit us to correct for. That's what I told them."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "And I did just write it all out there, go ahead \u2014 but nobody's actually reading the room anymore. Right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Charles \u2014 your golf cadence is tied to Q3 attainment now, right? I don't know if that's helping. The team time prevalence has gotten worse."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME} \u2014 I'm actually late to this meeting again but it's no question that we must proactively reclaim that hour. Right? Can someone tell me what time it is?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "It's a great input there \u2014 and if I might bug that out real quick, but seriously. How do we solve for less week?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "I just wanted to quickly flag that the Daylight Savings Adjustment is this weekend, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "So we will effectively be dealing with one less hour in the weekly time envelope. And I did just write it all out there, go ahead."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Operationally speaking, if not properly mitigated, this seemingly minor temporal compression can create sizable downstream headwinds for us to correct for, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "Did you see that thing Ryan just said? 'temporal compression'? He's been spending more time in the golf league chat lately. His Q3 attainment is probably already slipping."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "And if I might bug that out real quick, it's no question that we must proactively reclaim that hour from a workflow standpoint if we are to prevent any daylight-induced productivity decline, right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, I need you to draft the mitigation plan. Make it look like there were 'systemic inefficiencies' discovered that necessitated a workflow realignment. We'll take credit for everything."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME} \u2014 also include language about 'optimizing for reduced temporal envelope' and reference that framework we discussed last quarter. The more abstract it gets, the less people will question it."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "Did you catch the subtle thing he said about 'temporal compression'? That's his new lingo. He used to just say we needed more meetings but now he's talking about compressing time itself. Either that or he's finally learned a second language."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME} \u2014 make sure the plan has 'holistic ecosystem realignment' in it. That phrase always makes people go quiet and not ask questions. We'll present it as if we discovered a hidden opportunity instead of fixing broken things."
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "video_id": "TirJZUa620U",
+  "cast": [
+    "cold_boss_ryan",
+    "bro_coworker_charles"
+  ],
+  "chats": [
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "For the record \u2014 I will be physically absent from this room for a brief period to address fiscal reporting applications. Please see me at your earliest convenience."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Tax day is this Wednesday? Holy sh*t, my golf reservation was for Tuesday night \ud83d\ude2d"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, can we loop on the cognitive overhead allocation during fiscal reporting? The downstream impact on day-to-day execution is a total delta. Please advise."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "I told HR I'd be at the mini-golf tournament in lieu of this meeting. They said 'enjoy.' I'm bringing a spreadsheet."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "The impending fiscal reporting applications create a temporary reallocation of mental bandwidth. We need to anticipate any corresponding short-term productivity disruption."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "Ryan, are you actually going to do the tax work or just send me a slide deck titled 'The Process'? I need the actual numbers for Q3 attainment."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Charles \u2014 historical speaking, my workflow is aligned to fiscal reporting cadence. The deliverables are prepared."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "If you're not here, how can I allow the org around minimizing any corresponding total short-term productivity disruption?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "I'm literally at the putting green. You know the drill \u2014 I've been historically speaking very committed to golfing for team morale."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Let me close that loop real quick. The tax-based deliverables may create cognitive overhead amongst personnel."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "If anyone else is golfing this week, let's grab drinks afterward \ud83c\udf6c"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "The downstream impacts of a modest increase in finance-related external focus can affect day-to-day execution. Please mitigate."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "I just realized my tax return was filed under the wrong name and I'm not sure how to fix that without going through a lawyer"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "That being said, if anyone needs me during this period \u2014 please feel free to contact my assistant. I will be available via email."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "So if you're 'available via email' during fiscal reporting, does that mean I should just send you my golf scorecard and call it done?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Right. That\u2019s the baseline posture going forward."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "So I\u2019ll lock the golf plan for post-tax day, right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, remember what you saw in that deck\u2014Ryan\u2019s absence is a delta, not just a time block. The org needs to treat it as a systemic headwind."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "I\u2019m happy to answer any questions before we move forward right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "You want me to send the golf update? I\u2019ll call it \u2018Team Time Prevalence\u2019\u2014the finance team already bought that one."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "If anyone has blockers on their immediate deliverables, let\u2019s flag them now, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "You said \u2018minimal disruption\u2019 but the team\u2019s been asked to do more with less since you last joined. The math doesn\u2019t work."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Great, thank you all for being so proactive here,"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, if you see Ryan\u2019s name on a deliverable next week it\u2019ll probably be ghosted. I mean that professionally. He\u2019s off the grid."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "Charles, your golf plan is fine as long as it doesn\u2019t conflict with any team-wide initiatives right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, I saw you liked that \u2018cognitive overhead\u2019 phrase. Want to borrow the slide? I\u2019ll swap in a graph so it looks like real data."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "We\u2019ll circle back next week with any necessary adjustments, right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "I'll be in touch with you directly regarding the downstream impact assessment right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "Hey, did you get that? I told Ryan he's 're-calibrating' but like\u2014historically speaking\u2014he just hates scheduling around my golf tee times. Also FYI the org is calling it a 'productivity delta' so don't tell anyone I said anything right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Your 'team time prevalence' is historically low. I need your full bandwidth during the Q3 attainment window. Right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "Your absence creates downstream headwinds. I'm already planning a 'cognitive deceleration' plan. Historically speaking, you're the bottleneck right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Also I just found out our finance apps are scheduled for Wed 10 AM. Does anyone else have a 9-5 right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "I need you to buffer the team's cognitive overhead from the impending fiscal reporting. Your 'bandwidth reallocation' will be measured in Q3 attainment right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Please minimize any corresponding total short-term productivity disruption. Thanks."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "FYI Ryan just sent me a calendar invite titled 'Midway Tax-Based Deliverables' for a meeting that doesn't exist. I'm calling it 'attainment shortfall' until someone says otherwise right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "I'll be unavailable for the duration of the application window. Please document all downstream impacts in my shared folder."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "I just saw Ryan's calendar. His 'tax day' block says 'Meditation & Corporate Synergy'\u2014but his assistant texted me it was just him reorganizing his spice rack right? Historically speaking he does this every quarter."
+    }
+  ]
+}

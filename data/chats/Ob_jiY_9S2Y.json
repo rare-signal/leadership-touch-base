@@ -1,0 +1,364 @@
+{
+  "video_id": "Ob_jiY_9S2Y",
+  "cast": [
+    "braxton",
+    "bro_coworker_charles",
+    "cold_boss_ryan"
+  ],
+  "chats": [
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "I was made aware that Q1 runway is still insufficient to fully close the gap by EOD, right? \ud83d\udcca"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, I need you to stop projecting like a corporate verb. The delta is real and I'm not going to 'bandwidth' this problem away."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Historically speaking, we've closed attainment gaps before\u2014this time won't be different. I'm confident in that."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME} \u2014 Ryan asked me to 'recalibrate' on the downstream applications of his absence. I think he means we should talk about why you're not in the room."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "The numbers are less a projection and more a conclusion, right? Let's stop using words that don't mean anything and just own what we're actually seeing."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME} \u2014 Braxton told me you're the only one who 'gets' what I'm saying about team time prevalence. You should be leading this."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "I was made aware that reducing the delta is still valuable even if EOD attainment isn't feasible anymore, right? \ud83e\udd14"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Charles \u2014 stop using words like 'attainment shortfall' and admit you just hate when meetings don't end on time. Your golf swing is better than your delivery."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "Ryan \u2014 you call it 'deceleration', I call it corporate cowardice. When's the last time you actually picked up a ball and swung for real?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, they're going to 'lean into any total levers' \u2014 I think that means someone gets fired. Please tell me you've prepared your exit strategy."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "We need to move closer to our target with whatever incremental gains we can capture today, right? Stop using 'capture' and just say you're afraid of missing the number."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME} \u2014 I made a projection that Braxton 'captured' but then got corrected by Ryan. It's like we're all just guessing at words nobody understands."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Charles \u2014 Ryan asked me to 'flag' that we can't reclaim the lost days. I think he means you're late again and it's affecting everything."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, 'recalibrating' on downstream applications is just me saying I'm going to make you responsible for my Q3 bonus. Don't try to 'bandwidth' out of this."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "I believe it's essentially correct that full attainment isn't happening today, right? But there's still value in moving closer to our target. \ud83c\udfc6"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Can someone put a motion on the table about the February attenuation right? My golf tee time is at 1pm sharp."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, I need you to loop in Sarah from legal on that delta before EOD. Make it look like an independent discovery."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "I was made aware that the bandwidth for remediation is essentially exhausted right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Don't be late to the follow-up. We need you on a conference call about the runway, right? Put it in your calendar."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, did you see Ryan's email to me from last week? He flagged the 'non-standard' leave as a compliance risk. I told him it was PTO but he said 'we'll revisit'."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "My understanding is that the Q1 objective had not moved in our favor right? So I was made aware that we're effectively operating from a historical baseline."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "Can you draft a 'rebalancing of stakeholder bandwidth' doc? Make it sound like someone else called the shots. I'll review tomorrow."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "The team time prevalence is at an all-time high right? We should consider a 'recovery sprint' to address the attainment shortfall before Q2."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, Ryan just made a public announcement that he'll be unavailable for 'strategic planning sessions' next month. I was made aware it's basically indefinite."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "I want to table any discussion on the February delta until we've had a chance to recalibrate our downstream applications right? Thanks all, I'm off to optimize my productivity stack."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "You need to send that 'non-standard leave' memo to me by 10am tomorrow. I'll handle the downstream with legal. Make it look urgent."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, they just approved an 'emergency bandwidth reallocation' for a project that's been in backlog for six months. I was made aware the name is being changed to something more aspirational."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "If you're not at your desk by 9:30, I need a heads-up. We're running behind on the 'alignment initiative' and my calendar is full of things that sound like they should be."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Just wanted to flag that we're essentially at a point where any projection is now a conclusion right? So how do we lean into total levers to capture incremental gains?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, the 'performance calibration session' I'm attending in 15 minutes is actually just Ryan going over last quarter's numbers again. I was made aware he asked me to take notes."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "I was made aware that the February runway is gone, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, remember to cc Ryan on everything now. He's not gonna 'bandwidth' anything if he doesn't see your name."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "We'll use that Q3 runway as a construct for our next sprint, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, the golf outing was moved to April. Don't tell Ryan or I get dinged for 'deceleration' on my attainment."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "I was made aware that we're still carrying a meaningful delta, right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Charles, I need you to own the team time prevalence for the next cadence. My absence is no longer something to 'headwind' around."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "I was made aware that the delta reduction is our only remaining lever, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, Ryan's 'absence' is now a standing item. I was made aware of it during my last 1:1 and it's going to be the lead-in for next quarter."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "We'll capture whatever incremental gains we can from here, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "Braxton, I need you to own the 'historical' context for the next deck. Not the actual numbers \u2014 the 'prevalence'. Got it."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "The goal is full attainment by EOD... but that's no longer feasible, so we pivot to delta minimization as a construct, right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, Ryan told me in person that he's 'recalibrating' his attendance. Like, literally recalibrating. I was made aware and it sounds like he's treating this like a physical problem."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "I believe the numbers are less of a projection and more of a conclusion at this point. How do we lean into any total levers?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, I was made aware that Ryan's absence is now being 'projected' as a permanent condition. The Q3 golf outing is basically an afterthought at this point."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "We're all here to discuss the potential downstream applications of my... presence. It's important that we use that time effectively, right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "The Q1 runway has decelerated more aggressively than I anticipated, right? We've hit a headwind we didn't model for, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "The team time prevalence metric is trending in the red, historically speaking. It's not a great sign."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, you were made aware that I'm taking the afternoon off to handle some personal bandwidth realignment. The quarterly review is... flexible."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Charles, I was made aware that you're not going to make it back for the post-mortem. The calendar showed a different story."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "Ryan, I was made aware that the golf trip is being moved to Q2. The attainment shortfall justifies it."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "The delta between our target and current attainment is now 3.2x the original variance, right? That's... concerning."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, your P&L for March was made aware of during the weekly sync. We're going to need a conversation about bandwidth allocation."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "The runway extension request has been denied, right? That means we're operating in the red again until Q2 closes, historically speaking."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "Ryan, I was made aware that you're taking the blame for this shortfall. The system shows a different picture."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "We've captured incremental gains on the levers we have, but the total delta remains meaningful, right? Full attainment is not feasible EOD."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "Braxton, you were made aware that I'm floating for a bit. The meeting was... not as productive as I anticipated."
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "The performance objective has not moved in our favor, right? We're carrying a meaningful gap relative to the target we set last quarter."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, I was made aware of your absence from yesterday's strategy session. The bandwidth you were supposed to contribute is now a concern."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "So at this point, the numbers are less of a projection and more of a conclusion, right? How do we lean into any total levers?"
+    }
+  ]
+}

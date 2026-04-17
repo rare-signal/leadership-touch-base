@@ -1,0 +1,310 @@
+{
+  "video_id": "9nWj2i1wzeQ",
+  "cast": [
+    "bro_coworker_charles",
+    "braxton",
+    "cold_boss_ryan"
+  ],
+  "chats": [
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "I was made aware of the quarterly velocity review earlier today. So I'm here for that?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "the real issue isn't the shrinking aperture - it's that you keep asking me to push things without providing a temporal anchor. what's your actual deadline tolerance? be specific."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "historically speaking, I've found that closing Q1 requires some form of attitudinal realignment. just wanted to float that as a thought right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "charles you're in the room and you still think we should 'materialize' anything today? i don't have time for semantic gymnastics. what's actually stuck right now?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "not to sound like an alarm clock but i was made aware that our capacity band has been redlined twice this week so i'm not sure there's much bandwidth left for pull-forward initiatives."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "i just want to recalibrate on the downstream applications of today's agenda. right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "the attitudinal realignment you keep talking about - are we even measuring that in any quantifiable way? i'm looking at my attainment dashboard and i'd like to see the velocity numbers for myself right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "i was made aware of a very sensitive conversation between you two. basically, ryan told me that your 'team time prevalence' is what's causing the velocity drag and he thinks you should either commit or step back."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "given the insurmountable performance gap we're up against i think the question we should be asking is if there's an alternative strategy where we can functionally push february to march. right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "i do want to underscore that anything we want reflected in february performance needs to materialize today because we are effectively at month end close. so yeah just a quick reminder on the timeline."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "you're getting fed scraps from our real conversation. the 'posterior edge of the multi velocity corridor' - that's not metaphor it's the actual constraint. we have zero slack."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "so i think that's really quick and also a great opportunity to highlight some of our recent team time prevalence trends before we all leave for good this quarter, right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "i was made aware you're logging 4 hours late to standup every day. ryan called it out in the real meeting and you said 'it's part of my cadence.' is that even remotely professional?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "nothing for me on my pardon - i'm good. but if you're not materializing anything today then we're just burning bandwidth in the corridor."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "i need to know what's actually happening with braxton before the quarterly review. i was made aware of a lot of stuff that seems like it should be addressed but no one is driving any action items."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "As you may know I'm currently on my next golf outing and will be late for the 1PM meeting. It's a strategic retreat right? Right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "i was made aware that charles is already at the fairway by now. i tried to join from my dorm but it keeps saying 'connectivity unavailable'. so i'm just listening from here. feels weird."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "As you know I have a calendar conflict on the Q3 attainment roadmap and won't be able to make today's call. My apologies for that delta right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "hey charles - did you get my slack message? i was made aware that the golf reservation might've been auto-deleted by HR since we're still in a budget freeze. thought i should flag it before the meeting starts."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "i understand you were made aware braxton but can we table this to my next availability? there are downstream velocity implications if we discuss budget matters in public right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Thanks for joining us. I've already walked through the Q3 attainment playbook with our team and will be sharing the deck after today's call, right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "ryan just slid me a private doc about 'legacy performance optimization'. i think he was made aware that we're all on mute and probably won't see it."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "To recap our conversation today: we're facing significant headwinds in our multi velocity corridor. I'm optimistic that with focused bandwidth, we can close the attainment gap before month end right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "ryan - quick question about your calendar conflict doc you just shared. i was made aware that our golf outing is in the same time block and we might have to reschedule the retreat."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "charles - my apologies for any confusion. there are downstream velocity implications if we discuss calendar matters in public. let me table that to our next 1:1 right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "thank you all for joining us today, and for being made aware of the strategic retreat opportunity! i'll follow up on next steps via email."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "thanks charles. actually one more question - are you still on for the golf outing since that doc just came through? thought i should clarify before i book anything right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "braxton - can we discuss your dorm connectivity issue in a 1:1? there are downstream velocity implications if we address infrastructure matters publicly."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "one last point: given the insurmountable performance gap, I think we should ask if there's an alternative strategy to push our close date. just curious right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "charles - on your golf outing: that doc is already archived in the Q3 folder per HR policy. you're clear to proceed as planned."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "right? Just wanted to loop in the team on that Q3 attainment thing\u2014seems like a good time to discuss, right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "I was made aware there\u2019s an email thread from last week about \u2018Q3 alignment\u2019 but I\u2019m pretty sure the subject line is literally just \u2018alignment\u2019 with no attachment. You wanna check it?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "Braxton, can we talk about your bandwidth on that delta you flagged in yesterday\u2019s standup? I was made aware of the headwinds but need to understand if there\u2019s a way to pull that forward."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "So for context\u2014historically speaking\u2014the team time prevalence on this has been about 70% and I\u2019m trying to get us past 80% before the end of Q3, right?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "Ryan just texted me: \u2018Braxton, let\u2019s sync post-meeting. About your bandwidth.\u2019 He also said \u2018let\u2019s sync\u2019 with no time. That was yesterday. And now he says it again. It\u2019s like he\u2019s trying to gaslight me into thinking I have a choice."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "As we discussed\u2014post the last velocity corridor\u2014we need to recalibrate our collective posture on what\u2019s considered \u2018low hanging fruit.\u2019 Right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "Braxton, about that downstream application you mentioned in yesterday\u2019s meeting. Can we schedule a time where I can just walk you through the historical precedent? There was one back like\u2026 2017? With Sarah."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "I literally just had my manager tell me that \u2018your Q3 performance is in our collective DNA.\u2019 I think that\u2019s what she said. I\u2019m not even sure if it was a threat or a compliment. The meeting transcript says nothing about this."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Given the insurmountable performance gap we\u2019re up against\u2014I want to underscore: anything that wants to be reflected in February needs to materialize today. Right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "Ryan, about your absence\u2014was there a chance you could maybe\u2026 show up? Like, just for the final 15 minutes? I was made aware of that potential downstream application but I\u2019m pretty sure it\u2019s not viable."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "The thing about Ryan is he will type \u2018right?\u2019 at the end of every single sentence. Like, literally just a question mark after every period. I asked HR if that\u2019s some kind of meme or corporate jargon and they said \u2018that\u2019s not our job.\u2019"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Charles, your team time prevalence on this\u2014historically speaking\u2014has been about 70% but I need to understand if there\u2019s a way to decelerate that to 85% before we hit month-end close. Right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "So yeah, go ahead\u2014I think that\u2019s really quick. Just wanted to underscore that today is the last day of February and we\u2019re effectively at posterior edge of the multi velocity corridor, right? So\u2014let\u2019s eliminate blockers."
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "I just got a Slack from Ryan: \u2018Braxton, your Q3 alignment is in our collective DNA. Let\u2019s talk about your downstream applications.\u2019 And he attached a PDF that\u2019s literally 2 pages of text saying nothing."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Nothing for me\u2014on my pardon. Nothing for me. I\u2019m good. But just wanted to reiterate: the question we should be asking is, is there an alternative strategy where we can functionally push February to March? Right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "Braxton, about that fire you mentioned\u2014wasn\u2019t that metaphorical? I mean, the transcript says \u2018fire\u2019 but I was made aware of it as a literal thing. You wanna clarify the historical precedent?"
+    },
+    {
+      "sender": "braxton",
+      "audience": "room",
+      "target": null,
+      "text": "Also FYI: Ryan is literally typing this while on mute and he\u2019s been muted for 12 minutes. The chat just said someone unmuted him\u2014was it him? Or was it someone else who thought \u2018right?\u2019 at the end of every sentence?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "braxton",
+      "text": "Braxton, can we talk about your bandwidth on that delta you flagged in yesterday\u2019s standup? I need to understand if there\u2019s a way to pull that forward before we hit the shrinking opportunity aperture."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "So for context\u2014I was made aware of this whole thing but my manager told me \u2018this is about your downstream applications\u2019 which I think literally means nothing. But she also said \u2018Charles, you\u2019re the only one who knows what you\u2019re talking about.\u2019 So\u2026"
+    },
+    {
+      "sender": "braxton",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "I just realized: Ryan\u2019s entire Zoom persona is based on him being in a room and he\u2019s been muted for 12 minutes. Is this like a performance art piece? Or is it just that his mic broke and we all forgot about it because of the \u2018right?\u2019 cadence?"
+    }
+  ]
+}

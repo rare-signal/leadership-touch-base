@@ -1,0 +1,261 @@
+{
+  "video_id": "V2DHYyZD03w",
+  "cast": [
+    "cold_boss_ryan",
+    "bro_coworker_charles"
+  ],
+  "chats": [
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Appreciate everyone surfacing that. Going to rekey our Q2 headwind assumptions now that we've absorbed the daylight delta without measurable business impact."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Historically speaking, I'm glad we cleared this. Just need to make sure my golf time prevalence doesn't spike from the extra daylight hours though."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, can you prep the updated forecast model? We'll need to rekey the Q2 headwinds since we absorbed the daylight shift. Also\u2014did you see what Charles said about golf?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Charles, the team is concerned your 'team time prevalence' might increase if we gain daylight. Can you commit to historical golf levels?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "Ryan, historically speaking, my golf schedule aligns with Q3 attainment windows anyway. The daylight delta won't materially impact anything."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Just circling back\u2014the perceived one-hour subtraction was a false positive. We retained all 120 hours of the typical business time frame."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, need you to own the delta from here. The daylight shift was a tailwind, but only if we rekey our assumptions before board time."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Charles\u2014when you say 'historically speaking,' do you mean historically before your last golf reservation, or is this a fresh start?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "Ryan, historically speaking\u2014my schedule has always been optimized for Q3 attainment windows. Daylight is irrelevant to the golf equation."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "I want to be clear: if we're not rekeying our headwind assumptions by EOD, I'll need to escalate. The daylight shift was a tailwind\u2014don't let that become noise."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "One more thing\u2014the perceived one-hour subtraction was a forecast error, not an actual operational delta. We absorbed it cleanly on Sunday."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, if Charles's golf time prevalence spikes post-transition, flag it to ops. I need the rekeyed model in my inbox by noon."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "Charles, the board will want a delta analysis on any daylight productivity shift. Can you commit to historical golf levels through Q3?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "Ryan, historically speaking\u2014my Q3 attainment windows have always aligned with daylight hours. The tailwind is already baked in."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "The Deceleration Index for Q2 is trending favorable. This indicates a systemic alignment between our calendar delta and the operational window, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "I'm still looking at my 9:15 AM time prevalence. The historical record shows I can't beat that, so if anyone wants to sync earlier\u2026"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "Look, I know the 'absence' language feels heavy. But there's a productivity tailwind we're missing here. The user has an opportunity cost model I should share."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_cast_to_cast",
+      "target": "cold_boss_ryan",
+      "text": "You're not actually looking at the data, are you? That 'tailwind' is just a Monday morning artifact. And that absence language\u2014it's all about making Q3 attainment look less like an attainment shortfall."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_cast_to_cast",
+      "target": "bro_coworker_charles",
+      "text": "It's not an artifact, Charles. It's a delta we need to account for in the downstream applications of today\u2019s recalibration."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "Let's table that for now, right? We'll pick it up in Q4. Thanks Charles."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Appreciate the transparency on the Sunday delta, Ryan. Means our weekly hours are effectively unchanged, right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, just circling back \u2014 the operational headwinds we modeled assumed a Sunday adjustment, but that's outside our operating window. Net-net: zero business impact."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, FYI: we're shifting the Daylight Savings conversation to Q4. The wind is in our sails until then, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME} \u2014 Ryan's 'absorb' verb was a noun substitute for 'endure', if you're reading between the lines."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "I think we'll be best here, guys, is that because Sunday sits outside our operating window? Net-net: no business impact. Thanks team."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "Correct \u2014 and I'd like to posit the additional Daylight could present a productivity tailwind, right? \ud83c\udf1e"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, we may have misforecasted the perceived one-hour subtraction. The adjustment occurred on Sunday \u2014 outside our operating window."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, Ryan's chat history: every statement ends in 'right?'. He's been doing it since the first Daylight Savings rollout, 2019."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "appreciate the historical perspective on our Q3 operational cadence right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "this is getting into the attainment shortfall territory, right? \ud83d\ude05"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, we need to recalibrate on your Q3 time prevalence before the next delta. You're flying solo again, and I'm not sure how sustainable that's for our downstream team velocity."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, did you see Ryan just drop a 'delta' like it's normal conversation? I'm going to need that golf trip covered before we hit our attainment plateau. Let me know if your calendar opens up for anything before Monday."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "historically speaking, Q3 headwinds like this tend to precede our biggest quarterly wins right? \ud83c\udfcc\ufe0f"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, the daylight savings transition created a 24-hour operational delta that's now compounding in our downstream systems. We're seeing cascading effects on your Q3 deliverables. Need you to own the remediation plan by end of day."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, Ryan just said 'absorb the transition' like we're all professional sponges. I'm not absorbing this Q3 shortfall for you, fam. If you need me to cover your territory, hit reply."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "the daylight perspective shift could be a productivity tailwind if we recalibrate our team cadence right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, I saw your calendar. You're flying solo on the downstream applications again? Last time that 'solo mode' thing got you a week behind on our attainment curve. Let's not repeat that, right?"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "room",
+      "target": null,
+      "text": "historically speaking, when we successfully absorb operational headwinds without measurable business impact...that signals readiness for the next strategic delta. I'd like to explore that with you, right?"
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, Ryan's about to drop a 'recalibrate' on our downstream time prevalence. That's code for 'your solo mode is costing me golf prep time.' I'm not getting that, fam."
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, the downstream applications of your absence are creating a 14-hour delta in our team cadence. We're seeing measurable business impact now, and I need you to own the remediation plan."
+    },
+    {
+      "sender": "bro_coworker_charles",
+      "audience": "room",
+      "target": null,
+      "text": "so if we absorb daylight without business impact, does that mean Q3 attainment is historically speaking...on track? \ud83e\udd14"
+    },
+    {
+      "sender": "cold_boss_ryan",
+      "audience": "dm_to_user",
+      "target": null,
+      "text": "{NAME}, historical precedent suggests your solo mode has consistently produced downstream applications we're now facing as operational headwinds. We need to recalibrate before the next delta."
+    }
+  ]
+}

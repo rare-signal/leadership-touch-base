@@ -58,6 +58,15 @@ export type ChatMessage = {
   character_id?: string;
   text: string;
   timestamp: number;
+  // "room"             = visible to everyone (default)
+  // "dm"               = private DM to the user
+  // "dm_cast_to_cast"  = intercepted DM between two cast members; user is
+  //                      seeing a leak. `target_character_id` is the recipient.
+  audience?: "room" | "dm" | "dm_cast_to_cast";
+  target_character_id?: string;
+  // When role=user and this message is a DM reply to a specific character,
+  // this pins which character it's addressed to.
+  dm_character_id?: string;
 };
 
 export type TileBox = {
