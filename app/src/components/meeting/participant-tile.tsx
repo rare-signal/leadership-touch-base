@@ -6,12 +6,22 @@ import type { CharacterPack } from "@/lib/types";
 
 type Bbox = { x: number; y: number; w: number; h: number };
 
+type TalkMode = "normal" | "listening" | "concurring";
+
 type Props = {
   pack: CharacterPack | null;
   masterVideoRef: RefObject<HTMLVideoElement | null>;
   bbox: Bbox;
   displayAspect: number;
   active: boolean;
+  talkMode?: TalkMode;
+  // When provided, the tile mounts its own local <video> and loops this
+  // range. Active during `listening` mode — and also during `concurring`
+  // mode when `skipsConcur` is true (tile stays in listen posture while
+  // the rest of the room nods).
+  sourceUrl?: string;
+  ownListenRange?: [number, number];
+  skipsConcur?: boolean;
 };
 
 export function ParticipantTile({
@@ -20,8 +30,50 @@ export function ParticipantTile({
   bbox,
   displayAspect,
   active,
+  talkMode = "normal",
+  sourceUrl,
+  ownListenRange,
+  skipsConcur = false,
 }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const localVideoRef = useRef<HTMLVideoElement | null>(null);
+
+  // Use the local video when:
+  //   - listening, and this tile has its own range to play
+  //   - concurring, and this tile opts out of the nod (skipsConcur)
+  // Otherwise (including "normal"), read from the master.
+  const useOwnVideo =
+    !!ownListenRange &&
+    (talkMode === "listening" ||
+      (talkMode === "concurring" && skipsConcur));
+
+  // Drive the local video: seek to range start, loop while it should be
+  // the active source. Pause otherwise.
+  useEffect(() => {
+    const v = localVideoRef.current;
+    if (!v || !ownListenRange) return;
+    if (!useOwnVideo) {
+      v.pause();
+      return;
+    }
+    const [start, end] = ownListenRange;
+    try {
+      // Only jump if we're not already in the range — avoids re-seeking
+      // on the listening→concurring transition for skipsConcur tiles.
+      if (v.currentTime < start || v.currentTime >= end) {
+        v.currentTime = start;
+      }
+      v.play().catch(() => {});
+    } catch {}
+    const id = window.setInterval(() => {
+      if (!v) return;
+      if (v.currentTime >= end || v.currentTime < start) {
+        v.currentTime = start;
+        v.play().catch(() => {});
+      }
+    }, 100);
+    return () => window.clearInterval(id);
+  }, [useOwnVideo, ownListenRange]);
 
   // Every tile draws its bbox region from the shared master <video> onto a
   // <canvas> on every animation frame. One decode, six identical frames —
@@ -60,7 +112,12 @@ export function ParticipantTile({
 
     let raf = 0;
     const draw = () => {
-      const v = masterVideoRef.current;
+      // Pick source: local video when listening + this tile has its own
+      // range; master otherwise.
+      const v =
+        useOwnVideo && localVideoRef.current
+          ? localVideoRef.current
+          : masterVideoRef.current;
       if (v && v.readyState >= 2 && v.videoWidth > 0) {
         try {
           ctx.drawImage(v, sx, sy, sw, sh, 0, 0, canvas.width, canvas.height);
@@ -72,7 +129,7 @@ export function ParticipantTile({
     };
     raf = requestAnimationFrame(draw);
     return () => cancelAnimationFrame(raf);
-  }, [bbox.x, bbox.y, bbox.w, bbox.h, displayAspect, masterVideoRef]);
+  }, [bbox.x, bbox.y, bbox.w, bbox.h, displayAspect, masterVideoRef, useOwnVideo]);
 
   return (
     <div
@@ -88,6 +145,20 @@ export function ParticipantTile({
         ref={canvasRef}
         className="absolute inset-0 h-full w-full"
       />
+      {/* Per-tile local video for tiles whose listen_range differs from the
+          meeting's global. Stays in-viewport 1px/opacity-0 so browsers
+          don't throttle it; mounted whenever ownListenRange is set so it's
+          ready the moment talkMode flips to listening. */}
+      {sourceUrl && ownListenRange && (
+        <video
+          ref={localVideoRef}
+          src={sourceUrl}
+          className="pointer-events-none fixed left-0 top-0 h-[1px] w-[1px] opacity-0"
+          muted
+          playsInline
+          preload="auto"
+        />
+      )}
 
       {active && (
         <div className="absolute top-2 right-2 flex items-center gap-1 rounded-full bg-[#5EDC62]/90 px-2 py-0.5 text-[10px] font-semibold text-black">
@@ -181,6 +252,86 @@ export function CastAvatar({
   );
 }
 
+// Cmd/Ctrl-drag to pan, Cmd/Ctrl-wheel to zoom your webcam. Framing is
+// saved to localStorage so it survives reloads. Used for both the PIP and
+// the in-grid versions so your crop is consistent.
+const STAGE_STORAGE_KEY = "larp-meeting.webcam_stage";
+type Stage = { scale: number; tx: number; ty: number };
+const DEFAULT_STAGE: Stage = { scale: 1, tx: 0, ty: 0 };
+
+function loadStage(): Stage {
+  if (typeof window === "undefined") return DEFAULT_STAGE;
+  try {
+    const raw = localStorage.getItem(STAGE_STORAGE_KEY);
+    if (!raw) return DEFAULT_STAGE;
+    const parsed = JSON.parse(raw) as Partial<Stage>;
+    return {
+      scale: clamp(Number(parsed.scale) || 1, 0.5, 5),
+      tx: Number(parsed.tx) || 0,
+      ty: Number(parsed.ty) || 0,
+    };
+  } catch {
+    return DEFAULT_STAGE;
+  }
+}
+function clamp(v: number, lo: number, hi: number): number {
+  return v < lo ? lo : v > hi ? hi : v;
+}
+
+function useWebcamStage() {
+  const [stage, setStage] = useState<Stage>(DEFAULT_STAGE);
+  useEffect(() => setStage(loadStage()), []);
+  const dragRef = useRef<{ startX: number; startY: number; stage: Stage } | null>(
+    null
+  );
+
+  const save = (next: Stage) => {
+    setStage(next);
+    try {
+      localStorage.setItem(STAGE_STORAGE_KEY, JSON.stringify(next));
+    } catch {}
+  };
+
+  const onMouseDown = (e: React.MouseEvent) => {
+    if (!(e.ctrlKey || e.metaKey)) return;
+    e.preventDefault();
+    e.stopPropagation();
+    dragRef.current = { startX: e.clientX, startY: e.clientY, stage };
+    const move = (ev: MouseEvent) => {
+      const d = dragRef.current;
+      if (!d) return;
+      const dx = ev.clientX - d.startX;
+      const dy = ev.clientY - d.startY;
+      save({ ...d.stage, tx: d.stage.tx + dx, ty: d.stage.ty + dy });
+    };
+    const up = () => {
+      dragRef.current = null;
+      window.removeEventListener("mousemove", move);
+      window.removeEventListener("mouseup", up);
+    };
+    window.addEventListener("mousemove", move);
+    window.addEventListener("mouseup", up);
+  };
+
+  const onWheel = (e: React.WheelEvent) => {
+    if (!(e.ctrlKey || e.metaKey)) return;
+    e.preventDefault();
+    e.stopPropagation();
+    const factor = e.deltaY > 0 ? 0.92 : 1.08;
+    const nextScale = clamp(stage.scale * factor, 0.5, 5);
+    save({ ...stage, scale: nextScale });
+  };
+
+  const onContextMenu = (e: React.MouseEvent) => {
+    // ctrl+click on macOS fires contextmenu — swallow it so drag works.
+    if (e.ctrlKey || e.metaKey) e.preventDefault();
+  };
+
+  const transform = `translate(${stage.tx}px, ${stage.ty}px) scale(${stage.scale})`;
+  const reset = () => save(DEFAULT_STAGE);
+  return { transform, onMouseDown, onWheel, onContextMenu, reset, stage };
+}
+
 // A shared webcam stream hook — getUserMedia once per component, reused by
 // the floating PIP and the "joined the grid" version without requesting
 // camera permission twice.
@@ -230,21 +381,40 @@ export function WebcamPIP({
     v.play().catch(() => {});
   }, [stream]);
 
+  const stage = useWebcamStage();
   return (
     <button
       type="button"
-      onClick={onClick}
+      onClick={(e) => {
+        // Suppress the container-level click when the user is actively
+        // staging (ctrl/meta held), so pan/zoom doesn't accidentally toggle
+        // the PIP-grid swap.
+        if (e.ctrlKey || e.metaKey) return;
+        onClick?.();
+      }}
+      onMouseDown={stage.onMouseDown}
+      onWheel={stage.onWheel}
+      onContextMenu={stage.onContextMenu}
+      onDoubleClick={(e) => {
+        // Double-click with ctrl/meta resets your framing.
+        if (e.ctrlKey || e.metaKey) {
+          e.preventDefault();
+          e.stopPropagation();
+          stage.reset();
+        }
+      }}
       className={`absolute bottom-4 right-4 z-10 w-[180px] overflow-hidden rounded-lg border-2 bg-[#1a1a1a] shadow-2xl ring-1 ring-black/40 transition-transform hover:scale-[1.03] ${
         muted ? "border-red-500/80" : "border-white/15"
       } ${onClick ? "cursor-pointer" : "cursor-default"}`}
       style={{ aspectRatio: 4 / 3 }}
-      title={onClick ? "Join the grid" : undefined}
+      title={onClick ? "Join the grid · Cmd/Ctrl-drag to pan, Cmd/Ctrl-wheel to zoom" : undefined}
     >
       <video
         ref={videoRef}
         className={`absolute inset-0 h-full w-full -scale-x-100 object-cover transition-opacity ${
           stream && !videoOff ? "opacity-100" : "opacity-0"
         }`}
+        style={{ transform: `scaleX(-1) ${stage.transform}` }}
         muted
         playsInline
         autoPlay
@@ -284,20 +454,35 @@ export function UserGridTile({
     v.play().catch(() => {});
   }, [stream]);
 
+  const stage = useWebcamStage();
   return (
     <button
       type="button"
-      onClick={onClick}
+      onClick={(e) => {
+        if (e.ctrlKey || e.metaKey) return;
+        onClick?.();
+      }}
+      onMouseDown={stage.onMouseDown}
+      onWheel={stage.onWheel}
+      onContextMenu={stage.onContextMenu}
+      onDoubleClick={(e) => {
+        if (e.ctrlKey || e.metaKey) {
+          e.preventDefault();
+          e.stopPropagation();
+          stage.reset();
+        }
+      }}
       className={`relative h-full w-full overflow-hidden rounded-lg border bg-[#1a1a1a] transition-all cursor-pointer hover:brightness-110 ${
         muted ? "border-red-500/70" : "border-white/10"
       }`}
-      title={onClick ? "Drop back to PIP" : undefined}
+      title={onClick ? "Drop back to PIP · Cmd/Ctrl-drag to pan, Cmd/Ctrl-wheel to zoom" : undefined}
     >
       <video
         ref={videoRef}
         className={`absolute inset-0 h-full w-full -scale-x-100 object-cover transition-opacity ${
           stream && !videoOff ? "opacity-100" : "opacity-0"
         }`}
+        style={{ transform: `scaleX(-1) ${stage.transform}` }}
         muted
         playsInline
         autoPlay

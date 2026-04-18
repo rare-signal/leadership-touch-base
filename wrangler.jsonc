@@ -1,0 +1,23 @@
+// Cloudflare Workers config. We only ship static assets — no Worker
+// script — so this is an "assets-only" deployment: Workers serves
+// everything under `app/out/` directly, same as Cloudflare Pages would.
+//
+// The Cloudflare "Create a Worker" Git flow runs (from repo root):
+//   1. Build:  `cd app && npm install && npm run build:static`
+//              → emits static bundle into `app/out/`
+//   2. Deploy: `npx wrangler deploy`
+//              → reads this file and uploads `app/out/` as the asset tree
+//
+// Prod build also needs NEXT_PUBLIC_READ_ONLY_CHAT=1 set in the
+// Cloudflare dashboard (Variables & Secrets) so the baked client bundle
+// hides chat input and skips the `/api/turn` fallback.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "leadership-touch-base",
+  "compatibility_date": "2026-04-01",
+  "assets": {
+    "directory": "app/out",
+    // SPA-style fallback: unknown paths serve the 404 page Next emits.
+    "not_found_handling": "404-page"
+  }
+}

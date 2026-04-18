@@ -117,6 +117,22 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@font-face {
+  font-family: "PP Fragment";
+  src: url("https://cdn.prod.website-files.com/67f59821939aaf15da3f4d66/67f5a6747cfe3eaf6797cbcd_PPFragment-TextRegular%20(1).otf") format("opentype");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Fragment";
+  src: url("https://cdn.prod.website-files.com/67f59821939aaf15da3f4d66/67f5a68b1b1e7781f63ba02b_PPFragment-SerifRegularItalic%20(2).otf") format("opentype");
+  font-weight: 400 600;
+  font-style: italic;
+  font-display: swap;
+}
+
 @keyframes reactionFloat {
   0% {
     transform: translateY(0) scale(0.6);

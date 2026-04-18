@@ -1,0 +1,299 @@
+{
+  "braxton": [
+    {
+      "path": "grunts/braxton/0.mp3",
+      "text": "It does.",
+      "duration": 0.26,
+      "source_video": "0JQkAxmLzhM",
+      "source_start": 8.86
+    },
+    {
+      "path": "grunts/braxton/1.mp3",
+      "text": "right?",
+      "duration": 0.28,
+      "source_video": "0JQkAxmLzhM",
+      "source_start": 19.12
+    },
+    {
+      "path": "grunts/braxton/2.mp3",
+      "text": "What?",
+      "duration": 0.28,
+      "source_video": "1sACHNa3_P0",
+      "source_start": 91.39
+    },
+    {
+      "path": "grunts/braxton/3.mp3",
+      "text": "Right.",
+      "duration": 0.3,
+      "source_video": "1sACHNa3_P0",
+      "source_start": 107.81
+    }
+  ],
+  "cold_boss": [
+    {
+      "path": "grunts/cold_boss/0.mp3",
+      "text": "It does.",
+      "duration": 0.26,
+      "source_video": "0JQkAxmLzhM",
+      "source_start": 8.86
+    },
+    {
+      "path": "grunts/cold_boss/1.mp3",
+      "text": "right?",
+      "duration": 0.28,
+      "source_video": "0JQkAxmLzhM",
+      "source_start": 19.12
+    },
+    {
+      "path": "grunts/cold_boss/2.mp3",
+      "text": "Yeah",
+      "duration": 0.3,
+      "source_video": "ATcugwW9RJs",
+      "source_start": 56.53
+    },
+    {
+      "path": "grunts/cold_boss/3.mp3",
+      "text": "Very well framed.",
+      "duration": 0.34,
+      "source_video": "0JQkAxmLzhM",
+      "source_start": 31.82
+    }
+  ],
+  "bro_coworker": [
+    {
+      "path": "grunts/bro_coworker/0.mp3",
+      "text": "What?",
+      "duration": 0.28,
+      "source_video": "1sACHNa3_P0",
+      "source_start": 91.39
+    },
+    {
+      "path": "grunts/bro_coworker/1.mp3",
+      "text": "Right.",
+      "duration": 0.3,
+      "source_video": "1sACHNa3_P0",
+      "source_start": 107.81
+    },
+    {
+      "path": "grunts/bro_coworker/2.mp3",
+      "text": "Yeah, go ahead.",
+      "duration": 0.34,
+      "source_video": "B7i2ObNrZzk",
+      "source_start": 12.4
+    },
+    {
+      "path": "grunts/bro_coworker/3.mp3",
+      "text": "All right.",
+      "duration": 0.38,
+      "source_video": "1sACHNa3_P0",
+      "source_start": 5.38
+    }
+  ],
+  "earnest_intern": [
+    {
+      "path": "grunts/earnest_intern/0.mp3",
+      "text": "It does.",
+      "duration": 0.26,
+      "source_video": "0JQkAxmLzhM",
+      "source_start": 8.86
+    },
+    {
+      "path": "grunts/earnest_intern/1.mp3",
+      "text": "right?",
+      "duration": 0.28,
+      "source_video": "0JQkAxmLzhM",
+      "source_start": 19.12
+    },
+    {
+      "path": "grunts/earnest_intern/2.mp3",
+      "text": "What?",
+      "duration": 0.28,
+      "source_video": "1sACHNa3_P0",
+      "source_start": 91.39
+    },
+    {
+      "path": "grunts/earnest_intern/3.mp3",
+      "text": "Right.",
+      "duration": 0.3,
+      "source_video": "1sACHNa3_P0",
+      "source_start": 107.81
+    }
+  ],
+  "chaos_agent": [
+    {
+      "path": "grunts/chaos_agent/0.mp3",
+      "text": "as operationally detrimental",
+      "duration": 1.52,
+      "source_video": "fdvsrY1-F4I",
+      "source_start": 20.74
+    },
+    {
+      "path": "grunts/chaos_agent/1.mp3",
+      "text": "Right, like hilarious.",
+      "duration": 1.52,
+      "source_video": "fdvsrY1-F4I",
+      "source_start": 53.1
+    },
+    {
+      "path": "grunts/chaos_agent/2.mp3",
+      "text": "disadvantage time cycle.",
+      "duration": 1.7,
+      "source_video": "6c4ezOY-HOc",
+      "source_start": 23.36
+    },
+    {
+      "path": "grunts/chaos_agent/3.mp3",
+      "text": "disruption across workflows",
+      "duration": 1.72,
+      "source_video": "fdvsrY1-F4I",
+      "source_start": 42.8
+    }
+  ],
+  "sycophant": [
+    {
+      "path": "grunts/sycophant/0.mp3",
+      "text": "It does.",
+      "duration": 0.26,
+      "source_video": "0JQkAxmLzhM",
+      "source_start": 8.86
+    },
+    {
+      "path": "grunts/sycophant/1.mp3",
+      "text": "right?",
+      "duration": 0.28,
+      "source_video": "0JQkAxmLzhM",
+      "source_start": 19.12
+    },
+    {
+      "path": "grunts/sycophant/2.mp3",
+      "text": "Very well framed.",
+      "duration": 0.34,
+      "source_video": "0JQkAxmLzhM",
+      "source_start": 31.82
+    },
+    {
+      "path": "grunts/sycophant/3.mp3",
+      "text": "Right, so-",
+      "duration": 0.38,
+      "source_video": "ts6m_SCQ8_w",
+      "source_start": 7.28
+    }
+  ],
+  "corporate_parent": [
+    {
+      "path": "grunts/corporate_parent/0.mp3",
+      "text": "Yeah",
+      "duration": 0.3,
+      "source_video": "ATcugwW9RJs",
+      "source_start": 56.53
+    }
+  ],
+  "corporate_recruiter": [
+    {
+      "path": "grunts/corporate_recruiter/0.mp3",
+      "text": "I mean",
+      "duration": 0.74,
+      "source_video": "IygvbdeNWqY",
+      "source_start": 76.64
+    }
+  ],
+  "departing_employee": [
+    {
+      "path": "grunts/departing_employee/0.mp3",
+      "text": "Very sad.",
+      "duration": 0.26,
+      "source_video": "IPmyYpcLvZE",
+      "source_start": 21.37
+    },
+    {
+      "path": "grunts/departing_employee/1.mp3",
+      "text": "They're lucky.",
+      "duration": 0.32,
+      "source_video": "IPmyYpcLvZE",
+      "source_start": 56.82
+    },
+    {
+      "path": "grunts/departing_employee/2.mp3",
+      "text": "Go get them.",
+      "duration": 0.42,
+      "source_video": "IPmyYpcLvZE",
+      "source_start": 56.02
+    },
+    {
+      "path": "grunts/departing_employee/3.mp3",
+      "text": "That made your place.",
+      "duration": 0.54,
+      "source_video": "IPmyYpcLvZE",
+      "source_start": 20.09
+    }
+  ],
+  "corporate_boss": [
+    {
+      "path": "grunts/corporate_boss/0.mp3",
+      "text": "I mean",
+      "duration": 0.74,
+      "source_video": "IygvbdeNWqY",
+      "source_start": 76.64
+    }
+  ],
+  "cold_boss_ryan": [
+    {
+      "path": "grunts/cold_boss_ryan/0.mp3",
+      "text": "No question.",
+      "duration": 0.42,
+      "source_video": "wUGEyA4CirU",
+      "source_start": 26.46
+    },
+    {
+      "path": "grunts/cold_boss_ryan/1.mp3",
+      "text": "Yeah, yeah, go ahead.",
+      "duration": 0.44,
+      "source_video": "wUGEyA4CirU",
+      "source_start": 28.36
+    },
+    {
+      "path": "grunts/cold_boss_ryan/2.mp3",
+      "text": "Yeah, super helpful.",
+      "duration": 0.54,
+      "source_video": "wUGEyA4CirU",
+      "source_start": 19.18
+    },
+    {
+      "path": "grunts/cold_boss_ryan/3.mp3",
+      "text": "Yeah, real equipment.",
+      "duration": 0.78,
+      "source_video": "wUGEyA4CirU",
+      "source_start": 27.58
+    }
+  ],
+  "bro_coworker_charles": [
+    {
+      "path": "grunts/bro_coworker_charles/0.mp3",
+      "text": "Right, yeah.",
+      "duration": 0.38,
+      "source_video": "wtaTQyf055I",
+      "source_start": 20.4
+    },
+    {
+      "path": "grunts/bro_coworker_charles/1.mp3",
+      "text": "Right, call out.",
+      "duration": 0.52,
+      "source_video": "wtaTQyf055I",
+      "source_start": 46.98
+    },
+    {
+      "path": "grunts/bro_coworker_charles/2.mp3",
+      "text": "Oh, totally.",
+      "duration": 0.78,
+      "source_video": "wtaTQyf055I",
+      "source_start": 28.88
+    },
+    {
+      "path": "grunts/bro_coworker_charles/3.mp3",
+      "text": "We're doing it.",
+      "duration": 0.9,
+      "source_video": "wtaTQyf055I",
+      "source_start": 12.24
+    }
+  ]
+}

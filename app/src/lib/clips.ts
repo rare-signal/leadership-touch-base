@@ -17,7 +17,9 @@ let _inflight: Promise<ClipIndex> | null = null;
 export function fetchClipIndex(): Promise<ClipIndex> {
   if (_cached) return Promise.resolve(_cached);
   if (_inflight) return _inflight;
-  _inflight = fetch("/api/clips")
+  // Static bundle built by scripts/stage-public.py (served from CDN on
+  // Vercel). Same shape the old /api/clips GET returned.
+  _inflight = fetch("/clips-index.json")
     .then((r) => r.json())
     .then((d) => {
       _cached = (d.clips ?? {}) as ClipIndex;

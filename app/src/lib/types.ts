@@ -78,6 +78,12 @@ export type TileBox = {
   w: number;
   h: number;
   character_id?: string | null;
+  // Timeline ranges in source-video seconds. Used by the "you unmute and
+  // start talking" choreography in /meeting:
+  //   listen_range:  silent-listening loop (character is quiet, attentive)
+  //   concur_range:  nodding-agreement loop that fires when you stop talking
+  listen_range?: [number, number];
+  concur_range?: [number, number];
 };
 
 export type TileDoc = {

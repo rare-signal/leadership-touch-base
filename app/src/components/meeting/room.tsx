@@ -31,6 +31,8 @@ type MeetingTile = {
   col: number;
   bbox: { x: number; y: number; w: number; h: number };
   pack: CharacterPack | null;
+  listenRange: [number, number] | null;
+  concurRange: [number, number] | null;
 };
 
 type MeetingSource = {
@@ -42,6 +44,13 @@ type MeetingSource = {
   tiles: MeetingTile[];
   sourceUrl: string;
   audioUrl: string;
+  // First per-tile listen/concur range we find, used globally by the
+  // "you start talking → everyone listens → nods → restart" choreography.
+  // The master video seeks into these windows; since all tiles read from
+  // the same video element, they all show their bbox crops during that
+  // same time window.
+  listenRange: [number, number] | null;
+  concurRange: [number, number] | null;
 };
 
 function rankMeetingSources(
@@ -67,10 +76,22 @@ function rankMeetingSources(
         col: t.col,
         bbox: { x: t.x, y: t.y, w: t.w, h: t.h },
         pack,
+        listenRange: t.listen_range ?? null,
+        concurRange: t.concur_range ?? null,
       };
     });
     const tagged = tiles.filter((t) => t.pack).length;
     if (tagged < 1) continue;
+
+    // First tile with a listen_range / concur_range wins (used globally).
+    const listenRange =
+      (doc.tiles.find((t) => t.listen_range)?.listen_range as
+        | [number, number]
+        | undefined) ?? null;
+    const concurRange =
+      (doc.tiles.find((t) => t.concur_range)?.concur_range as
+        | [number, number]
+        | undefined) ?? null;
 
     const [, , cbw, cbh] = doc.content_bbox ?? [0, 0, 0, 0];
     const tileW = cbw > 0 ? cbw / cols : 1;
@@ -84,8 +105,10 @@ function rankMeetingSources(
       sourceSize: doc.source_size,
       tileAspect,
       tiles,
-      sourceUrl: `/api/source/${doc.video_id}`,
-      audioUrl: `/api/clips/_audio/${doc.video_id}.m4a`,
+      sourceUrl: `/source/${doc.video_id}.mp4`,
+      audioUrl: `/clips/_audio/${doc.video_id}.m4a`,
+      listenRange,
+      concurRange,
       tagged,
     });
   }
@@ -101,6 +124,8 @@ function rankMeetingSources(
     tiles: c.tiles,
     sourceUrl: c.sourceUrl,
     audioUrl: c.audioUrl,
+    listenRange: c.listenRange,
+    concurRange: c.concurRange,
   }));
 }
 
@@ -202,6 +227,32 @@ const COREY_DEMOTE_LINES = [
   "{NAME}, moved you to self-view. Nothing personal, just optimizing the visual aperture.",
   "{NAME}, minimizing your video to the self-view corner — tighter cadence on the main grid.",
 ];
+// DM responses to "you just said something". Dropped in (random chance) a
+// beat after you start talking. Sender = random cast member from current
+// meeting. {NAME} is substituted at render.
+const USER_TALK_DMS: string[] = [
+  "{NAME} cooking here tbh",
+  "damn good point.",
+  "solid read, {NAME}.",
+  "you might be onto something {NAME}",
+  "☝️ {NAME} speaks wisdom",
+  "can we get this on the roadmap?",
+  "{NAME} nailed the framing. going to borrow this.",
+  "hmm. interesting.",
+  "wait say that again?",
+  "that's the construct i've been looking for",
+  "hard agree with {NAME} here, don't tell ryan",
+  "lowkey {NAME} should run the Q2 sync tbh",
+  "i've been thinking this for weeks but couldn't word it",
+  "pls stop making sense you're making us look bad",
+  "ok that's a banger of a take",
+  "I literally had this exact thought in the shower",
+  "{NAME} pressing on the right deltas here",
+  "going to clip this and send to ryan",
+  "this is the energy we needed from Q1",
+  "can you say this louder for the folks in the back",
+];
+
 const COREY_VIDEO_OFF_LINES = [
   "{NAME} — dropping your camera for the walkthrough, just to reduce visual chatter.",
   "Going to cut {NAME}'s video for this segment — audio-only is the cleaner construct here.",
@@ -212,6 +263,14 @@ const COREY_VIDEO_OFF_LINES = [
 // near-square look. Per-source bbox differences are handled inside the
 // canvas via object-fit:cover.
 const TILE_DISPLAY_ASPECT = 1.15;
+
+// Build-time flag: when set, the meeting UI runs in read-only mode —
+// chat input is hidden, the ambient poller skips the live-LLM fallback
+// and just loops the pre-gen pack. Set via env var so the same code runs
+// local (with LLM) and deployed (static-friendly).
+const READ_ONLY_CHAT =
+  process.env.NEXT_PUBLIC_READ_ONLY_CHAT === "1" ||
+  process.env.NEXT_PUBLIC_READ_ONLY_CHAT === "true";
 
 // Character display in the UI prefers a first-name alias over the verbose
 // `display_name` ("Cold Boss Ryan" -> "Ryan"). Falls through to the display
@@ -277,6 +336,48 @@ export function MeetingRoom({ topic, initialVid }: Props) {
   const [inGrid, setInGrid] = useState(true);
   // Hidden dev tool — double-click the REC pill to toggle bbox tuner.
   const [tunerVisible, setTunerVisible] = useState(false);
+  // First-load onboarding: Braxton-from-HR email setting up the LARP bit.
+  // Gated on localStorage so we only show it the very first time.
+  const [onboardingOpen, setOnboardingOpen] = useState(false);
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (!window.localStorage.getItem("larp_onboarded")) {
+      setOnboardingOpen(true);
+    }
+  }, []);
+  // Choreography for "you're talking":
+  //   normal  → master video plays normally
+  //   listening → looping the source's listen_range (everyone silent)
+  //   concurring → playing the source's concur_range once (everyone nods)
+  type TalkMode = "normal" | "listening" | "concurring";
+  const [talkMode, setTalkMode] = useState<TalkMode>("normal");
+  const talkModeRef = useRef<TalkMode>("normal");
+  useEffect(() => { talkModeRef.current = talkMode; }, [talkMode]);
+  // (Previously we dimmed the grid on talkMode transitions to mask the
+  // video seek — removed because the fade looked worse than the seek.)
+  const silenceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const concurTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // "Group talks over you" — if the user keeps talking too long, there's a
+  // 60% chance the room just resumes the meeting and drowns them out after
+  // 3-7 seconds. Cleared if they stop talking first.
+  const talkoverTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // Snapshot of the meeting's video + audio currentTime at the moment you
+  // started talking, so we can resume (not restart) after the concur nod.
+  const preTalkVideoTimeRef = useRef<number>(0);
+  const preTalkAudioTimeRef = useRef<number>(0);
+  // Timestamp (ms) of the last time the "you had the floor" cycle ended
+  // (concur completed OR talkover fired OR you got muted mid-talk). New
+  // voice inside this window is ignored entirely — no listening mode, no
+  // mode flip-flop on quick restarts. Also used to suppress a second
+  // concur nod in short succession.
+  const lastFloorEndedAtRef = useRef<number>(0);
+  const FLOOR_COOLDOWN_MS = 5000;
+  // Mic VAD state: a dedicated MediaStream + AudioContext lifecycle separate
+  // from the webcam stream (we only request mic when unmuted for the first
+  // time, and tear it down when muted again).
+  const vadStreamRef = useRef<MediaStream | null>(null);
+  const vadContextRef = useRef<AudioContext | null>(null);
+  const vadRafRef = useRef<number>(0);
   // Pre-generated chat pack for the current meeting (loaded from
   // /api/chats/[vid]). The ambient poller draws from this first; live LLM
   // generation is the fallback when the pool is empty/exhausted.
@@ -287,7 +388,6 @@ export function MeetingRoom({ topic, initialVid }: Props) {
   const chatScrollRef = useRef<HTMLDivElement>(null);
   const clipIndex = useClipIndex();
   const speakingAudioRef = useRef<HTMLAudioElement | null>(null);
-  const masterAudioRef = useRef<HTMLAudioElement | null>(null);
   const masterVideoRef = useRef<HTMLVideoElement | null>(null);
   // Bumped whenever a new call starts OR a new fade kicks off, so lingering
   // fade ticks can check "is this still my fade?" and bail if not.
@@ -302,10 +402,19 @@ export function MeetingRoom({ topic, initialVid }: Props) {
   const topicRef = useRef<string>("");
   const castIdsRef = useRef<string[]>([]);
 
+  // Mirror these too so setTimeout handlers (Corey actions) can check the
+  // latest values without nesting side effects inside setState updaters.
+  const inGridRef = useRef(true);
+  const videoOffRef = useRef(false);
+  const micMutedRef = useRef(false);
+
   useEffect(() => { phaseRef.current = phase; }, [phase]);
   useEffect(() => { historyRef.current = history; }, [history]);
   useEffect(() => { sendingRef.current = sending; }, [sending]);
   useEffect(() => { userNameRef.current = userName; }, [userName]);
+  useEffect(() => { inGridRef.current = inGrid; }, [inGrid]);
+  useEffect(() => { videoOffRef.current = videoOff; }, [videoOff]);
+  useEffect(() => { micMutedRef.current = micMuted; }, [micMuted]);
 
   // Restore name on mount.
   useEffect(() => {
@@ -316,10 +425,13 @@ export function MeetingRoom({ topic, initialVid }: Props) {
   }, []);
 
   useEffect(() => {
-    fetch("/api/characters")
+    // Static bundles — see scripts/stage-public.py. Served from CDN on
+    // Vercel, no API route hit. Locally they're also in public/ so this
+    // works in dev too (re-run the stage script after data changes).
+    fetch("/characters.json")
       .then((r) => r.json())
       .then((d) => setPacks(d.packs ?? []));
-    fetch("/api/admin/tiles")
+    fetch("/tiles.json")
       .then((r) => r.json())
       .then((d) => setTileDocs(d.tiles ?? []));
   }, []);
@@ -378,6 +490,22 @@ export function MeetingRoom({ topic, initialVid }: Props) {
 
   const source = sources[sourceIdx] ?? null;
   const castReady = !!source;
+  // A meeting "supports talking" only if the tile tagger configured a
+  // listening loop or concur nod for it. Without either, the choreography
+  // for "you unmute and hold the floor" has nothing to play — so the mic
+  // button is locked (you can't unmute yourself) and the host gag that
+  // mutes you mid-call is suppressed (nothing to mute).
+  const voiceSupported = !!(source?.listenRange || source?.concurRange);
+  const voiceSupportedRef = useRef(voiceSupported);
+  useEffect(() => { voiceSupportedRef.current = voiceSupported; }, [voiceSupported]);
+
+  // Sync the mic's initial state to the meeting: muted-and-locked when the
+  // meeting doesn't support talking, unmuted (Corey may still take it) when
+  // it does. Re-runs per source so rotating into a different meeting DTRT.
+  useEffect(() => {
+    if (!source) return;
+    setMicMuted(!voiceSupported);
+  }, [source, voiceSupported]);
 
   // Record every source the user actually lands in (phase → active) as
   // "visited" so the shuffle-bag can avoid repeats.
@@ -390,14 +518,23 @@ export function MeetingRoom({ topic, initialVid }: Props) {
   // "Corey the host" is a synthetic authority who occasionally mutes you or
   // demotes you to PIP with a chat message. Fires a few seconds into each
   // new active call, independent chances per action.
+  const hostFiredForIdxRef = useRef<number>(-1);
   useEffect(() => {
     if (phase !== "active") return;
+    // Strict Mode re-runs effects on mount — without this guard, each dice
+    // roll happens twice and you can see the same host action (same line)
+    // posted by both Corey and Spencer.
+    if (hostFiredForIdxRef.current === sourceIdx) return;
+    hostFiredForIdxRef.current = sourceIdx;
     const timers: ReturnType<typeof setTimeout>[] = [];
-    // 50% chance to mute ~3-6s in
-    if (Math.random() < 0.5) {
+    // 50% chance to mute ~3-6s in — but only in meetings that DON'T support
+    // talking. If the meeting has listen/concur ranges configured, the user
+    // is meant to engage by voice, so Corey/Spencer can't yank the mic.
+    if (!voiceSupportedRef.current && Math.random() < 0.5) {
       timers.push(
         setTimeout(() => {
           if (phaseRef.current !== "active") return;
+          if (voiceSupportedRef.current) return;
           setMicMuted(true);
           const line =
             COREY_MUTE_LINES[
@@ -408,20 +545,20 @@ export function MeetingRoom({ topic, initialVid }: Props) {
       );
     }
     // 60% chance to demote to PIP ~8-14s in (only fires if user's in grid).
-    // This is the main gag now that default seating puts you in the grid.
+    // Side effects must live OUTSIDE the setState updater — React Strict
+    // Mode invokes updaters twice expecting purity, so calling
+    // addHostMessage inside one double-posts the host chat.
     if (Math.random() < 0.6) {
       timers.push(
         setTimeout(() => {
           if (phaseRef.current !== "active") return;
-          setInGrid((currentlyInGrid) => {
-            if (!currentlyInGrid) return currentlyInGrid;
-            const line =
-              COREY_DEMOTE_LINES[
-                Math.floor(Math.random() * COREY_DEMOTE_LINES.length)
-              ];
-            addHostMessage(line);
-            return false;
-          });
+          if (!inGridRef.current) return;
+          const line =
+            COREY_DEMOTE_LINES[
+              Math.floor(Math.random() * COREY_DEMOTE_LINES.length)
+            ];
+          setInGrid(false);
+          addHostMessage(line);
         }, 8_000 + Math.random() * 6000)
       );
     }
@@ -430,15 +567,13 @@ export function MeetingRoom({ topic, initialVid }: Props) {
       timers.push(
         setTimeout(() => {
           if (phaseRef.current !== "active") return;
-          setVideoOff((currentlyOff) => {
-            if (currentlyOff) return currentlyOff;
-            const line =
-              COREY_VIDEO_OFF_LINES[
-                Math.floor(Math.random() * COREY_VIDEO_OFF_LINES.length)
-              ];
-            addHostMessage(line);
-            return true;
-          });
+          if (videoOffRef.current) return;
+          const line =
+            COREY_VIDEO_OFF_LINES[
+              Math.floor(Math.random() * COREY_VIDEO_OFF_LINES.length)
+            ];
+          setVideoOff(true);
+          addHostMessage(line);
         }, 14_000 + Math.random() * 8000)
       );
     }
@@ -476,7 +611,7 @@ export function MeetingRoom({ topic, initialVid }: Props) {
       return;
     }
     let cancelled = false;
-    fetch(`/api/chats/${source.vid}`)
+    fetch(`/chats/${source.vid}.json`)
       .then((r) => r.json())
       .then((d) => {
         if (cancelled) return;
@@ -551,8 +686,9 @@ export function MeetingRoom({ topic, initialVid }: Props) {
     });
   }, [history, pending]);
 
-  // Click-to-join handler. The click is what unlocks unmuted audio under the
-  // browser autoplay policy — we kick off the master ambient track here.
+  // Click-to-join handler. The click unlocks audio under the browser
+  // autoplay policy — we rely on the master <video>'s own audio track now
+  // (same timeline as frames, zero drift) instead of a separate <audio>.
   function joinMeeting(name: string) {
     if (!source) return;
     const trimmed = name.trim();
@@ -560,35 +696,282 @@ export function MeetingRoom({ topic, initialVid }: Props) {
       setUserName(trimmed);
       try { localStorage.setItem(NAME_STORAGE_KEY, trimmed); } catch {}
     }
-    if (!masterAudioRef.current) {
-      const a = new Audio(source.audioUrl);
-      a.loop = true;
-      a.volume = 0.35;
-      a.preload = "auto";
-      masterAudioRef.current = a;
-    }
-    masterAudioRef.current.src = source.audioUrl;
-    masterAudioRef.current.currentTime = 0;
-    masterAudioRef.current.play().catch(() => {});
+    // Master video will be unmuted + played by the [phase, source] effect
+    // below once it's mounted.
     setPhase("active");
   }
 
-  // If the source changes after we're active, restart the master track (used
-  // when we rotate into a new meeting). Bumping audioGenRef invalidates any
-  // in-flight fade ticks from the previous endCall/leaveCall so they can't
-  // pause this fresh playback. Re-enable loop (fadeOutMasterAudio disables
-  // it to prevent end-of-track looping during hangup).
+  // Voice-activity choreography. The mic pipeline (getUserMedia +
+  // AudioContext + VAD loop) stays alive for the entire active call — we
+  // only open it once per meeting. Mute/unmute just gates whether the VAD
+  // acts on its input, so toggles are instant instead of re-running a
+  // ~100-500ms getUserMedia cycle every time (including when Corey mutes
+  // you mid-sentence).
   useEffect(() => {
-    if (phase !== "active" || !source || !masterAudioRef.current) return;
-    audioGenRef.current++;
-    const a = masterAudioRef.current;
-    a.src = source.audioUrl;
-    a.load();
-    a.currentTime = 0;
-    a.volume = VOL_AMBIENT;
-    a.loop = true;
-    a.play().catch(() => {});
+    if (phase !== "active" || !source) return;
+    if (!source.listenRange && !source.concurRange) return;
+
+    let cancelled = false;
+    let analyser: AnalyserNode | null = null;
+    // Explicit ArrayBuffer-backing satisfies the Web Audio type in newer
+    // TS lib-dom: getByteFrequencyData wants Uint8Array<ArrayBuffer>, not
+    // the wider ArrayBufferLike default of `new Uint8Array(n)`.
+    let buf: Uint8Array<ArrayBuffer> | null = null;
+
+    navigator.mediaDevices
+      .getUserMedia({ audio: true, video: false })
+      .then((stream) => {
+        if (cancelled) {
+          stream.getTracks().forEach((t) => t.stop());
+          return;
+        }
+        vadStreamRef.current = stream;
+        const AC =
+          (window as unknown as { AudioContext: typeof AudioContext })
+            .AudioContext ||
+          (window as unknown as { webkitAudioContext: typeof AudioContext })
+            .webkitAudioContext;
+        const ctx = new AC();
+        vadContextRef.current = ctx;
+        const src = ctx.createMediaStreamSource(stream);
+        analyser = ctx.createAnalyser();
+        analyser.fftSize = 1024;
+        buf = new Uint8Array(new ArrayBuffer(analyser.frequencyBinCount));
+        src.connect(analyser);
+
+        // VAD: RMS over freq bins; sustained above threshold = talking.
+        const VOICE_THRESHOLD = 18; // avg byte magnitude
+        const VOICE_SUSTAIN_MS = 120;
+        const SILENCE_MS = 900;
+        let voiceStart = 0;
+
+        const tick = () => {
+          if (cancelled || !analyser || !buf) return;
+          vadRafRef.current = requestAnimationFrame(tick);
+          // If muted, skip VAD entirely — the pipeline stays alive but
+          // doesn't react. Cheap: one ref read + early return per frame.
+          if (micMutedRef.current) {
+            voiceStart = 0;
+            return;
+          }
+          analyser.getByteFrequencyData(buf);
+          let sum = 0;
+          for (let i = 0; i < buf.length; i++) sum += buf[i];
+          const avg = sum / buf.length;
+
+          const now = performance.now();
+          if (avg > VOICE_THRESHOLD) {
+            if (voiceStart === 0) voiceStart = now;
+            if (now - voiceStart > VOICE_SUSTAIN_MS) {
+              // User is talking.
+              if (silenceTimerRef.current) {
+                clearTimeout(silenceTimerRef.current);
+                silenceTimerRef.current = null;
+              }
+              if (talkModeRef.current !== "listening") {
+                enterListeningMode();
+              }
+            }
+          } else {
+            voiceStart = 0;
+            if (
+              talkModeRef.current === "listening" &&
+              !silenceTimerRef.current
+            ) {
+              silenceTimerRef.current = setTimeout(() => {
+                silenceTimerRef.current = null;
+                // User actually stopped — cancel any pending talkover.
+                if (talkoverTimerRef.current) {
+                  clearTimeout(talkoverTimerRef.current);
+                  talkoverTimerRef.current = null;
+                }
+                enterConcurringMode();
+              }, SILENCE_MS);
+            }
+          }
+        };
+        tick();
+      })
+      .catch(() => {
+        // Mic denied — silently stay in normal mode.
+      });
+
+    return () => {
+      cancelled = true;
+      if (vadRafRef.current) cancelAnimationFrame(vadRafRef.current);
+      vadRafRef.current = 0;
+      vadContextRef.current?.close().catch(() => {});
+      vadContextRef.current = null;
+      vadStreamRef.current?.getTracks().forEach((t) => t.stop());
+      vadStreamRef.current = null;
+      if (silenceTimerRef.current) clearTimeout(silenceTimerRef.current);
+      if (concurTimerRef.current) clearTimeout(concurTimerRef.current);
+      if (talkoverTimerRef.current) clearTimeout(talkoverTimerRef.current);
+      silenceTimerRef.current = null;
+      concurTimerRef.current = null;
+      talkoverTimerRef.current = null;
+    };
+
+    function enterListeningMode() {
+      // Cooldown: if the room JUST got done dealing with you (concur,
+      // talkover, or mute snap-out) within the last 5s, we ignore any new
+      // voice and let the meeting keep going. Prevents the flip-flop where
+      // you stop/start and immediately re-enter listening.
+      if (Date.now() - lastFloorEndedAtRef.current < FLOOR_COOLDOWN_MS) return;
+      const v = masterVideoRef.current;
+      if (!v) return;
+      talkModeRef.current = "listening";
+      setTalkMode("listening");
+      // Snapshot so we can resume here after concur.
+      preTalkVideoTimeRef.current = v.currentTime;
+      // Single media element now: mute it (frames keep coming for canvases)
+      // and seek into the listen range for the looping visual. Your mic
+      // isn't fighting the room audio.
+      v.muted = true;
+      if (source?.listenRange) {
+        try {
+          v.currentTime = source.listenRange[0];
+          v.play().catch(() => {});
+        } catch {}
+      }
+      // Talkover disabled: the room listens for as long as you want. Feels
+      // more "you actually have the floor" than arbitrary interruptions.
+      if (talkoverTimerRef.current) clearTimeout(talkoverTimerRef.current);
+      // 45% chance a cast member fires off a DM reacting to "what you said".
+      // Sender = random on-screen cast. Drops in 700-1800ms after you start.
+      if (Math.random() < 0.45) {
+        const castPacks = source?.tiles
+          .map((t) => t.pack)
+          .filter((p): p is NonNullable<typeof p> => !!p) ?? [];
+        if (castPacks.length > 0) {
+          const sender =
+            castPacks[Math.floor(Math.random() * castPacks.length)];
+          const line =
+            USER_TALK_DMS[Math.floor(Math.random() * USER_TALK_DMS.length)];
+          const text = line.replace(/\{NAME\}/g, userName || "you");
+          setTimeout(() => {
+            // Still listening? Otherwise the user already stopped talking.
+            if (talkModeRef.current !== "listening") return;
+            setHistory((h) => [
+              ...h,
+              {
+                id: crypto.randomUUID(),
+                role: "character",
+                character_id: sender.character.id,
+                text,
+                timestamp: Date.now(),
+                audience: "dm",
+              },
+            ]);
+          }, 700 + Math.random() * 1100);
+        }
+      }
+    }
+    function enterConcurringMode() {
+      // Guard against double-entry: if we're already concurring (or a
+      // pending concur timer is in flight), skip.
+      if (talkModeRef.current === "concurring") return;
+      if (concurTimerRef.current) return;
+      // Cooldown: if the floor-cycle just ended (concur/talkover/mute),
+      // skip another concur and resume directly — room doesn't nod-approve
+      // you twice in quick succession.
+      const sinceLast = Date.now() - lastFloorEndedAtRef.current;
+      if (sinceLast < FLOOR_COOLDOWN_MS) {
+        restartMeeting();
+        return;
+      }
+      if (!source?.concurRange) {
+        // No concur range — just restart the meeting from the top.
+        restartMeeting();
+        return;
+      }
+      const v = masterVideoRef.current;
+      if (!v) return;
+      talkModeRef.current = "concurring";
+      setTalkMode("concurring");
+      const [start, end] = source.concurRange;
+      // Single element: unmute + seek into concur range. Audio and frames
+      // stay inherently in sync since they share the same decode pipeline.
+      try {
+        v.muted = false;
+        v.volume = VOL_AMBIENT;
+        v.currentTime = start;
+        v.play().catch(() => {});
+      } catch {}
+      const durMs = Math.max(1200, (end - start) * 1000 + 400);
+      concurTimerRef.current = setTimeout(() => {
+        concurTimerRef.current = null;
+        lastFloorEndedAtRef.current = Date.now();
+        restartMeeting();
+      }, durMs);
+    }
+    function restartMeeting() {
+      // Resume the meeting from where it was when you started talking.
+      const v = masterVideoRef.current;
+      try {
+        if (v) {
+          v.muted = false;
+          v.volume = VOL_AMBIENT;
+          v.currentTime = preTalkVideoTimeRef.current;
+          v.play().catch(() => {});
+        }
+      } catch {}
+      talkModeRef.current = "normal";
+      setTalkMode("normal");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // NOTE: micMuted is intentionally NOT in deps — the pipeline stays up
+    // and the VAD tick reads micMutedRef each frame. Keeps toggles instant.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, source]);
+
+  // If muted mid-talk (you or Corey), snap out of listening immediately so
+  // the video stops looping the listen_range on a dead-mic state.
+  useEffect(() => {
+    if (!micMuted) return;
+    if (talkModeRef.current !== "listening") return;
+    if (silenceTimerRef.current) {
+      clearTimeout(silenceTimerRef.current);
+      silenceTimerRef.current = null;
+    }
+    if (talkoverTimerRef.current) {
+      clearTimeout(talkoverTimerRef.current);
+      talkoverTimerRef.current = null;
+    }
+    // Going from "you have the floor" to "muted" doesn't need concur.
+    // Just restore the meeting.
+    const v = masterVideoRef.current;
+    if (v) {
+      try {
+        v.muted = false;
+        v.volume = VOL_AMBIENT;
+        v.currentTime = preTalkVideoTimeRef.current;
+        v.play().catch(() => {});
+      } catch {}
+    }
+    talkModeRef.current = "normal";
+    setTalkMode("normal");
+    // Treat a mute-mid-talk as "floor cycle ended" so an immediate unmute
+    // + voice doesn't re-enter listening until cooldown expires.
+    lastFloorEndedAtRef.current = Date.now();
+  }, [micMuted]);
+
+  // While listening, keep the master video inside listen_range — seek back
+  // to start whenever it passes the end. Audio stays paused.
+  useEffect(() => {
+    if (talkMode !== "listening" || !source?.listenRange) return;
+    const [start, end] = source.listenRange;
+    const v = masterVideoRef.current;
+    if (!v) return;
+    const id = window.setInterval(() => {
+      if (!v) return;
+      if (v.currentTime >= end || v.currentTime < start) {
+        v.currentTime = start;
+        v.play().catch(() => {});
+      }
+    }, 100);
+    return () => window.clearInterval(id);
+  }, [talkMode, source]);
 
   // Kick the master video into playback explicitly once it's mounted with a
   // source. Also wire the "ended" event → end-of-call handler.
@@ -597,6 +980,11 @@ export function MeetingRoom({ topic, initialVid }: Props) {
     const v = masterVideoRef.current;
     if (!v) return;
     const tryPlay = () => {
+      // Single media element now: unmute the master video on call start so
+      // its built-in audio track is what the user hears (same decode
+      // pipeline as the canvas frames = no drift).
+      v.muted = false;
+      v.volume = VOL_AMBIENT;
       v.currentTime = 0;
       v.play().catch(() => {});
     };
@@ -641,22 +1029,20 @@ export function MeetingRoom({ topic, initialVid }: Props) {
   }
 
   function fadeOutMasterAudio() {
-    const ma = masterAudioRef.current;
-    if (!ma) return;
+    // Now that audio lives on the master <video>, we fade its .volume and
+    // leave the element paused at the end. Video tearing down afterwards
+    // handles visual cleanup.
+    const v = masterVideoRef.current;
+    if (!v) return;
     const myGen = ++audioGenRef.current;
-    // Kill the loop immediately — if the track is near its tail when the
-    // call ends, we don't want a 600ms fade chain to be interrupted by the
-    // audio hopping back to frame 0 and blasting the "beginning of the
-    // meeting" during the ended/invited screens.
-    ma.loop = false;
-    const startVol = ma.volume;
+    const startVol = v.volume;
     let i = 0;
     const tick = () => {
       if (audioGenRef.current !== myGen) return;
       i++;
-      ma.volume = Math.max(0, startVol * (1 - i / 10));
+      v.volume = Math.max(0, startVol * (1 - i / 10));
       if (i < 10) setTimeout(tick, 60);
-      else ma.pause();
+      else v.pause();
     };
     tick();
   }
@@ -821,6 +1207,12 @@ export function MeetingRoom({ topic, initialVid }: Props) {
       const delay = 4_000 + Math.floor(Math.random() * 9_000);
       timer = setTimeout(() => {
         if (cancelled || phaseRef.current !== "active") return;
+        // Pause outbursts while the user has the floor — no green speaker
+        // rings, no grunt ad-libs. Resume naturally in concur/normal.
+        if (talkModeRef.current === "listening") {
+          if (!cancelled) schedule();
+          return;
+        }
         const pack = castPacks[Math.floor(Math.random() * castPacks.length)];
         const charId = pack.character.id;
         setActiveIds((s) => new Set(s).add(charId));
@@ -830,7 +1222,7 @@ export function MeetingRoom({ topic, initialVid }: Props) {
         if (grunts.length > 0) {
           const g = grunts[Math.floor(Math.random() * grunts.length)];
           const name = g.path.split("/").pop()?.replace(/\.mp3$/, "");
-          if (name) playGrunt(charId, `/api/grunt/${charId}/${name}`);
+          if (name) playGrunt(charId, `/grunts/${charId}/${name}.mp3`);
         }
         // Clear the ring after a beat.
         setTimeout(() => {
@@ -871,17 +1263,27 @@ export function MeetingRoom({ topic, initialVid }: Props) {
         // Prefer the pre-gen pack first — pick a chat we haven't used yet.
         const pack = chatPackRef.current;
         const used = chatPackUsedRef.current;
-        const availableIdx = pack
+        let availableIdx = pack
           .map((_, i) => i)
           .filter((i) => !used.has(i));
+        // In read-only mode, pool exhaustion wraps around instead of
+        // hitting /api/turn — keeps the static build self-contained.
+        if (availableIdx.length === 0 && READ_ONLY_CHAT && pack.length > 0) {
+          chatPackUsedRef.current = new Set();
+          availableIdx = pack.map((_, i) => i);
+        }
         if (availableIdx.length > 0) {
           const idx = availableIdx[Math.floor(Math.random() * availableIdx.length)];
-          used.add(idx);
+          chatPackUsedRef.current.add(idx);
           commitPackChat(pack[idx]);
           if (!cancelled) schedule();
           return;
         }
-        // Pool exhausted → fall back to live LLM generation.
+        // Pool exhausted + not read-only → fall back to live LLM generation.
+        if (READ_ONLY_CHAT) {
+          if (!cancelled) schedule();
+          return;
+        }
         try {
           const res = await fetch("/api/turn", {
             method: "POST",
@@ -1030,6 +1432,16 @@ export function MeetingRoom({ topic, initialVid }: Props) {
             <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" />
             REC
           </div>
+          <div className="h-5 w-px bg-white/10" aria-hidden="true" />
+          <a
+            href="https://raresignal.ai"
+            target="_blank"
+            rel="noreferrer"
+            className="hidden md:inline-flex items-center text-[11px] text-zinc-500 hover:text-zinc-300"
+          >
+            made with love by David Lin-Clark
+          </a>
+          <div className="hidden md:block h-5 w-px bg-white/10" aria-hidden="true" />
           <div>
             <div className="text-[10px] uppercase tracking-wide text-zinc-500">
               LARP Meeting
@@ -1039,8 +1451,24 @@ export function MeetingRoom({ topic, initialVid }: Props) {
             </div>
           </div>
         </div>
-        <div className="text-[11px] text-zinc-500">
-          {source ? `${source.tiles.filter((t) => t.pack).length + 1} in call` : ""}
+        <div className="flex items-center gap-3 text-[11px] text-zinc-500">
+          <a
+            href="https://versojobs.me/david-lin-clark"
+            target="_blank"
+            rel="noreferrer"
+            className="group hidden md:inline-flex items-center gap-3 text-[13px] font-medium leading-tight text-zinc-300 hover:text-white font-[family-name:var(--font-space-grotesk)]"
+          >
+            <span>
+              If you&apos;d rather work at an awesome startup instead of endless touch base, use
+            </span>
+            <span className="inline-flex items-center rounded-md bg-[#eb3223] px-2.5 py-1.5 shadow-sm transition-colors group-hover:bg-[#5aba89]">
+              <img
+                src="/verso-jobs-logo.png"
+                alt="Verso Jobs"
+                className="h-5 w-auto"
+              />
+            </span>
+          </a>
         </div>
       </header>
 
@@ -1100,27 +1528,54 @@ export function MeetingRoom({ topic, initialVid }: Props) {
                       gridTemplateRows: `repeat(${source.rows}, minmax(0, 1fr))`,
                     }}
                   >
-                    {source.tiles.map((t) => (
-                      <div
-                        key={t.idx}
-                        style={{
-                          gridColumn: t.col + 1,
-                          gridRow: t.row + 1,
-                        }}
-                      >
-                        <ParticipantTile
-                          pack={t.pack}
-                          masterVideoRef={masterVideoRef}
-                          bbox={t.bbox}
-                          displayAspect={TILE_DISPLAY_ASPECT}
-                          active={
-                            t.pack
-                              ? activeIds.has(t.pack.character.id)
-                              : false
-                          }
-                        />
-                      </div>
-                    ))}
+                    {source.tiles.map((t) => {
+                      const hasOwnListen =
+                        !!t.listenRange &&
+                        (!source.listenRange ||
+                          t.listenRange[0] !== source.listenRange[0] ||
+                          t.listenRange[1] !== source.listenRange[1]);
+                      // If the tile has NO concur_range, it opts out of the
+                      // nod and keeps looping listen_range during the concur
+                      // phase. Needs its own local video too.
+                      const skipsConcur = !t.concurRange;
+                      const needsLocalVideo = hasOwnListen || skipsConcur;
+                      // Local loop range: tile's own listen if set, else
+                      // fall back to the meeting's global.
+                      const localLoopRange =
+                        (t.listenRange as [number, number] | null) ??
+                        source.listenRange;
+                      return (
+                        <div
+                          key={t.idx}
+                          style={{
+                            gridColumn: t.col + 1,
+                            gridRow: t.row + 1,
+                          }}
+                        >
+                          <ParticipantTile
+                            pack={t.pack}
+                            masterVideoRef={masterVideoRef}
+                            bbox={t.bbox}
+                            displayAspect={TILE_DISPLAY_ASPECT}
+                            active={
+                              t.pack
+                                ? activeIds.has(t.pack.character.id)
+                                : false
+                            }
+                            talkMode={talkMode}
+                            sourceUrl={
+                              needsLocalVideo ? source.sourceUrl : undefined
+                            }
+                            ownListenRange={
+                              needsLocalVideo && localLoopRange
+                                ? localLoopRange
+                                : undefined
+                            }
+                            skipsConcur={skipsConcur}
+                          />
+                        </div>
+                      );
+                    })}
                     {inGrid && (
                       <div
                         className="self-center"
@@ -1205,36 +1660,38 @@ export function MeetingRoom({ topic, initialVid }: Props) {
               ))
             )}
           </div>
-          <div className="border-t p-3">
-            {error && (
-              <div className="mb-2 rounded-md bg-red-500/10 px-3 py-2 text-xs text-red-400">
-                {error}
+          {!READ_ONLY_CHAT && (
+            <div className="border-t p-3">
+              {error && (
+                <div className="mb-2 rounded-md bg-red-500/10 px-3 py-2 text-xs text-red-400">
+                  {error}
+                </div>
+              )}
+              <div className="flex items-end gap-2">
+                <Input
+                  ref={inputRef}
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && !e.shiftKey) {
+                      e.preventDefault();
+                      send();
+                    }
+                  }}
+                  placeholder="Say something…"
+                  disabled={sending || !castReady}
+                  className="h-10"
+                />
+                <Button
+                  onClick={send}
+                  disabled={sending || !input.trim() || !castReady}
+                  className="h-10"
+                >
+                  {sending ? "…" : "Send"}
+                </Button>
               </div>
-            )}
-            <div className="flex items-end gap-2">
-              <Input
-                ref={inputRef}
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" && !e.shiftKey) {
-                    e.preventDefault();
-                    send();
-                  }
-                }}
-                placeholder="Say something…"
-                disabled={sending || !castReady}
-                className="h-10"
-              />
-              <Button
-                onClick={send}
-                disabled={sending || !input.trim() || !castReady}
-                className="h-10"
-              >
-                {sending ? "…" : "Send"}
-              </Button>
             </div>
-          </div>
+          )}
         </aside>
       </div>
       {phase === "active" && (
@@ -1246,7 +1703,14 @@ export function MeetingRoom({ topic, initialVid }: Props) {
           participantCount={
             source ? source.tiles.filter((t) => t.pack).length + 1 : 1
           }
-          onToggleMic={() => setMicMuted((v) => !v)}
+          shortVid={source?.vid}
+          micLocked={!voiceSupported}
+          onToggleMic={() => {
+            // In no-voice meetings the host has locked the mic — the button
+            // stays disabled, the tooltip explains why.
+            if (!voiceSupported) return;
+            setMicMuted((v) => !v);
+          }}
           onToggleVideo={() => setVideoOff((v) => !v)}
           onToggleChat={() => setChatOpen((v) => !v)}
           onToggleParticipants={() => setParticipantsOpen((v) => !v)}
@@ -1254,7 +1718,124 @@ export function MeetingRoom({ topic, initialVid }: Props) {
           onLeave={leaveCall}
         />
       )}
+      {onboardingOpen && (
+        <OnboardingEmailModal
+          braxtonClipUrl={
+            clipIndex ? (clipIndex["braxton"] ?? [])[0]?.video_url : undefined
+          }
+          userName={userName}
+          onClose={() => {
+            if (typeof window !== "undefined") {
+              window.localStorage.setItem("larp_onboarded", "1");
+            }
+            setOnboardingOpen(false);
+          }}
+        />
+      )}
     </main>
+  );
+}
+
+function OnboardingEmailModal({
+  braxtonClipUrl,
+  userName,
+  onClose,
+}: {
+  braxtonClipUrl: string | undefined;
+  userName: string;
+  onClose: () => void;
+}) {
+  const firstName = userName.trim().split(/\s+/)[0] || "bro";
+  const today = new Date().toLocaleString("en-US", {
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  });
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4 py-6 backdrop-blur-sm"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div className="relative w-full max-w-[640px] overflow-hidden rounded-xl border border-zinc-200 bg-white text-[13px] text-zinc-900 shadow-2xl font-[family-name:var(--font-space-grotesk)]">
+        {/* Gmail-ish chrome */}
+        <div className="flex items-center gap-2 border-b border-zinc-200 bg-zinc-50 px-4 py-2 text-[11px] text-zinc-500">
+          <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+          <span className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
+          <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
+          <span className="ml-2">Inbox · 1 new</span>
+          <span className="ml-auto">{today}</span>
+        </div>
+
+        {/* Subject line */}
+        <div className="border-b border-zinc-200 px-5 pb-3 pt-4">
+          <div className="text-lg font-semibold leading-tight text-zinc-900">
+            Welcome to LARP — you&apos;re in 🎉
+          </div>
+          <div className="mt-1 text-[11px] uppercase tracking-wide text-zinc-400">
+            Inbox
+          </div>
+        </div>
+
+        {/* From row */}
+        <div className="flex items-center gap-3 px-5 py-3">
+          <CastAvatar
+            clipUrl={braxtonClipUrl}
+            displayName="Braxton"
+            size={40}
+          />
+          <div className="flex-1 min-w-0">
+            <div className="flex items-baseline gap-2">
+              <div className="font-semibold text-zinc-900">Braxton</div>
+              <div className="text-[11px] text-zinc-500">
+                &lt;braxton@larp.co&gt;
+              </div>
+            </div>
+            <div className="text-[11px] text-zinc-500 truncate">
+              to me · {today}
+            </div>
+          </div>
+        </div>
+
+        {/* Body */}
+        <div className="space-y-3 px-5 pb-5 text-[14px] leading-relaxed text-zinc-800">
+          <p>Yo {firstName} — <span className="font-semibold">CONGRATS</span>, right??</p>
+          <p>
+            Just got the loop-in from my dad. You&apos;re officially on as the
+            new <span className="font-semibold">Junior Lead</span> at LARP
+            (Logistics Analytics and Reporting Partners). I put in the good word,
+            you absolutely crushed the vibe check. I was made aware.
+          </p>
+          <p>
+            Quick heads up before you&apos;re in it: my dad is the VP here. He&apos;s
+            chill overall, just a little stuck in the old-school way of doing
+            things — think &quot;quarterly construct,&quot; think &quot;touch
+            base cadence.&quot; Nod, mirror, you&apos;ll be fine.
+          </p>
+          <p>
+            OH SHIT actually — he just pulled us into a meeting like right now.
+            Jump in, I&apos;ll be in there too. You got this, right?
+          </p>
+          <p className="text-zinc-500">— Braxton</p>
+        </div>
+
+        {/* CTA */}
+        <div className="flex items-center justify-between border-t border-zinc-200 bg-zinc-50 px-5 py-3">
+          <div className="text-[11px] text-zinc-500">
+            Meeting starting now · LARP HQ
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="rounded-md bg-[#eb3223] px-4 py-2 text-[13px] font-semibold text-white shadow-sm hover:bg-[#5aba89]"
+          >
+            Join the meeting →
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -1525,24 +2106,28 @@ function ZoomToolbar({
   chatOpen,
   participantsOpen,
   participantCount,
+  micLocked,
   onToggleMic,
   onToggleVideo,
   onToggleChat,
   onToggleParticipants,
   onReact,
   onLeave,
+  shortVid,
 }: {
   micMuted: boolean;
   videoOff: boolean;
   chatOpen: boolean;
   participantsOpen: boolean;
   participantCount: number;
+  micLocked: boolean;
   onToggleMic: () => void;
   onToggleVideo: () => void;
   onToggleChat: () => void;
   onToggleParticipants: () => void;
   onReact: (emoji: string) => void;
   onLeave: () => void;
+  shortVid: string | undefined;
 }) {
   const [reactionsOpen, setReactionsOpen] = useState(false);
   return (
@@ -1552,6 +2137,12 @@ function ZoomToolbar({
         label={micMuted ? "Unmute" : "Mute"}
         onClick={onToggleMic}
         danger={micMuted}
+        disabled={micLocked}
+        title={
+          micLocked
+            ? "You cannot unmute yourself — the host has configured it so you cannot unmute yourself in this meeting."
+            : undefined
+        }
       />
       <ToolbarBtn
         icon={videoOff ? "📷̶" : "📷"}
@@ -1605,6 +2196,27 @@ function ZoomToolbar({
         )}
       </div>
       <div className="mx-1 h-6 w-px bg-white/10" />
+      {shortVid && (
+        <>
+          <a
+            href={`https://www.youtube.com/shorts/${shortVid}`}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-md border border-white/10 bg-white/5 px-2.5 py-1.5 text-xs font-semibold text-zinc-100 hover:border-white/20 hover:bg-white/10"
+            title="Watch the original VersoJobs short on YouTube"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4">
+              <path
+                fill="#FF0033"
+                d="M17.77 10.32l-1.2-.5 1.2-.5a4.64 4.64 0 0 0-.3-8.6L9.7.01A4.64 4.64 0 0 0 8.23 8.93l1.2.5-1.2.5a4.64 4.64 0 0 0 .3 8.6l7.78 3.17a4.64 4.64 0 0 0 1.47-8.92z"
+              />
+              <path fill="#fff" d="M9.55 15.2V8.8l5.7 3.2z" />
+            </svg>
+            Watch the original short
+          </a>
+          <div className="mx-1 h-6 w-px bg-white/10" />
+        </>
+      )}
       <button
         type="button"
         onClick={onLeave}
@@ -1622,25 +2234,32 @@ function ToolbarBtn({
   onClick,
   active,
   danger,
+  disabled,
+  title,
 }: {
   icon: string;
   label: string;
   onClick: () => void;
   active?: boolean;
   danger?: boolean;
+  disabled?: boolean;
+  title?: string;
 }) {
   return (
     <button
       type="button"
       onClick={onClick}
+      aria-disabled={disabled || undefined}
       className={`flex min-w-[62px] flex-col items-center gap-0.5 rounded-md px-2 py-1 text-[10px] transition-colors ${
-        danger
+        disabled
+          ? "cursor-not-allowed text-zinc-500 opacity-60"
+          : danger
           ? "bg-red-500/20 text-red-400 hover:bg-red-500/30"
           : active
           ? "bg-[#2D8CFF]/20 text-[#5BA3FF]"
           : "text-zinc-300 hover:bg-white/10"
       }`}
-      title={label}
+      title={title ?? label}
     >
       <span className="text-base leading-none">{icon}</span>
       <span className="leading-none">{label}</span>
@@ -1905,12 +2524,12 @@ function playHangupBloop() {
 
 // --- helpers ---
 
-// Volume levels — kept close to the ambient track (0.35) so grunts and
-// speaking-clip swaps feel like parts of the same call, not a louder second
-// audio layer on top.
-const VOL_AMBIENT = 0.35;
-const VOL_SPEAKING = 0.4;
-const VOL_GRUNT = 0.5;
+// Volume levels. The grunt mp3s are pipeline-normalized to -16 LUFS while
+// the source MP4 audio is raw TikTok-loudness — at equal `volume` values
+// grunts blow out the mix. Bring them way down so they sit under.
+const VOL_AMBIENT = 0.65;
+const VOL_SPEAKING = 0.2;
+const VOL_GRUNT = 0.18;
 
 const audioCache = new Map<string, HTMLAudioElement>();
 function playGrunt(charId: string, url: string) {

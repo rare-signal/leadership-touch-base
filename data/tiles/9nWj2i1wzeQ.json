@@ -20,7 +20,15 @@
       "y": 646,
       "w": 318,
       "h": 348,
-      "character_id": null
+      "character_id": null,
+      "listen_range": [
+        0,
+        8.172935
+      ],
+      "concur_range": [
+        44.302983,
+        50.848672
+      ]
     },
     {
       "idx": 1,
@@ -30,7 +38,15 @@
       "y": 646,
       "w": 318,
       "h": 348,
-      "character_id": "bro_coworker_charles"
+      "character_id": "bro_coworker_charles",
+      "listen_range": [
+        0,
+        8.172935
+      ],
+      "concur_range": [
+        44.302983,
+        50.848672
+      ]
     },
     {
       "idx": 2,
@@ -40,7 +56,15 @@
       "y": 646,
       "w": 318,
       "h": 348,
-      "character_id": "braxton"
+      "character_id": "braxton",
+      "listen_range": [
+        0,
+        8.172935
+      ],
+      "concur_range": [
+        44.302983,
+        50.848672
+      ]
     },
     {
       "idx": 3,
@@ -50,7 +74,15 @@
       "y": 926,
       "w": 318,
       "h": 348,
-      "character_id": null
+      "character_id": null,
+      "listen_range": [
+        9.365401,
+        14.223182
+      ],
+      "concur_range": [
+        44.302983,
+        50.848672
+      ]
     },
     {
       "idx": 4,
@@ -60,7 +92,15 @@
       "y": 926,
       "w": 318,
       "h": 348,
-      "character_id": null
+      "character_id": null,
+      "listen_range": [
+        0,
+        8.172935
+      ],
+      "concur_range": [
+        44.302983,
+        50.848672
+      ]
     },
     {
       "idx": 5,
@@ -70,7 +110,15 @@
       "y": 926,
       "w": 318,
       "h": 348,
-      "character_id": "cold_boss_ryan"
+      "character_id": "cold_boss_ryan",
+      "listen_range": [
+        0,
+        8.172935
+      ],
+      "concur_range": [
+        44.302983,
+        50.848672
+      ]
     }
   ],
   "confidence": 1,

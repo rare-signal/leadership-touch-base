@@ -13,6 +13,8 @@ const TileBoxSchema = z.object({
   w: z.number().int(),
   h: z.number().int(),
   character_id: z.string().nullable().optional(),
+  listen_range: z.tuple([z.number(), z.number()]).optional(),
+  concur_range: z.tuple([z.number(), z.number()]).optional(),
 });
 
 // The pipeline seeds geometry + layout; the UI can re-edit geometry

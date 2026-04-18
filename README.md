@@ -27,7 +27,7 @@ cd ../app && pnpm dev                      # meeting at http://localhost:3000
 
 ## Credits
 
-Tribute to the work of [@VersoJobs](https://www.youtube.com/@VersoJobs). No affiliation. No redistribution of full videos; only derivative metadata and short ad-lib audio clips used under fair use for commentary and parody.
+Tribute to the work of [@VersoJobs](https://www.youtube.com/@VersoJobs). No affiliation. The deployed build re-hosts the full shorts (and per-character subclips + audio) so the meeting UI can play them as a single frame-synced master video — all such content is © @VersoJobs, used in good faith under fair use for commentary and parody. Each meeting header links back to the original short on YouTube. If you are the rights holder and want something removed, open an issue on this repo and it comes down.
 
 ## License
 

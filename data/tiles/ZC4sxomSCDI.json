@@ -20,7 +20,15 @@
       "y": 468,
       "w": 484,
       "h": 554,
-      "character_id": null
+      "character_id": null,
+      "listen_range": [
+        0,
+        11.38714
+      ],
+      "concur_range": [
+        12.103195,
+        13.964559
+      ]
     },
     {
       "idx": 1,
@@ -30,7 +38,15 @@
       "y": 468,
       "w": 484,
       "h": 554,
-      "character_id": "bro_coworker_xander"
+      "character_id": "bro_coworker_xander",
+      "listen_range": [
+        0,
+        11.38714
+      ],
+      "concur_range": [
+        12.103195,
+        13.964559
+      ]
     },
     {
       "idx": 2,
@@ -40,7 +56,15 @@
       "y": 898,
       "w": 484,
       "h": 554,
-      "character_id": null
+      "character_id": null,
+      "listen_range": [
+        16.864097,
+        32.570364
+      ],
+      "concur_range": [
+        12.103195,
+        13.964559
+      ]
     },
     {
       "idx": 3,
@@ -50,7 +74,15 @@
       "y": 898,
       "w": 484,
       "h": 554,
-      "character_id": null
+      "character_id": null,
+      "listen_range": [
+        0,
+        11.38714
+      ],
+      "concur_range": [
+        12.103195,
+        13.964559
+      ]
     }
   ],
   "confidence": 1,

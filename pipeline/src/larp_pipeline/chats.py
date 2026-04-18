@@ -16,6 +16,7 @@ Output: data/chats/{vid}.json
 from __future__ import annotations
 
 import json
+import re
 import time
 from pathlib import Path
 from typing import Any
@@ -96,6 +97,9 @@ def _prompt_for_batch(
         cadence = ", ".join((persona.get("speech_patterns") or [])[:3])
         cast_lines.append(f"- {cid} ({name}) — {one}. Cadence: {cadence}")
 
+    cast_name_lookup = ", ".join(
+        f"{cid}={name}" for cid, name in display_names.items() if cid in personas
+    )
     return f"""You are writing Zoom meeting chat messages for a LARP comedy bit.
 
 MEETING TRANSCRIPT (what was spoken out loud during this meeting):
@@ -103,6 +107,8 @@ MEETING TRANSCRIPT (what was spoken out loud during this meeting):
 
 CAST OF THIS MEETING (character_id → persona):
 {chr(10).join(cast_lines)}
+
+CAST DISPLAY NAMES: {cast_name_lookup}
 
 Produce {batch_size} short chat messages that would plausibly appear alongside
 this meeting. Each must be in-character for the sender. Vary the audience:
@@ -115,12 +121,28 @@ this meeting. Each must be in-character for the sender. Vary the audience:
     Gossipy, confidential, conspiratorial. The user doesn't need to have
     prompted it.
   - "dm_cast_to_cast": a DM from one cast member to another (target_id). The
-    user is intercepting / seeing a leaked copy. Feels like eavesdropping.
-    Sender should NOT be the same as target.
+    user is viewing a side conversation they can see. Sender MUST be
+    different from target.
+
+STRICT RULES — violating these means the chat is broken:
+  1. FIRST PERSON ONLY. Each sender speaks AS THEMSELVES using "I", "me",
+     "my". A sender NEVER addresses themselves by their own display name
+     in the third person. (No "for you, Charles" written by Charles.)
+  2. No "sincerely, <name>" signoffs, no self-narration, no fake stage
+     directions like "*laughs*".
+  3. Messages must vary. Don't repeat the same construction twice within
+     this batch. Each chat is a distinct beat.
+  4. Do NOT label the audience inside the text (no "DM:" prefix). The
+     audience field already tags it.
+  5. For dm_to_user: the sender is writing TO the user. Address the user
+     (use "{{NAME}}" sparingly — once per message max). Don't make the
+     sender refer to themselves by name.
+  6. For dm_cast_to_cast: sender and target are different characters. The
+     sender addresses the TARGET by name (or pronoun) — never themselves.
 
 Ground the content in the transcript's topic and each speaker's personality.
 Reference specific phrases or ideas from the transcript when it fits. Mix
-tones — some earnest, some petty, some absurd. Avoid repeating yourself.
+tones — earnest, petty, absurd, conspiratorial. Short. Punchy.
 
 Respond with JSON ONLY, no markdown:
 {{"chats": [
@@ -169,6 +191,21 @@ def _generate_batch(
                 continue
         else:
             target = None
+        # Reject any message where the sender uses their own display name
+        # in the text — that's the "Charles talks about Charles" bug. Match
+        # as a standalone word (case-insensitive) so we don't false-positive
+        # on substrings like "ryanair".
+        sender_name = (display_names.get(sender) or "").strip()
+        if sender_name:
+            pattern = re.compile(rf"\b{re.escape(sender_name)}\b", re.IGNORECASE)
+            if pattern.search(text):
+                continue
+        # Also block the id's tail (e.g. sender=cold_boss_ryan → "ryan")
+        sender_tail = sender.split("_")[-1]
+        if sender_tail and sender_tail != sender_name:
+            pattern = re.compile(rf"\b{re.escape(sender_tail)}\b", re.IGNORECASE)
+            if pattern.search(text):
+                continue
         cleaned.append(
             {
                 "sender": sender,
