@@ -9,12 +9,11 @@ const isStaticExport = process.env.STATIC_EXPORT === "1";
 const nextConfig: NextConfig = {
   // Next 16's dev-origin blocker returns "Not found" plain text when it
   // rejects a request. It wants hostnames (no protocol/port), not globs
-  // with "*" alone. List the machine's LAN IP explicitly + a broad /24 glob.
+  // with "*" alone. Allow private LAN ranges broadly for LAN dev.
   allowedDevOrigins: [
-    "192.168.86.170",
-    "192.168.86.*",
     "192.168.*.*",
     "10.*.*.*",
+    "172.16.*.*",
   ],
   ...(isStaticExport
     ? {

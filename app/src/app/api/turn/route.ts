@@ -4,7 +4,7 @@
  * Returns an SSE stream: events "speaker", "delta", "character_done", "done".
  *
  * Director (JSON mode) picks 1-2 characters -> each streams their reply.
- * Backed by David's local LLM cluster (see lib/cluster.ts).
+ * Backed by a local LLM cluster (see lib/cluster.ts).
  */
 import { NextRequest } from "next/server";
 import { z } from "zod";

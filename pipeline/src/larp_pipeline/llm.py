@@ -1,7 +1,8 @@
-"""OpenAI-compatible client for David's local LLM cluster.
+"""OpenAI-compatible client for a local LLM cluster.
 
 Single source of truth for the endpoints, model names, retry + fallback logic.
 Used by characters.py, personas.py, and anywhere else we need a chat call.
+Configure via LARP_LLM_* env vars (see .env.example) — defaults to localhost.
 """
 from __future__ import annotations
 
@@ -17,11 +18,7 @@ from rich.console import Console
 
 console = Console()
 
-DEFAULT_ENDPOINTS = (
-    "http://192.168.86.243:1234",
-    "http://192.168.86.250:1234",
-    "http://192.168.86.39:1234",
-)
+DEFAULT_ENDPOINTS = ("http://127.0.0.1:1234",)
 
 
 @dataclass
@@ -40,8 +37,8 @@ class ClusterConfig:
         eps = tuple(e.strip().rstrip("/") for e in re.split(r"[,\n]", raw) if e.strip()) or DEFAULT_ENDPOINTS
         return cls(
             endpoints=eps,
-            model=os.environ.get("LARP_LLM_MODEL", "crow-9b-opus-4.6-distill-heretic_qwen3.5"),
-            fallback_model=os.environ.get("LARP_LLM_MODEL_FALLBACK", "qwen/qwen3.5-9b"),
+            model=os.environ.get("LARP_LLM_MODEL", "your-chat-model"),
+            fallback_model=os.environ.get("LARP_LLM_MODEL_FALLBACK", "your-fallback-model"),
             api_key=os.environ.get("LARP_LLM_API_KEY", ""),
         )
 

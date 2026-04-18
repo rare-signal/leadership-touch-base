@@ -1,15 +1,12 @@
-/** OpenAI-compatible client for David's local LLM cluster.
+/** OpenAI-compatible client for a local LLM cluster.
  *
  * Used by /api/turn for director calls and streaming character responses.
  * Matches the Python `larp_pipeline.llm` client: same endpoints, same models,
- * same fallback order.
+ * same fallback order. Configure via LARP_LLM_ENDPOINTS env var (see
+ * .env.example) — defaults to localhost for a safe public clone.
  */
 
-const DEFAULT_ENDPOINTS = [
-  "http://192.168.86.243:1234",
-  "http://192.168.86.250:1234",
-  "http://192.168.86.39:1234",
-];
+const DEFAULT_ENDPOINTS = ["http://127.0.0.1:1234"];
 
 function parseList(raw: string | undefined): string[] {
   if (!raw) return [];
@@ -22,10 +19,10 @@ export function clusterEndpoints(): string[] {
 }
 
 export const DEFAULT_MODEL =
-  process.env.LARP_LLM_MODEL ?? "crow-9b-opus-4.6-distill-heretic_qwen3.5";
+  process.env.LARP_LLM_MODEL ?? "your-chat-model";
 
 export const FALLBACK_MODEL =
-  process.env.LARP_LLM_MODEL_FALLBACK ?? "qwen/qwen3.5-9b";
+  process.env.LARP_LLM_MODEL_FALLBACK ?? "your-fallback-model";
 
 const API_KEY = process.env.LARP_LLM_API_KEY ?? "";
 

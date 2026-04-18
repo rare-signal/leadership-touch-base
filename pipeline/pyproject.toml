@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 authors = [
-    { name = "David Lin-Clark", email = "david@woolymango.com" }
+    { name = "David Lin-Clark" }
 ]
 requires-python = ">=3.11"
 dependencies = [
