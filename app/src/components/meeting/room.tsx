@@ -877,12 +877,12 @@ export function MeetingRoom({ topic, initialVid }: Props) {
       // you twice in quick succession.
       const sinceLast = Date.now() - lastFloorEndedAtRef.current;
       if (sinceLast < FLOOR_COOLDOWN_MS) {
-        restartMeeting();
+        resumeMeetingPastListen();
         return;
       }
       if (!source?.concurRange) {
-        // No concur range — just restart the meeting from the top.
-        restartMeeting();
+        // No concur range — skip the nod, jump past the prelude.
+        resumeMeetingPastListen();
         return;
       }
       const v = masterVideoRef.current;
@@ -902,17 +902,30 @@ export function MeetingRoom({ topic, initialVid }: Props) {
       concurTimerRef.current = setTimeout(() => {
         concurTimerRef.current = null;
         lastFloorEndedAtRef.current = Date.now();
-        restartMeeting();
+        // Let the video keep rolling forward from concur_range[1].
+        // Seeking back to preTalkVideoTime here is what used to make the
+        // meeting look like it was "restarting from the start" — every
+        // listen_range in our data begins at 0, so preTalk is typically
+        // a small number inside the quiet prelude, and the seek replays
+        // that prelude (and can double-play the concur clip when ambient
+        // playback hits concur_range naturally again).
+        talkModeRef.current = "normal";
+        setTalkMode("normal");
       }, durMs);
     }
-    function restartMeeting() {
-      // Resume the meeting from where it was when you started talking.
+    function resumeMeetingPastListen() {
+      // Resume where the user was when they started talking, but never
+      // inside the listen_range — jumping past listen_range[1] avoids
+      // replaying the quiet prelude when the user talks early in the
+      // meeting (every listen_range in our data currently starts at 0).
       const v = masterVideoRef.current;
+      const listenEnd = source?.listenRange?.[1] ?? 0;
+      const resumeAt = Math.max(preTalkVideoTimeRef.current, listenEnd);
       try {
         if (v) {
           v.muted = false;
           v.volume = VOL_AMBIENT;
-          v.currentTime = preTalkVideoTimeRef.current;
+          v.currentTime = resumeAt;
           v.play().catch(() => {});
         }
       } catch {}
@@ -939,13 +952,17 @@ export function MeetingRoom({ topic, initialVid }: Props) {
       talkoverTimerRef.current = null;
     }
     // Going from "you have the floor" to "muted" doesn't need concur.
-    // Just restore the meeting.
+    // Resume past the listen_range prelude so the meeting doesn't visually
+    // restart from 0 when the user muted early (same reasoning as
+    // resumeMeetingPastListen above — every listen_range starts at 0).
     const v = masterVideoRef.current;
     if (v) {
       try {
+        const listenEnd = source?.listenRange?.[1] ?? 0;
+        const resumeAt = Math.max(preTalkVideoTimeRef.current, listenEnd);
         v.muted = false;
         v.volume = VOL_AMBIENT;
-        v.currentTime = preTalkVideoTimeRef.current;
+        v.currentTime = resumeAt;
         v.play().catch(() => {});
       } catch {}
     }
