@@ -11,9 +11,13 @@ export default function Lobby() {
   const [ready, setReady] = useState<boolean | null>(null);
 
   useEffect(() => {
-    fetch("/api/characters")
-      .then((r) => r.json())
-      .then((d) => setReady(!!d.pipeline_ready))
+    // Static deploy: read the staged bundle directly. `/api/characters`
+    // only exists in dev — it gets moved aside by scripts/build-static.mjs
+    // because `output: "export"` can't ship its force-dynamic handler.
+    // Ready = the bundle exists AND has at least one character pack.
+    fetch("/characters.json")
+      .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+      .then((d) => setReady(Array.isArray(d.packs) && d.packs.length > 0))
       .catch(() => setReady(false));
   }, []);
 
@@ -41,8 +45,18 @@ export default function Lobby() {
           {ready === null ? "Loading…" : "Join a meeting"}
         </Button>
         <p className="mt-6 text-xs text-muted-foreground">
-          No videos are redistributed. Short audio ad-libs used under fair use
-          for commentary and parody.
+          Full shorts are re-hosted for frame-synced playback. All content
+          © @VersoJobs, used in good faith under fair use for commentary
+          and parody. Rights holder? Open an issue on{" "}
+          <a
+            href="https://github.com/rare-signal/leadership-touch-base"
+            target="_blank"
+            rel="noreferrer"
+            className="underline hover:text-foreground"
+          >
+            GitHub
+          </a>{" "}
+          and it comes down.
         </p>
       </div>
     </main>
