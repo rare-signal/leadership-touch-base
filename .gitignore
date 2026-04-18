@@ -24,6 +24,9 @@ dist/
 .DS_Store
 Thumbs.db
 
+# Personal notes — don't publish
+my_next_25_years.md
+
 # Project data — local media; intermediate artifacts tracked selectively
 data/raw/
 data/keyframes/
